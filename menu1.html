@@ -6,37 +6,12 @@
     <title>Allit - 메뉴1</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
     <!-- 네비게이션 -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">Allit</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">홈</a>
-                </li>
-                <li class="nav-item">
-                    <a href="menu1.html" class="nav-link active">메뉴1</a>
-                </li>
-                <li class="nav-item">
-                    <a href="menu2.html" class="nav-link">메뉴2</a>
-                </li>
-                <li class="nav-item">
-                    <a href="menu3.html" class="nav-link">메뉴3</a>
-                </li>
-                <li class="nav-item">
-                    <a href="menu4.html" class="nav-link">메뉴4</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
     </nav>
 
     <!-- 메인 콘텐츠 -->
@@ -48,24 +23,96 @@
             </div>
         </section>
 
-        <section class="about-section">
+        <div class="content-wrapper">
             <div class="container">
-                <h2>메뉴1 콘텐츠</h2>
-                <p>이 페이지는 메뉴1의 샘플 콘텐츠입니다. 공통 네비게이션을 사용하여 일관된 사용자 경험을 제공합니다.</p>
-                
-                <div style="margin-top: 40px; text-align: center;">
-                    <h3>특징</h3>
-                    <ul style="list-style: none; padding: 0; margin-top: 20px;">
-                        <li style="margin: 10px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">✅ 반응형 디자인</li>
-                        <li style="margin: 10px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">✅ 모던한 UI/UX</li>
-                        <li style="margin: 10px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">✅ 공통 네비게이션</li>
-                        <li style="margin: 10px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">✅ 부드러운 애니메이션</li>
-                    </ul>
+                <div class="content-layout">
+                    <!-- 메인 콘텐츠 영역 -->
+                    <div class="main-content-area">
+                        <section id="introduction" class="content-section">
+                            <h2>소개</h2>
+                            <p>이 페이지는 메뉴1의 샘플 콘텐츠입니다. 공통 네비게이션을 사용하여 일관된 사용자 경험을 제공합니다.</p>
+                            <p>오른쪽 사이드바에는 이 페이지의 목차가 표시되어 원하는 섹션으로 빠르게 이동할 수 있습니다.</p>
+                        </section>
+
+                        <section id="features" class="content-section">
+                            <h2>주요 특징</h2>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <h3>반응형 디자인</h3>
+                                    <p>모든 디바이스에서 최적화된 사용자 경험을 제공합니다.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>모던한 UI/UX</h3>
+                                    <p>최신 디자인 트렌드를 반영한 직관적인 인터페이스입니다.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>공통 네비게이션</h3>
+                                    <p>일관된 네비게이션으로 사용자가 쉽게 탐색할 수 있습니다.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>부드러운 애니메이션</h3>
+                                    <p>사용자 상호작용에 반응하는 자연스러운 애니메이션을 제공합니다.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="technology" class="content-section">
+                            <h2>기술 스택</h2>
+                            <p>이 웹사이트는 다음과 같은 기술을 사용하여 구축되었습니다:</p>
+                            <ul class="tech-list">
+                                <li><strong>HTML5:</strong> 시맨틱 마크업과 접근성</li>
+                                <li><strong>CSS3:</strong> Flexbox, Grid, 애니메이션</li>
+                                <li><strong>JavaScript:</strong> ES6+, DOM 조작, 이벤트 처리</li>
+                                <li><strong>반응형 디자인:</strong> 모바일 퍼스트 접근법</li>
+                            </ul>
+                        </section>
+
+                        <section id="implementation" class="content-section">
+                            <h2>구현 방법</h2>
+                            <p>이 페이지의 구현은 다음과 같은 단계로 진행되었습니다:</p>
+                            <ol class="implementation-steps">
+                                <li>HTML 구조 설계 및 시맨틱 마크업</li>
+                                <li>CSS 스타일링 및 반응형 레이아웃 구현</li>
+                                <li>JavaScript 기능 추가 및 인터랙션 구현</li>
+                                <li>사이드바 네비게이션 및 스크롤 스파이 기능</li>
+                                <li>테스트 및 최적화</li>
+                            </ol>
+                        </section>
+
+                        <section id="conclusion" class="content-section">
+                            <h2>결론</h2>
+                            <p>이 페이지는 모던 웹 개발의 모범 사례를 보여주는 예시입니다. 사용자 경험을 최우선으로 고려한 디자인과 기능을 제공합니다.</p>
+                            <p>오른쪽 사이드바를 통해 원하는 섹션으로 빠르게 이동할 수 있으며, 스크롤 시 현재 위치가 하이라이트됩니다.</p>
+                        </section>
+                    </div>
+
+                    <!-- 오른쪽 사이드바 -->
+                    <aside class="sidebar">
+                        <div class="sidebar-content">
+                            <div class="sidebar-header">
+                                <div class="sidebar-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <nav class="sidebar-nav">
+                                <ul class="sidebar-menu">
+                                    <li><a href="#introduction" class="sidebar-link">소개</a></li>
+                                    <li><a href="#features" class="sidebar-link">주요 특징</a></li>
+                                    <li><a href="#technology" class="sidebar-link">기술 스택</a></li>
+                                    <li><a href="#implementation" class="sidebar-link">구현 방법</a></li>
+                                    <li><a href="#conclusion" class="sidebar-link">결론</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
-    <script src="js/navigation.js"></script>
+    <script src="js/nav-loader.js"></script>
+    <script src="js/sidebar.js"></script>
 </body>
 </html> 
