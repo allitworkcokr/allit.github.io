@@ -1,6 +1,6 @@
 /* 사이드바 스타일 */
 .content-wrapper {
-    background-color: #CAF0F8;
+    background-color: #E1E5F2;
     padding: 60px 0;
 }
 
@@ -26,22 +26,22 @@
 .content-section h2 {
     font-size: 2.2rem;
     margin-bottom: 25px;
-    color: #03045E;
-    border-bottom: 3px solid #00B4D8;
+    color: #022B3A;
+    border-bottom: 3px solid #1F7A8C;
     padding-bottom: 10px;
 }
 
 .content-section h3 {
     font-size: 1.5rem;
     margin: 25px 0 15px 0;
-    color: #03045E;
+    color: #022B3A;
 }
 
 .content-section p {
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 20px;
-    color: #03045E;
+    color: #022B3A;
 }
 
 /* 특징 그리드 */
@@ -53,10 +53,10 @@
 }
 
 .feature-item {
-    background: linear-gradient(135deg, #ADE8F4 0%, #90E0EF 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, #E1E5F2 100%);
     padding: 25px;
     border-radius: 12px;
-    border-left: 4px solid #00B4D8;
+    border-left: 4px solid #1F7A8C;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .feature-item h3 {
-    color: #03045E;
+    color: #022B3A;
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
@@ -89,7 +89,7 @@
 }
 
 .tech-list strong {
-    color: #00B4D8;
+    color: #1F7A8C;
 }
 
 /* 구현 단계 */
@@ -102,7 +102,7 @@
     margin-bottom: 15px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #03045E;
+    color: #022B3A;
 }
 
 /* 사이드바 */
@@ -111,7 +111,7 @@
     top: 100px;
     height: fit-content;
     background: white;
-    border-left: 1px solid #00B4D8;
+    border-left: 1px solid #1F7A8C;
     padding: 20px;
 }
 
@@ -128,7 +128,7 @@
 
 .sidebar-icon span {
     height: 2px;
-    background-color: #00B4D8;
+    background-color: #1F7A8C;
     border-radius: 1px;
 }
 
@@ -165,13 +165,13 @@
 }
 
 .sidebar-link:hover {
-    color: #00B4D8;
+    color: #1F7A8C;
 }
 
 .sidebar-link.active {
-    color: #00B4D8;
+    color: #1F7A8C;
     font-weight: 500;
-    border-bottom-color: #00B4D8;
+    border-bottom-color: #1F7A8C;
 }
 
 /* 반응형 디자인 */
