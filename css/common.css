@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #022B3A;
-    background-color: #FFFFFF;
+    color: #04080f;
+    background-color: #dae3e5;
     overflow-y: scroll;
     min-height: 100vh;
     display: flex;
@@ -29,7 +29,7 @@ body {
 
 /* 히어로 섹션 */
 .hero {
-    background: linear-gradient(135deg, #022B3A 0%, #1F7A8C 100%);
+    background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -49,7 +49,7 @@ body {
 
 .cta-button {
     display: inline-block;
-    background-color: #1F7A8C;
+    background-color: #507dbc;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -74,7 +74,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 30px;
     text-align: center;
-    color: #022B3A;
+    color: #04080f;
 }
 
 .about-section p {
@@ -82,7 +82,7 @@ body {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-    color: #022B3A;
+    color: #04080f;
 }
 
 /* 반응형 디자인 */
