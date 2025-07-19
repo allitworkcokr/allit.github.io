@@ -48,29 +48,8 @@ class BannerLoader {
             });
         });
 
-        // 배너 닫기 버튼 이벤트
-        const closeBtn = document.querySelector('.banner-close');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', this.closeBanner.bind(this));
-        }
-    }
 
-    // 배너 닫기
-    closeBanner() {
-        if (this.bannerContainer) {
-            this.bannerContainer.style.opacity = '0';
-            this.bannerContainer.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                this.bannerContainer.style.display = 'none';
-            }, 300);
-        }
     }
-}
-
-// 전역 닫기 함수
-function closeBanner() {
-    const bannerLoader = new BannerLoader();
-    bannerLoader.closeBanner();
 }
 
 // 페이지 로드 시 배너 로드
