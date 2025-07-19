@@ -1,79 +1,87 @@
-/* 배너 스타일 */
+/* 플로팅 배너 스타일 */
 .banner {
     position: fixed;
-    left: 0;
-    top: 80px; /* 네비게이션 높이만큼 아래 */
-    width: 280px;
-    height: calc(100vh - 80px);
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    max-height: 400px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    overflow-y: auto;
-    z-index: 100;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .banner-container {
     padding: 20px;
-    height: 100%;
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .banner-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .banner-section h3 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+    font-size: 1rem;
+    margin-bottom: 12px;
     color: #fff;
     font-weight: 600;
-    border-bottom: 2px solid rgba(255,255,255,0.3);
-    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 6px;
 }
 
 .banner-item {
     background: rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .banner-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .banner-item h4 {
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
     color: #fff;
     font-weight: 600;
 }
 
 .banner-item p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
     color: rgba(255,255,255,0.9);
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* 배너 이미지 */
 .banner-image {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .banner-placeholder {
     width: 100%;
-    height: 120px;
+    height: 80px;
     background: rgba(255,255,255,0.2);
-    border-radius: 8px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: rgba(255,255,255,0.8);
     border: 2px dashed rgba(255,255,255,0.3);
 }
@@ -83,10 +91,10 @@
     display: inline-block;
     background: rgba(255,255,255,0.2);
     color: white;
-    padding: 8px 16px;
+    padding: 6px 12px;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 0.85rem;
+    border-radius: 5px;
+    font-size: 0.75rem;
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid rgba(255,255,255,0.3);
@@ -100,112 +108,102 @@
 /* 배너 날짜 */
 .banner-date {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: rgba(255,255,255,0.7);
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 /* 배너 인용구 */
 .banner-quote {
     font-style: italic;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
     color: rgba(255,255,255,0.9);
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
 .banner-author {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: rgba(255,255,255,0.7);
     margin: 0;
 }
 
-/* 메인 콘텐츠 영역 조정 */
+/* 배너 닫기 버튼 */
+.banner-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.banner-close:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.1);
+}
+
+/* 메인 콘텐츠 영역 조정 - 플로팅 배너는 여백 불필요 */
 .main-content {
-    margin-left: 280px; /* 배너 너비만큼 여백 */
     margin-top: 80px;
 }
 
 /* 반응형 디자인 */
-@media (max-width: 1200px) {
-    .banner {
-        width: 250px;
-    }
-    
-    .main-content {
-        margin-left: 250px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .banner {
-        width: 220px;
-    }
-    
-    .main-content {
-        margin-left: 220px;
-    }
-    
-    .banner-container {
-        padding: 15px;
-    }
-    
-    .banner-content {
-        gap: 20px;
-    }
-}
-
 @media (max-width: 768px) {
     .banner {
-        position: static;
-        width: 100%;
-        height: auto;
-        top: auto;
+        right: 10px;
+        bottom: 10px;
+        width: 280px;
+        max-height: 350px;
     }
     
-    .main-content {
-        margin-left: 0;
-    }
-    
-    .banner-content {
-        flex-direction: row;
-        overflow-x: auto;
-        gap: 15px;
-        padding-bottom: 10px;
-    }
-    
-    .banner-section {
-        min-width: 250px;
-        flex-shrink: 0;
-    }
-    
-    .banner-item {
+    .banner-container {
         padding: 15px;
     }
-}
-
-@media (max-width: 480px) {
-    .banner-container {
-        padding: 10px;
-    }
     
     .banner-content {
-        gap: 10px;
-    }
-    
-    .banner-section {
-        min-width: 200px;
+        gap: 15px;
     }
     
     .banner-item {
         padding: 12px;
     }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        right: 5px;
+        bottom: 5px;
+        width: calc(100vw - 10px);
+        max-width: 300px;
+    }
+    
+    .banner-container {
+        padding: 12px;
+    }
+    
+    .banner-content {
+        gap: 12px;
+    }
+    
+    .banner-item {
+        padding: 10px;
+    }
     
     .banner-item h4 {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .banner-item p {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 } 

@@ -28,7 +28,7 @@ class BannerLoader {
         
         bannerItems.forEach(item => {
             item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px) scale(1.02)';
+                this.style.transform = 'translateY(-2px) scale(1.01)';
             });
             
             item.addEventListener('mouseleave', function() {
@@ -47,7 +47,30 @@ class BannerLoader {
                 }, 150);
             });
         });
+
+        // 배너 닫기 버튼 이벤트
+        const closeBtn = document.querySelector('.banner-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', this.closeBanner.bind(this));
+        }
     }
+
+    // 배너 닫기
+    closeBanner() {
+        if (this.bannerContainer) {
+            this.bannerContainer.style.opacity = '0';
+            this.bannerContainer.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                this.bannerContainer.style.display = 'none';
+            }, 300);
+        }
+    }
+}
+
+// 전역 닫기 함수
+function closeBanner() {
+    const bannerLoader = new BannerLoader();
+    bannerLoader.closeBanner();
 }
 
 // 페이지 로드 시 배너 로드
