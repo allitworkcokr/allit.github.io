@@ -91,18 +91,22 @@
     display: inline-block;
     background: rgba(255,255,255,0.2);
     color: white;
-    padding: 4px 8px;
+    padding: 6px 12px;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.65rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .banner-btn:hover {
     background: rgba(255,255,255,0.3);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* 배너 날짜 */
@@ -126,6 +130,20 @@
     font-size: 0.6rem;
     color: rgba(255,255,255,0.7);
     margin: 0;
+}
+
+/* 휴대폰 번호 스타일 */
+.banner-phone {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 8px 0;
+    letter-spacing: 1px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 
@@ -182,5 +200,11 @@
     
     .banner-item p {
         font-size: 0.65rem;
+    }
+    
+    .banner-phone {
+        font-size: 0.9rem;
+        padding: 6px;
+        margin: 6px 0;
     }
 } 

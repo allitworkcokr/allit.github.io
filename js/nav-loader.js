@@ -43,6 +43,7 @@ class NavLoader {
         const navMenu = document.querySelector('.nav-menu');
         const navbar = document.querySelector('.navbar');
         const navLinks = document.querySelectorAll('.nav-link');
+        const hasSubmenuItems = document.querySelectorAll('.has-submenu');
 
         // 햄버거 메뉴 토글
         if (hamburger) {
@@ -52,14 +53,31 @@ class NavLoader {
             });
         }
 
-        // 메뉴 링크 클릭 시 모바일 메뉴 닫기
+        // 모바일에서 서브메뉴 토글
+        hasSubmenuItems.forEach(item => {
+            const link = item.querySelector('.nav-link');
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    // 모바일에서만 서브메뉴 토글
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('active');
+                    }
+                });
+            }
+        });
+
+        // 메뉴 링크 클릭 시 모바일 메뉴 닫기 (서브메뉴가 아닌 경우)
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                if (hamburger) {
-                    hamburger.classList.remove('active');
-                }
-                if (navMenu) {
-                    navMenu.classList.remove('active');
+                // 서브메뉴 링크가 아닌 경우에만 메뉴 닫기
+                if (!link.closest('.submenu')) {
+                    if (hamburger) {
+                        hamburger.classList.remove('active');
+                    }
+                    if (navMenu) {
+                        navMenu.classList.remove('active');
+                    }
                 }
             });
         });

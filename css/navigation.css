@@ -80,6 +80,68 @@
     color: #667eea;
 }
 
+/* 서브메뉴 스타일 */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    padding: 8px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.has-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.submenu a:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    border-left-color: #667eea;
+}
+
+/* 드롭다운 화살표 */
+.dropdown-arrow {
+    font-size: 0.7rem;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.has-submenu:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
 /* 햄버거 메뉴 */
 .hamburger {
     display: none;
@@ -121,6 +183,51 @@
 
     .nav-menu.active {
         left: 0;
+    }
+
+    /* 모바일 서브메뉴 스타일 */
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: rgba(102, 126, 234, 0.05);
+        border-radius: 8px;
+        box-shadow: none;
+        margin: 10px 20px 0 20px;
+        padding: 10px 0;
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        display: none;
+    }
+
+    .has-submenu.active .submenu {
+        display: block;
+    }
+
+    .submenu a {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        border-left: none;
+        border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    }
+
+    .submenu a:last-child {
+        border-bottom: none;
+    }
+
+    .submenu a:hover {
+        background: rgba(102, 126, 234, 0.1);
+        border-left: none;
+    }
+
+    /* 모바일 드롭다운 화살표 */
+    .dropdown-arrow {
+        font-size: 0.6rem;
+        margin-left: 3px;
+    }
+
+    .has-submenu.active .dropdown-arrow {
+        transform: rotate(180deg);
     }
 
     .hamburger {
