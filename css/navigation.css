@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: rgba(40, 81, 133, 0.95);
+    background-color: rgba(3, 4, 94, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -26,7 +26,7 @@
 .nav-logo a {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #d67940;
+    color: #00B4D8;
     text-decoration: none;
     transition: color 0.3s ease;
     display: block;
@@ -34,7 +34,7 @@
 }
 
 .nav-logo a:hover {
-    color: #ccd9e2;
+    color: #ADE8F4;
 }
 
 .nav-menu {
@@ -63,7 +63,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #d67940;
+    background-color: #00B4D8;
     transition: width 0.3s ease;
 }
 
@@ -77,7 +77,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-    color: #d67940;
+    color: #00B4D8;
 }
 
 /* 서브메뉴 스타일 */
@@ -89,7 +89,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(40, 81, 133, 0.98);
+    background: rgba(3, 4, 94, 0.98);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -100,7 +100,7 @@
     transition: all 0.3s ease;
     z-index: 1001;
     padding: 8px 0;
-    border: 1px solid rgba(214, 121, 64, 0.3);
+    border: 1px solid rgba(0, 180, 216, 0.3);
 }
 
 .has-submenu:hover .submenu {
@@ -125,9 +125,9 @@
 }
 
 .submenu a:hover {
-    background: rgba(214, 121, 64, 0.2);
-    color: #d67940;
-    border-left-color: #d67940;
+    background: rgba(0, 180, 216, 0.2);
+    color: #00B4D8;
+    border-left-color: #00B4D8;
 }
 
 /* 드롭다운 화살표 */
@@ -161,7 +161,7 @@
 
 /* 스크롤 시 네비게이션 스타일 변경 */
 .navbar.scrolled {
-    background-color: rgba(40, 81, 133, 0.98);
+    background-color: rgba(3, 4, 94, 0.98);
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -172,7 +172,7 @@
         left: -100%;
         top: 80px;
         flex-direction: column;
-        background-color: rgba(40, 81, 133, 0.98);
+        background-color: rgba(3, 4, 94, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -191,12 +191,12 @@
         opacity: 1;
         visibility: visible;
         transform: none;
-        background: rgba(214, 121, 64, 0.1);
+        background: rgba(0, 180, 216, 0.1);
         border-radius: 8px;
         box-shadow: none;
         margin: 10px 20px 0 20px;
         padding: 10px 0;
-        border: 1px solid rgba(214, 121, 64, 0.3);
+        border: 1px solid rgba(0, 180, 216, 0.3);
         display: none;
     }
 
@@ -208,7 +208,7 @@
         padding: 8px 16px;
         font-size: 0.85rem;
         border-left: none;
-        border-bottom: 1px solid rgba(214, 121, 64, 0.2);
+        border-bottom: 1px solid rgba(0, 180, 216, 0.2);
     }
 
     .submenu a:last-child {
@@ -216,7 +216,7 @@
     }
 
     .submenu a:hover {
-        background: rgba(214, 121, 64, 0.2);
+        background: rgba(0, 180, 216, 0.2);
         border-left: none;
     }
 
