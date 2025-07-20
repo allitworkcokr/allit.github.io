@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>올아이티 - 뉴스</title>
+    <script src="js/head-loader.js"></script>
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        /* 뉴스 스타일 */
+        .news-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .news-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 24px;
+            border: 2px solid #507dbc;
+            background: white;
+            color: #507dbc;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #507dbc;
+            color: white;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #507dbc, #a1c6ea);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #507dbc;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 1.3rem;
+            color: #04080f;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 0.95rem;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .news-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .news-tag {
+            background: #f8f9fa;
+            color: #507dbc;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .news-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .pagination-btn {
+            padding: 10px 15px;
+            border: 1px solid #e9ecef;
+            background: white;
+            color: #04080f;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .pagination-btn:hover,
+        .pagination-btn.active {
+            background: #507dbc;
+            color: white;
+            border-color: #507dbc;
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .newsletter-description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .newsletter-btn {
+            padding: 15px 30px;
+            background: #a1c6ea;
+            color: #04080f;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .news-filters {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .newsletter-input {
+                min-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <!-- 왼쪽 배너 -->
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="container">
+                <h1>뉴스</h1>
+                <p>올아이티의 최신 소식과 업데이트를 확인하세요</p>
+            </div>
+        </section>
+
+        <!-- 뉴스 섹션 -->
+        <section class="section">
+            <div class="container">
+                <div class="news-container">
+                    <!-- 필터 버튼 -->
+                    <div class="news-filters">
+                        <button class="filter-btn active" data-filter="all">전체</button>
+                        <button class="filter-btn" data-filter="update">업데이트</button>
+                        <button class="filter-btn" data-filter="project">프로젝트</button>
+                        <button class="filter-btn" data-filter="release">릴리즈</button>
+                        <button class="filter-btn" data-filter="company">회사소식</button>
+                    </div>
+
+                    <!-- 뉴스 그리드 -->
+                    <div class="news-grid">
+                        <!-- 뉴스 카드 1 -->
+                        <div class="news-card" data-category="update">
+                            <div class="news-image">
+                                <div class="news-category">업데이트</div>
+                                <span>🚀</span>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date">2024.01.15</div>
+                                <h3 class="news-title">웹 개발 플랫폼 v2.1.0 릴리즈</h3>
+                                <p class="news-excerpt">
+                                    성능 최적화와 새로운 기능들이 추가된 웹 개발 플랫폼의 최신 버전을 출시했습니다. 
+                                    사용자 경험 개선과 개발 효율성 향상에 중점을 두었습니다.
+                                </p>
+                                <div class="news-tags">
+                                    <span class="news-tag">웹개발</span>
+                                    <span class="news-tag">성능최적화</span>
+                                    <span class="news-tag">v2.1.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 뉴스 카드 2 -->
+                        <div class="news-card" data-category="project">
+                            <div class="news-image">
+                                <div class="news-category">프로젝트</div>
+                                <span>💼</span>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date">2024.01.10</div>
+                                <h3 class="news-title">대형 E-커머스 플랫폼 프로젝트 완료</h3>
+                                <p class="news-excerpt">
+                                    ABC 테크놀로지와 협력하여 진행한 대형 E-커머스 플랫폼 프로젝트가 성공적으로 완료되었습니다. 
+                                    매출 50% 증가라는 목표를 달성했습니다.
+                                </p>
+                                <div class="news-tags">
+                                    <span class="news-tag">E-커머스</span>
+                                    <span class="news-tag">프로젝트완료</span>
+                                    <span class="news-tag">ABC테크</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 뉴스 카드 3 -->
+                        <div class="news-card" data-category="release">
+                            <div class="news-image">
+                                <div class="news-category">릴리즈</div>
+                                <span>📱</span>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date">2024.01.08</div>
+                                <h3 class="news-title">모바일 앱 개발 프레임워크 출시</h3>
+                                <p class="news-excerpt">
+                                    크로스 플랫폼 모바일 앱 개발을 위한 새로운 프레임워크를 출시했습니다. 
+                                    React Native 기반으로 개발 효율성을 크게 향상시켰습니다.
+                                </p>
+                                <div class="news-tags">
+                                    <span class="news-tag">모바일앱</span>
+                                    <span class="news-tag">React Native</span>
+                                    <span class="news-tag">프레임워크</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 뉴스 카드 4 -->
+                        <div class="news-card" data-category="company">
+                            <div class="news-image">
+                                <div class="news-category">회사소식</div>
+                                <span>🏢</span>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date">2024.01.05</div>
+                                <h3 class="news-title">새로운 협력사 DEF 디지털과 파트너십 체결</h3>
+                                <p class="news-excerpt">
+                                    디지털 마케팅 전문 기업 DEF 디지털과 전략적 파트너십을 체결했습니다. 
+                                    향후 디지털 마케팅 솔루션 개발에 협력할 예정입니다.
+                                </p>
+                                <div class="news-tags">
+                                    <span class="news-tag">파트너십</span>
+                                    <span class="news-tag">DEF디지털</span>
+                                    <span class="news-tag">디지털마케팅</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 뉴스 카드 5 -->
+                        <div class="news-card" data-category="update">
+                            <div class="news-image">
+                                <div class="news-category">업데이트</div>
+                                <span>🔧</span>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date">2024.01.03</div>
+                                <h3 class="news-title">AI 기반 분석 시스템 베타 테스트 시작</h3>
+                                <p class="news-excerpt">
+                                    머신러닝 기술을 활용한 AI 기반 데이터 분석 시스템의 베타 테스트를 시작했습니다. 
+                                    정확도 95% 달성을 목표로 하고 있습니다.
+                                </p>
+                                <div class="news-tags">
+                                    <span class="news-tag">AI</span>
+                                    <span class="news-tag">머신러닝</span>
+                                    <span class="news-tag">베타테스트</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 뉴스 카드 6 -->
+                        <div class="news-card" data-category="project">
+                            <div class="news-image">
+                                <div class="news-category">프로젝트</div>
+                                <span>☁️</span>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-date">2023.12.28</div>
+                                <h3 class="news-title">클라우드 마이그레이션 프로젝트 진행 중</h3>
+                                <p class="news-excerpt">
+                                    GHI 시스템즈와 함께 진행 중인 클라우드 마이그레이션 프로젝트가 60% 완료되었습니다. 
+                                    비용 30% 절감 효과를 기대하고 있습니다.
+                                </p>
+                                <div class="news-tags">
+                                    <span class="news-tag">클라우드</span>
+                                    <span class="news-tag">마이그레이션</span>
+                                    <span class="news-tag">GHI시스템즈</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 페이지네이션 -->
+                    <div class="news-pagination">
+                        <button class="pagination-btn" disabled>이전</button>
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn">다음</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 뉴스레터 섹션 -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">뉴스레터 구독</h3>
+                    <p class="newsletter-description">
+                        올아이티의 최신 소식과 업데이트를 이메일로 받아보세요
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="이메일 주소를 입력하세요" required>
+                        <button type="submit" class="newsletter-btn">구독하기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <script src="js/nav-loader.js"></script>
+    <script src="js/banner-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+    
+    <script>
+        // 뉴스 필터링 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // 활성 버튼 변경
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // 필터링
+                    const filter = this.getAttribute('data-filter');
+                    
+                    newsCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 뉴스레터 폼 제출
+            const newsletterForm = document.querySelector('.newsletter-form');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('.newsletter-input').value;
+                alert('뉴스레터 구독이 완료되었습니다!');
+                this.querySelector('.newsletter-input').value = '';
+            });
+        });
+    </script>
+</body>
+</html> 
