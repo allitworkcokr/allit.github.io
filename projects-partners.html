@@ -179,6 +179,21 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .partner-logo::before {
+            content: "🏢";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        .partner-logo.has-image::before {
+            display: none;
         }
 
         .partner-card h3 {
@@ -365,50 +380,44 @@
                 <div class="partners-grid">
                     <!-- 협력사 1 -->
                     <div class="partner-card">
-                        <div class="partner-logo" style="background-image: url('images/partner1.jpg');"></div>
+                        <div class="partner-logo has-image" style="background-image: url('images/partner1.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
                         <h3>ABC 테크놀로지</h3>
                         <p class="partner-industry">IT 서비스</p>
-                        <span class="partner-status status-active">활성 협력</span>
                     </div>
 
                     <!-- 협력사 2 -->
                     <div class="partner-card">
-                        <div class="partner-logo" style="background-image: url('images/partner2.jpg');"></div>
+                        <div class="partner-logo has-image" style="background-image: url('images/partner2.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
                         <h3>XYZ 솔루션즈</h3>
                         <p class="partner-industry">소프트웨어</p>
-                        <span class="partner-status status-maintenance">유지보수</span>
                     </div>
 
                     <!-- 협력사 3 -->
                     <div class="partner-card">
-                        <div class="partner-logo" style="background-image: url('images/partner3.jpg');"></div>
+                        <div class="partner-logo has-image" style="background-image: url('images/partner3.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
                         <h3>DEF 디지털</h3>
                         <p class="partner-industry">디지털 마케팅</p>
-                        <span class="partner-status status-active">활성 협력</span>
                     </div>
 
                     <!-- 협력사 4 -->
                     <div class="partner-card">
-                        <div class="partner-logo" style="background-image: url('images/partner4.jpg');"></div>
+                        <div class="partner-logo has-image" style="background-image: url('images/partner4.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
                         <h3>GHI 시스템즈</h3>
                         <p class="partner-industry">시스템 통합</p>
-                        <span class="partner-status status-completed">완료</span>
                     </div>
 
                     <!-- 협력사 5 -->
                     <div class="partner-card">
-                        <div class="partner-logo" style="background-image: url('images/partner5.jpg');"></div>
+                        <div class="partner-logo has-image" style="background-image: url('images/partner5.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
                         <h3>JKL 인포메이션</h3>
                         <p class="partner-industry">데이터 분석</p>
-                        <span class="partner-status status-maintenance">유지보수</span>
                     </div>
 
                     <!-- 협력사 6 -->
                     <div class="partner-card">
-                        <div class="partner-logo" style="background-image: url('images/partner6.jpg');"></div>
+                        <div class="partner-logo has-image" style="background-image: url('images/partner6.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
                         <h3>MNO 커뮤니케이션</h3>
                         <p class="partner-industry">커뮤니케이션</p>
-                        <span class="partner-status status-active">활성 협력</span>
                     </div>
                 </div>
             </div>
