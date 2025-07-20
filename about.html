@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allit - 회사소개</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .company-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .company-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        .company-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .company-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #04080f;
+            text-align: justify;
+        }
+
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #507dbc;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #04080f;
+            font-weight: 600;
+        }
+
+        .mission-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .mission-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        .mission-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #04080f;
+            text-align: justify;
+        }
+
+        .values-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #507dbc;
+        }
+
+        .value-item p {
+            color: #04080f;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .company-section h2,
+            .mission-content h2 {
+                font-size: 2rem;
+            }
+            
+            .company-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <!-- 왼쪽 배너 -->
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>회사소개</h1>
+                <p>혁신적인 기술과 창의적인 솔루션으로 미래를 만들어가는 Allit입니다</p>
+            </div>
+        </section>
+
+        <!-- 회사 소개 섹션 -->
+        <section class="company-section">
+            <div class="container">
+                <h2>Allit에 대하여</h2>
+                <div class="company-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+
+                <!-- 회사 통계 -->
+                <div class="company-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">완료 프로젝트</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">만족한 고객</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5년</div>
+                        <div class="stat-label">업계 경험</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">고객 지원</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 미션 섹션 -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <h2>우리의 미션</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    
+                    <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+                    
+                    <p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 핵심 가치 섹션 -->
+        <section class="values-section">
+            <div class="container">
+                <h2>핵심 가치</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h3>혁신</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>품질</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>신뢰</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>협력</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>지속가능성</h3>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>고객 중심</h3>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <script src="js/nav-loader.js"></script>
+    <script src="js/banner-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+</body>
+</html> 
