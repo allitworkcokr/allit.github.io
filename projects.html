@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allit - 프로젝트</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .projects-hero {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .projects-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .projects-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .projects-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .projects-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .status-ongoing {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .status-planning {
+            background-color: #ffc107;
+            color: #212529;
+        }
+
+        .status-completed {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #04080f;
+        }
+
+        .project-card p {
+            color: #04080f;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .project-detail i {
+            color: #507dbc;
+            font-size: 1rem;
+        }
+
+        .project-progress {
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #507dbc, #a1c6ea);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-align: center;
+        }
+
+        .project-tech {
+            margin-top: 20px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background-color: #507dbc;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .projects-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .projects-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .projects-section h2 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .project-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <!-- 왼쪽 배너 -->
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section class="projects-hero">
+            <div class="container">
+                <h1>진행중인 프로젝트</h1>
+                <p>혁신적인 기술과 창의적인 솔루션으로 고객의 비즈니스 성장을 지원합니다</p>
+            </div>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section class="projects-section">
+            <div class="container">
+                <h2>현재 진행중인 프로젝트</h2>
+                <div class="projects-grid">
+                    <!-- 프로젝트 1 -->
+                    <div class="project-card">
+                        <span class="project-status status-ongoing">진행중</span>
+                        <h3>E-커머스 플랫폼 개발</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <i>📅</i>
+                                <span>2024.01 - 2024.06</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>👥</i>
+                                <span>팀 규모: 8명</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>💰</i>
+                                <span>예산: 2억원</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>🎯</i>
+                                <span>목표: 매출 50% 증가</span>
+                            </div>
+                        </div>
+
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <div class="progress-text">진행률: 75%</div>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 2 -->
+                    <div class="project-card">
+                        <span class="project-status status-ongoing">진행중</span>
+                        <h3>모바일 앱 개발</h3>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <i>📅</i>
+                                <span>2024.02 - 2024.08</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>👥</i>
+                                <span>팀 규모: 6명</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>💰</i>
+                                <span>예산: 1.5억원</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>🎯</i>
+                                <span>목표: 사용자 10만명</span>
+                            </div>
+                        </div>
+
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <div class="progress-text">진행률: 45%</div>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-tags">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Google Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 3 -->
+                    <div class="project-card">
+                        <span class="project-status status-planning">기획단계</span>
+                        <h3>AI 기반 분석 시스템</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <i>📅</i>
+                                <span>2024.04 - 2024.12</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>👥</i>
+                                <span>팀 규모: 10명</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>💰</i>
+                                <span>예산: 3억원</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>🎯</i>
+                                <span>목표: 정확도 95%</span>
+                            </div>
+                        </div>
+
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <div class="progress-text">진행률: 15%</div>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 프로젝트 4 -->
+                    <div class="project-card">
+                        <span class="project-status status-ongoing">진행중</span>
+                        <h3>클라우드 마이그레이션</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                        
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <i>📅</i>
+                                <span>2024.03 - 2024.09</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>👥</i>
+                                <span>팀 규모: 12명</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>💰</i>
+                                <span>예산: 2.5억원</span>
+                            </div>
+                            <div class="project-detail">
+                                <i>🎯</i>
+                                <span>목표: 비용 30% 절감</span>
+                            </div>
+                        </div>
+
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <div class="progress-text">진행률: 60%</div>
+                        </div>
+
+                        <div class="project-tech">
+                            <div class="tech-tags">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Terraform</span>
+                                <span class="tech-tag">Ansible</span>
+                                <span class="tech-tag">Jenkins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <script src="js/nav-loader.js"></script>
+    <script src="js/banner-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+</body>
+</html> 
