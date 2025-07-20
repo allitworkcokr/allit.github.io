@@ -2,7 +2,8 @@
 .banner {
     position: fixed;
     left: 20px;
-    top: 20px;
+    top: 40%;
+    transform: translateY(-50%);
     width: 200px;
     height: auto;
     background: #04080f;
@@ -143,7 +144,8 @@
 @media (max-width: 768px) {
     .banner {
         left: 10px;
-        top: 10px;
+        top: 40%;
+        transform: translateY(-50%);
         width: 180px;
     }
     
@@ -163,7 +165,8 @@
 @media (max-width: 480px) {
     .banner {
         left: 5px;
-        top: 5px;
+        top: 40%;
+        transform: translateY(-50%);
         width: calc(100vw - 10px);
         max-width: 200px;
     }
