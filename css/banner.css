@@ -32,6 +32,112 @@
     gap: 16px;
 }
 
+/* 프로모션 배너 스타일 */
+.banner-promotion {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    border-radius: 12px;
+    padding: 16px;
+    border: 2px solid #ff9ff3;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.promotion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.promotion-header h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.promotion-badge {
+    background: #ff9ff3;
+    color: #2c3e50;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.promotion-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.promotion-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.promotion-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.promotion-text {
+    flex: 1;
+}
+
+.promotion-text strong {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.promotion-text span {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.promotion-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.promotion-timer {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #ff9ff3;
+}
+
+.promotion-contact {
+    text-align: center;
+}
+
+.promotion-contact .banner-phone {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .banner-section h3 {
     font-size: 0.85rem;
     margin-bottom: 8px;
@@ -87,8 +193,6 @@
     border: 1px dashed rgba(255,255,255,0.3);
 }
 
-
-
 /* 배너 날짜 */
 .banner-date {
     display: block;
@@ -133,8 +237,6 @@
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-
-
 /* 메인 콘텐츠 영역 조정 - 플로팅 배너는 여백 불필요 */
 .main-content {
     margin-top: 80px;
@@ -159,6 +261,31 @@
     
     .banner-item {
         padding: 8px;
+    }
+    
+    .banner-promotion {
+        padding: 12px;
+    }
+    
+    .promotion-header h3 {
+        font-size: 0.8rem;
+    }
+    
+    .promotion-item {
+        padding: 8px;
+    }
+    
+    .promotion-icon {
+        font-size: 1rem;
+        width: 20px;
+    }
+    
+    .promotion-text strong {
+        font-size: 0.75rem;
+    }
+    
+    .promotion-text span {
+        font-size: 0.65rem;
     }
 }
 
@@ -199,5 +326,46 @@
     .banner-phone {
         font-size: 1rem;
         padding: 10px;
+    }
+    
+    .banner-promotion {
+        padding: 10px;
+    }
+    
+    .promotion-header h3 {
+        font-size: 0.75rem;
+    }
+    
+    .promotion-badge {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+    
+    .promotion-item {
+        padding: 6px;
+        gap: 8px;
+    }
+    
+    .promotion-icon {
+        font-size: 0.9rem;
+        width: 18px;
+    }
+    
+    .promotion-text strong {
+        font-size: 0.7rem;
+    }
+    
+    .promotion-text span {
+        font-size: 0.6rem;
+    }
+    
+    .promotion-timer {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+    
+    .promotion-contact .banner-phone {
+        font-size: 0.7rem;
+        padding: 4px 8px;
     }
 } 
