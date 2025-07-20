@@ -175,11 +175,15 @@
             font-size: 1.2rem;
             font-weight: 700;
             color: white;
-            /* 실제 이미지가 들어갈 경우를 위한 스타일 */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             position: relative;
+            overflow: hidden;
+        }
+
+        .partner-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
         .partner-logo::before {
@@ -380,42 +384,54 @@
                 <div class="partners-grid">
                     <!-- 협력사 1 -->
                     <div class="partner-card">
-                        <div class="partner-logo has-image" style="background-image: url('images/partner1.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
+                        <div class="partner-logo">
+                            <img src="images/partner1.jpg" alt="ABC 테크놀로지" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        </div>
                         <h3>ABC 테크놀로지</h3>
                         <p class="partner-industry">IT 서비스</p>
                     </div>
 
                     <!-- 협력사 2 -->
                     <div class="partner-card">
-                        <div class="partner-logo has-image" style="background-image: url('images/partner2.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
+                        <div class="partner-logo">
+                            <img src="images/partner2.jpg" alt="XYZ 솔루션즈" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        </div>
                         <h3>XYZ 솔루션즈</h3>
                         <p class="partner-industry">소프트웨어</p>
                     </div>
 
                     <!-- 협력사 3 -->
                     <div class="partner-card">
-                        <div class="partner-logo has-image" style="background-image: url('images/partner3.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
+                        <div class="partner-logo">
+                            <img src="images/partner3.jpg" alt="DEF 디지털" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        </div>
                         <h3>DEF 디지털</h3>
                         <p class="partner-industry">디지털 마케팅</p>
                     </div>
 
                     <!-- 협력사 4 -->
                     <div class="partner-card">
-                        <div class="partner-logo has-image" style="background-image: url('images/partner4.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
+                        <div class="partner-logo">
+                            <img src="images/partner4.jpg" alt="GHI 시스템즈" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        </div>
                         <h3>GHI 시스템즈</h3>
                         <p class="partner-industry">시스템 통합</p>
                     </div>
 
                     <!-- 협력사 5 -->
                     <div class="partner-card">
-                        <div class="partner-logo has-image" style="background-image: url('images/partner5.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
+                        <div class="partner-logo">
+                            <img src="images/partner5.jpg" alt="JKL 인포메이션" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        </div>
                         <h3>JKL 인포메이션</h3>
                         <p class="partner-industry">데이터 분석</p>
                     </div>
 
                     <!-- 협력사 6 -->
                     <div class="partner-card">
-                        <div class="partner-logo has-image" style="background-image: url('images/partner6.jpg');" onerror="this.classList.remove('has-image'); this.style.backgroundImage='none';"></div>
+                        <div class="partner-logo">
+                            <img src="images/partner6.jpg" alt="MNO 커뮤니케이션" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        </div>
                         <h3>MNO 커뮤니케이션</h3>
                         <p class="partner-industry">커뮤니케이션</p>
                     </div>
@@ -456,5 +472,23 @@
     <script src="js/nav-loader.js"></script>
     <script src="js/banner-loader.js"></script>
     <script src="js/footer-loader.js"></script>
+    
+    <script>
+        // 협력사 이미지 로드 실패 시 기본 아이콘 표시
+        document.addEventListener('DOMContentLoaded', function() {
+            const partnerLogos = document.querySelectorAll('.partner-logo img');
+            
+            partnerLogos.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.style.display = 'none';
+                    this.parentElement.classList.remove('has-image');
+                });
+                
+                img.addEventListener('load', function() {
+                    this.parentElement.classList.add('has-image');
+                });
+            });
+        });
+    </script>
 </body>
 </html> 
