@@ -4,7 +4,61 @@
     <title>올아이티 - 그라비아 인쇄 특화 MES</title>
     <script src="js/head-loader.js"></script>
     <style>
-        /* 그라비아 MES 특화 스타일 */
+        .hero {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: #04080f;
+            margin-bottom: 20px;
+        }
+
+        /* 그라비아 인쇄 특화 스타일 */
         .gravure-overview {
             max-width: 1000px;
             margin: 0 auto;
@@ -50,12 +104,28 @@
             line-height: 1.6;
         }
 
-        /* 기능 소개 스타일 */
+        /* 특화 기능 스타일 */
+        .specialized-features {
+            margin-top: 50px;
+        }
+
+        .feature-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            color: #04080f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
-            margin-top: 50px;
+            margin-bottom: 40px;
         }
 
         .feature-card {
@@ -115,46 +185,11 @@
             font-weight: bold;
         }
 
-        /* 장점 스타일 */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        /* 프로세스 스타일 */
+        .process-flow {
             margin-top: 50px;
         }
 
-        .benefit-item {
-            text-align: center;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #507dbc;
-        }
-
-        .benefit-title {
-            font-size: 1.2rem;
-            color: #04080f;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .benefit-description {
-            color: #6c757d;
-            line-height: 1.6;
-        }
-
-        /* 프로세스 스타일 */
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -205,6 +240,45 @@
             line-height: 1.5;
         }
 
+        /* 장점 스타일 */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #507dbc;
+        }
+
+        .benefit-title {
+            font-size: 1.2rem;
+            color: #04080f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .benefit-description {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
         /* CTA 섹션 */
         .cta-section {
             background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
@@ -250,6 +324,18 @@
         }
 
         @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
             .overview-grid,
             .features-grid,
             .benefits-grid {
