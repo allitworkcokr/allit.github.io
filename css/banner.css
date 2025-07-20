@@ -2,7 +2,7 @@
 .banner {
     position: fixed;
     left: 20px;
-    bottom: 20px;
+    top: 20px;
     width: 200px;
     height: auto;
     background: #04080f;
@@ -143,7 +143,7 @@
 @media (max-width: 768px) {
     .banner {
         left: 10px;
-        bottom: 10px;
+        top: 10px;
         width: 180px;
     }
     
@@ -163,7 +163,7 @@
 @media (max-width: 480px) {
     .banner {
         left: 5px;
-        bottom: 5px;
+        top: 5px;
         width: calc(100vw - 10px);
         max-width: 200px;
     }
