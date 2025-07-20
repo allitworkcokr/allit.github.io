@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Allit - 채용정보</title>
+    <script src="js/head-loader.js"></script>
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: #04080f;
+            margin-bottom: 20px;
+        }
+
+        /* 채용 정보 스타일 */
+        .career-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .no-jobs-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: #6c757d;
+        }
+
+        .no-jobs-title {
+            font-size: 2rem;
+            color: #04080f;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .no-jobs-description {
+            font-size: 1.1rem;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            color: #04080f;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .contact-description {
+            font-size: 1rem;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #507dbc, #a1c6ea);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+        }
+
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(80, 125, 188, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .positions-section {
+            margin-top: 50px;
+        }
+
+        .positions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .position-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid #e9ecef;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .position-card:hover {
+            transform: translateY(-5px);
+            border-color: #507dbc;
+        }
+
+        .position-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .position-title {
+            font-size: 1.3rem;
+            color: #04080f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .position-description {
+            font-size: 0.95rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        .company-culture {
+            margin-top: 60px;
+        }
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .culture-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .culture-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #507dbc;
+        }
+
+        .culture-title {
+            font-size: 1.1rem;
+            color: #04080f;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .culture-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .career-content {
+                padding: 30px 20px;
+            }
+            
+            .no-jobs-icon {
+                font-size: 3rem;
+            }
+            
+            .no-jobs-title {
+                font-size: 1.5rem;
+            }
+            
+            .positions-grid,
+            .culture-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <!-- 왼쪽 배너 -->
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="container">
+                <h1>채용정보</h1>
+                <p>함께 성장할 열정적인 인재를 기다립니다</p>
+            </div>
+        </section>
+
+        <!-- 채용 정보 섹션 -->
+        <section class="section">
+            <div class="container">
+                <div class="career-content">
+                    <div class="no-jobs-icon">📋</div>
+                    <h2 class="no-jobs-title">현재 채용중인 직무가 없습니다</h2>
+                    <p class="no-jobs-description">
+                        현재 공개 채용 중인 직무는 없지만, 저희 Allit과 함께 일하고 싶으신 분들을 항상 환영합니다.<br>
+                        Frontend, Backend, Full-stack 개발자로서의 경험이나 열정이 있으시다면 언제든 연락주세요.
+                    </p>
+
+                    <div class="contact-section">
+                        <h3 class="contact-title">지원 의향이 있으시다면</h3>
+                        <p class="contact-description">
+                            자유양식의 프로필, 이력서 또는 이력 링크를 보내주세요.<br>
+                            검토 후 적절한 기회가 있을 때 연락드리겠습니다.
+                        </p>
+                        <a href="mailto:allitjob@gmail.com" class="email-link">📧 allitjob@gmail.com</a>
+                    </div>
+
+                    <div class="positions-section">
+                        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 30px;">지원 가능한 직무</h3>
+                        <div class="positions-grid">
+                            <div class="position-card">
+                                <div class="position-icon">💻</div>
+                                <h4 class="position-title">Frontend 개발자</h4>
+                                <p class="position-description">
+                                    React, Vue.js, Angular 등을 활용한 웹 애플리케이션 개발<br>
+                                    사용자 경험과 인터페이스 설계에 대한 이해
+                                </p>
+                            </div>
+                            <div class="position-card">
+                                <div class="position-icon">⚙️</div>
+                                <h4 class="position-title">Backend 개발자</h4>
+                                <p class="position-description">
+                                    Node.js, Python, Java 등을 활용한 서버 개발<br>
+                                    데이터베이스 설계 및 API 개발 경험
+                                </p>
+                            </div>
+                            <div class="position-card">
+                                <div class="position-icon">🔄</div>
+                                <h4 class="position-title">Full-stack 개발자</h4>
+                                <p class="position-description">
+                                    Frontend와 Backend 모두를 아우르는 개발 경험<br>
+                                    전체 시스템 아키텍처 이해 및 개발
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="company-culture">
+                        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 30px;">우리의 문화</h3>
+                        <div class="culture-grid">
+                            <div class="culture-item">
+                                <div class="culture-icon">🚀</div>
+                                <h4 class="culture-title">혁신 추구</h4>
+                                <p class="culture-description">최신 기술과 트렌드를 적극적으로 도입하여 혁신적인 솔루션을 만들어갑니다.</p>
+                            </div>
+                            <div class="culture-item">
+                                <div class="culture-icon">🤝</div>
+                                <h4 class="culture-title">협력 문화</h4>
+                                <p class="culture-description">팀워크를 중시하며, 서로의 아이디어를 존중하고 함께 성장하는 환경을 제공합니다.</p>
+                            </div>
+                            <div class="culture-item">
+                                <div class="culture-icon">📚</div>
+                                <h4 class="culture-title">지속적 학습</h4>
+                                <p class="culture-description">개발자로서의 성장을 위해 학습과 기술 향상에 대한 지원을 아끼지 않습니다.</p>
+                            </div>
+                            <div class="culture-item">
+                                <div class="culture-icon">⚖️</div>
+                                <h4 class="culture-title">워라밸</h4>
+                                <p class="culture-description">업무와 삶의 균형을 중요시하며, 건강한 근무 환경을 조성합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <script src="js/nav-loader.js"></script>
+    <script src="js/banner-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+</body>
+</html> 
