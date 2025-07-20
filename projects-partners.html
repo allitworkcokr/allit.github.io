@@ -138,19 +138,24 @@
         /* 협력사 스타일 */
         .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             margin-top: 50px;
         }
 
         .partner-card {
             background: white;
             border-radius: 15px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #e9ecef;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
         }
 
         .partner-card:hover {
@@ -159,101 +164,34 @@
         }
 
         .partner-logo {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #507dbc, #a1c6ea);
-            border-radius: 50%;
-            margin: 0 auto 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: white;
-        }
-
-        .partner-status {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .status-active {
-            background-color: #28a745;
-            color: white;
-        }
-
-        .status-maintenance {
-            background-color: #17a2b8;
-            color: white;
-        }
-
-        .status-completed {
-            background-color: #6c757d;
-            color: white;
+            /* 실제 이미지가 들어갈 경우를 위한 스타일 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .partner-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
             color: #04080f;
+            font-weight: 600;
         }
 
-        .partner-card p {
-            color: #04080f;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .partner-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .partner-detail {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .partner-industry {
             font-size: 0.9rem;
             color: #6c757d;
-            justify-content: center;
-        }
-
-        .partner-detail i {
-            color: #507dbc;
-            font-size: 1rem;
-        }
-
-        .partner-projects {
-            margin-top: 20px;
-        }
-
-        .project-count {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #507dbc;
-            margin-bottom: 5px;
-        }
-
-        .project-label {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-
-        .partnership-duration {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #e9ecef;
-        }
-
-        .duration-text {
-            font-size: 0.9rem;
-            color: #6c757d;
+            font-weight: 500;
         }
 
         .stats-section {
@@ -308,10 +246,6 @@
             .project-card,
             .partner-card {
                 padding: 25px;
-            }
-            
-            .partner-details {
-                grid-template-columns: 1fr;
             }
             
             .stats-grid {
@@ -431,218 +365,50 @@
                 <div class="partners-grid">
                     <!-- 협력사 1 -->
                     <div class="partner-card">
-                        <div class="partner-logo">ABC</div>
-                        <span class="partner-status status-active">활성 협력</span>
+                        <div class="partner-logo" style="background-image: url('images/partner1.jpg');"></div>
                         <h3>ABC 테크놀로지</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        
-                        <div class="partner-details">
-                            <div class="partner-detail">
-                                <i>🏢</i>
-                                <span>IT 서비스</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📍</i>
-                                <span>서울 강남구</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>👥</i>
-                                <span>직원 150명</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📞</i>
-                                <span>02-1234-5678</span>
-                            </div>
-                        </div>
-
-                        <div class="partner-projects">
-                            <div class="project-count">12</div>
-                            <div class="project-label">완료 프로젝트</div>
-                        </div>
-
-                        <div class="partnership-duration">
-                            <div class="duration-text">협력 기간: 2020년 ~ 현재</div>
-                        </div>
+                        <p class="partner-industry">IT 서비스</p>
+                        <span class="partner-status status-active">활성 협력</span>
                     </div>
 
                     <!-- 협력사 2 -->
                     <div class="partner-card">
-                        <div class="partner-logo">XYZ</div>
-                        <span class="partner-status status-maintenance">유지보수</span>
+                        <div class="partner-logo" style="background-image: url('images/partner2.jpg');"></div>
                         <h3>XYZ 솔루션즈</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                        
-                        <div class="partner-details">
-                            <div class="partner-detail">
-                                <i>🏢</i>
-                                <span>소프트웨어</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📍</i>
-                                <span>서울 서초구</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>👥</i>
-                                <span>직원 80명</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📞</i>
-                                <span>02-2345-6789</span>
-                            </div>
-                        </div>
-
-                        <div class="partner-projects">
-                            <div class="project-count">8</div>
-                            <div class="project-label">완료 프로젝트</div>
-                        </div>
-
-                        <div class="partnership-duration">
-                            <div class="duration-text">협력 기간: 2021년 ~ 현재</div>
-                        </div>
+                        <p class="partner-industry">소프트웨어</p>
+                        <span class="partner-status status-maintenance">유지보수</span>
                     </div>
 
                     <!-- 협력사 3 -->
                     <div class="partner-card">
-                        <div class="partner-logo">DEF</div>
-                        <span class="partner-status status-active">활성 협력</span>
+                        <div class="partner-logo" style="background-image: url('images/partner3.jpg');"></div>
                         <h3>DEF 디지털</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
-                        
-                        <div class="partner-details">
-                            <div class="partner-detail">
-                                <i>🏢</i>
-                                <span>디지털 마케팅</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📍</i>
-                                <span>서울 마포구</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>👥</i>
-                                <span>직원 60명</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📞</i>
-                                <span>02-3456-7890</span>
-                            </div>
-                        </div>
-
-                        <div class="partner-projects">
-                            <div class="project-count">15</div>
-                            <div class="project-label">완료 프로젝트</div>
-                        </div>
-
-                        <div class="partnership-duration">
-                            <div class="duration-text">협력 기간: 2019년 ~ 현재</div>
-                        </div>
+                        <p class="partner-industry">디지털 마케팅</p>
+                        <span class="partner-status status-active">활성 협력</span>
                     </div>
 
                     <!-- 협력사 4 -->
                     <div class="partner-card">
-                        <div class="partner-logo">GHI</div>
-                        <span class="partner-status status-completed">완료</span>
+                        <div class="partner-logo" style="background-image: url('images/partner4.jpg');"></div>
                         <h3>GHI 시스템즈</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        
-                        <div class="partner-details">
-                            <div class="partner-detail">
-                                <i>🏢</i>
-                                <span>시스템 통합</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📍</i>
-                                <span>서울 영등포구</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>👥</i>
-                                <span>직원 200명</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📞</i>
-                                <span>02-4567-8901</span>
-                            </div>
-                        </div>
-
-                        <div class="partner-projects">
-                            <div class="project-count">6</div>
-                            <div class="project-label">완료 프로젝트</div>
-                        </div>
-
-                        <div class="partnership-duration">
-                            <div class="duration-text">협력 기간: 2022년 ~ 2023년</div>
-                        </div>
+                        <p class="partner-industry">시스템 통합</p>
+                        <span class="partner-status status-completed">완료</span>
                     </div>
 
                     <!-- 협력사 5 -->
                     <div class="partner-card">
-                        <div class="partner-logo">JKL</div>
-                        <span class="partner-status status-maintenance">유지보수</span>
+                        <div class="partner-logo" style="background-image: url('images/partner5.jpg');"></div>
                         <h3>JKL 인포메이션</h3>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
-                        
-                        <div class="partner-details">
-                            <div class="partner-detail">
-                                <i>🏢</i>
-                                <span>데이터 분석</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📍</i>
-                                <span>서울 송파구</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>👥</i>
-                                <span>직원 120명</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📞</i>
-                                <span>02-5678-9012</span>
-                            </div>
-                        </div>
-
-                        <div class="partner-projects">
-                            <div class="project-count">10</div>
-                            <div class="project-label">완료 프로젝트</div>
-                        </div>
-
-                        <div class="partnership-duration">
-                            <div class="duration-text">협력 기간: 2021년 ~ 현재</div>
-                        </div>
+                        <p class="partner-industry">데이터 분석</p>
+                        <span class="partner-status status-maintenance">유지보수</span>
                     </div>
 
                     <!-- 협력사 6 -->
                     <div class="partner-card">
-                        <div class="partner-logo">MNO</div>
-                        <span class="partner-status status-active">활성 협력</span>
+                        <div class="partner-logo" style="background-image: url('images/partner6.jpg');"></div>
                         <h3>MNO 커뮤니케이션</h3>
-                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                        
-                        <div class="partner-details">
-                            <div class="partner-detail">
-                                <i>🏢</i>
-                                <span>커뮤니케이션</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📍</i>
-                                <span>서울 종로구</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>👥</i>
-                                <span>직원 90명</span>
-                            </div>
-                            <div class="partner-detail">
-                                <i>📞</i>
-                                <span>02-6789-0123</span>
-                            </div>
-                        </div>
-
-                        <div class="partner-projects">
-                            <div class="project-count">7</div>
-                            <div class="project-label">완료 프로젝트</div>
-                        </div>
-
-                        <div class="partnership-duration">
-                            <div class="duration-text">협력 기간: 2023년 ~ 현재</div>
-                        </div>
+                        <p class="partner-industry">커뮤니케이션</p>
+                        <span class="partner-status status-active">활성 협력</span>
                     </div>
                 </div>
             </div>
