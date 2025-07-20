@@ -66,6 +66,13 @@
     text-transform: uppercase;
 }
 
+.highlight-number {
+    color: #e74c3c;
+    font-weight: 900;
+    font-size: 0.7rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
 .promotion-content {
     display: flex;
     flex-direction: column;
@@ -100,14 +107,30 @@
 }
 
 .promotion-contact .banner-phone {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: white;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #fff;
     display: block;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    animation: phone-pulse 2s infinite;
+}
+
+@keyframes phone-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+    }
 }
 
 /* 메인 콘텐츠 영역 조정 */
@@ -187,7 +210,8 @@
     }
     
     .promotion-contact .banner-phone {
-        font-size: 0.7rem;
-        padding: 4px 8px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        white-space: nowrap;
     }
 } 
