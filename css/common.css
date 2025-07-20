@@ -29,7 +29,7 @@ body {
 
 /* 히어로 섹션 */
 .hero {
-    background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+    background-color: #04080f;
     color: white;
     padding: 100px 0;
     text-align: center;
