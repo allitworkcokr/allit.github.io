@@ -1,0 +1,19 @@
+{
+  "name": "allit-website",
+  "version": "1.0.0",
+  "description": "Allit Company Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/",
+    "build": "echo 'Static site - no build needed'",
+    "serve": "python3 -m http.server 3000"
+  },
+  "keywords": ["website", "static", "html", "css", "javascript"],
+  "author": "Allit",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}
