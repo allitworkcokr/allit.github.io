@@ -182,7 +182,7 @@
         .partner-logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 12px;
         }
 
@@ -344,7 +344,7 @@
                     <!-- 프로젝트 1 -->
                     <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                <h3>HPM MES 시스템 고도화</h3>
+                <h3>HPM 글로벌 MES 시스템 고도화</h3>
                 <p>생산실적, 자재 투입, 품질검사 데이터를 통합 관리하는 MES 시스템을 고도화 개발 중입니다.  
                 공정별 실시간 모니터링과 Lot 추적 기능을 통해 불량률 감소와 생산 효율 향상을 목표로 합니다.</p>
                 
@@ -419,8 +419,8 @@
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/gravure2.jpg" alt="HPM" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            <div class="partner-logo has-image">
+                                <img src="images/hpm.svg" alt="HPM" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
                             </div>
                             <h3>HPM 글로벌</h3>
                             <p class="partner-industry">고품질 인쇄, 팻 food 패키징 </p>
@@ -553,6 +553,11 @@
             const partnerLogos = document.querySelectorAll('.partner-logo img');
             
             partnerLogos.forEach(img => {
+                // 이미 로드된 이미지 처리
+                if (img.complete && img.naturalHeight !== 0) {
+                    img.parentElement.classList.add('has-image');
+                }
+                
                 img.addEventListener('error', function() {
                     this.style.display = 'none';
                     this.parentElement.classList.remove('has-image');
