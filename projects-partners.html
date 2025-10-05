@@ -138,7 +138,7 @@
         /* 협력사 스타일 */
         .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 50px;
         }
@@ -213,6 +213,37 @@
             font-weight: 500;
         }
 
+        /* 협력사 카테고리 스타일 */
+        .partner-category {
+            margin-bottom: 60px;
+        }
+
+        .partner-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: #04080f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #507dbc, #a1c6ea);
+            border-radius: 2px;
+        }
+
         .stats-section {
             background-color: #04080f;
             color: white;
@@ -256,10 +287,14 @@
                 font-size: 2rem;
             }
             
-            .projects-grid,
-            .partners-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .project-card,
@@ -300,73 +335,61 @@
             <div class="container">
                 <h2 class="section-title">현재 진행중인 프로젝트</h2>
                 <div class="section-intro">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
+                    <p>올아이티는 다양한 산업 현장에서 MES, ERP, 웹 시스템 구축 프로젝트를 진행하고 있습니다.  
+                        제조·인쇄·패키징 분야의 고객사와 함께, 데이터 중심의 스마트 생산환경을 구현하고 있습니다.</p>
+                        <p>지금도 여러 기업과의 협력을 통해 시스템 통합, 클라우드 전환, 공정 자동화 등  
+                        실제 현장의 문제를 해결하는 프로젝트가 활발히 진행 중입니다.</p></div>
 
                 <div class="projects-grid">
                     <!-- 프로젝트 1 -->
                     <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                        <h3>E-커머스 플랫폼 개발</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                        
-                        <div class="project-tech">
-                            <div class="tech-tags">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">AWS</span>
-                            </div>
-                        </div>
+                <h3>HPM MES 시스템 고도화</h3>
+                <p>생산실적, 자재 투입, 품질검사 데이터를 통합 관리하는 MES 시스템을 고도화 개발 중입니다.  
+                공정별 실시간 모니터링과 Lot 추적 기능을 통해 불량률 감소와 생산 효율 향상을 목표로 합니다.</p>
+                
+                <div class="project-tech">
+                    <div class="tech-tags">
+                        <span class="tech-tag">.NET 8</span>
+                        <span class="tech-tag">SQL Server</span>
+                        <span class="tech-tag">DevExpress</span>
+                        <span class="tech-tag">WinForms</span>
+                    </div>
+                </div>
                     </div>
 
                     <!-- 프로젝트 2 -->
                     <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                        <h3>모바일 앱 개발</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-                        
-                        <div class="project-tech">
-                            <div class="tech-tags">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Redux</span>
-                                <span class="tech-tag">Google Cloud</span>
-                            </div>
-                        </div>
+                <h3>나업체 그라비아 ERP 고도화</h3>
+                <p>인쇄·라벨 제조공정에 특화된 ERP 솔루션을 커스터마이징 중입니다.  
+                BOM, 원가계산, 재고·입출고 관리 모듈을 통합하여 생산정보를 실시간으로 연동합니다.</p>
+                
+                <div class="project-tech">
+                    <div class="tech-tags">
+                        <span class="tech-tag">ASP.NET Core</span>
+                        <span class="tech-tag">EF Core 8</span>
+                        <span class="tech-tag">DevExtreme</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                </div>
                     </div>
 
                     <!-- 프로젝트 3 -->
                     <div class="project-card">
-                        <span class="project-status status-planning">기획단계</span>
-                        <h3>AI 기반 분석 시스템</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
-                        
-                        <div class="project-tech">
-                            <div class="tech-tags">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Kubernetes</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 프로젝트 4 -->
-                    <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                        <h3>클라우드 마이그레이션</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
-                        
-                        <div class="project-tech">
-                            <div class="tech-tags">
-                                <span class="tech-tag">AWS</span>
-                                <span class="tech-tag">Terraform</span>
-                                <span class="tech-tag">Ansible</span>
-                                <span class="tech-tag">Jenkins</span>
-                            </div>
-                        </div>
+                <h3>라업체 Web SI 통합포털 구축</h3>
+                <p>업무별 웹 시스템을 하나의 포털로 통합하는 Web SI 프로젝트를 진행 중입니다.  
+                사용자 맞춤 대시보드와 데이터 시각화 기능을 통해 관리 효율을 극대화합니다.</p>
+                
+                <div class="project-tech">
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Nginx</span>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
@@ -377,63 +400,114 @@
             <div class="container">
                 <h2 class="section-title">우리의 협력사</h2>
                 <div class="section-intro">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>올아이티는 단순한 시스템 납품이 아니라, 구축 이후의 <strong>지속적인 운영과 품질 개선</strong>을 중요하게 생각합니다.  
+                        이를 위해 각 분야의 전문 파트너들과 긴밀하게 협력하며 고객사의 안정적인 서비스를 지원하고 있습니다.</p>
+                        <p>시스템 유지보수, 업무 컨설팅, 클라우드 인프라, UI/UX 개선 등  
+                        프로젝트 이후에도 함께 성장하는 <strong>신뢰 기반의 파트너십</strong>을 이어가고 있습니다.</p>
+                    </div>
+
+                <!-- 그라비아 인쇄 업체 -->
+                <div class="partner-category">
+                    <h3 class="category-title">그라비아 인쇄</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/gravure1.jpg" alt="풍산그라비아" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>풍산그라비아</h3>
+                            <p class="partner-industry">그라비아 인쇄, 10도 인쇄, 티다이, 솔벤트, 제대, 슬리팅, 레이저, 실링 </p>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/gravure2.jpg" alt="HPM" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>HPM 글로벌</h3>
+                            <p class="partner-industry">고품질 인쇄, 팻 food 패키징 </p>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/gravure3.jpg" alt="아트프린트" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>KWC</h3>
+                            <p class="partner-industry">그라이바 인쇄</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="partners-grid">
-                    <!-- 협력사 1 -->
-                    <div class="partner-card">
-                        <div class="partner-logo">
-                            <img src="images/partner1.jpg" alt="ABC 테크놀로지" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                <!-- 박스 패키징 업체 -->
+                <div class="partner-category">
+                    <h3 class="category-title">박스 패키징</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/gravure1.jpg" alt="양지디앤피" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>양지디앤피</h3>
+                            <p class="partner-industry">박스 패키징, 옵셋, 플렉소, 하이브리드, 평압</p>
                         </div>
-                        <h3>ABC 테크놀로지</h3>
-                        <p class="partner-industry">IT 서비스</p>
-                    </div>
 
-                    <!-- 협력사 2 -->
-                    <div class="partner-card">
-                        <div class="partner-logo">
-                            <img src="images/partner2.jpg" alt="XYZ 솔루션즈" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/gravure2.jpg" alt="프리미엄프린팅" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>풍산그라비아</h3>
+                            <p class="partner-industry">고품질 인쇄</p>
                         </div>
-                        <h3>XYZ 솔루션즈</h3>
-                        <p class="partner-industry">소프트웨어</p>
-                    </div>
 
-                    <!-- 협력사 3 -->
-                    <div class="partner-card">
-                        <div class="partner-logo">
-                            <img src="images/partner3.jpg" alt="DEF 디지털" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/gravure3.jpg" alt="아트프린트" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>아트프린트</h3>
+                            <p class="partner-industry">예술 인쇄</p>
                         </div>
-                        <h3>DEF 디지털</h3>
-                        <p class="partner-industry">디지털 마케팅</p>
                     </div>
+                </div>
 
-                    <!-- 협력사 4 -->
-                    <div class="partner-card">
-                        <div class="partner-logo">
-                            <img src="images/partner4.jpg" alt="GHI 시스템즈" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                <!-- 온도센서 제조업 -->
+                <div class="partner-category">
+                    <h3 class="category-title">온도센서 제조업</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/sensor1.jpg" alt="온도기술" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>온도기술</h3>
+                            <p class="partner-industry">온도센서 제조, Sensor System, Flow System, Control System</p>
                         </div>
-                        <h3>GHI 시스템즈</h3>
-                        <p class="partner-industry">시스템 통합</p>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/sensor2.jpg" alt="한국쎄미텍" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>한국쎄미텍</h3>
+                            <p class="partner-industry">정밀 센서, Surge Absorber, 전류디바이스, 적외선센서</p>
+                        </div>
+
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/sensor3.jpg" alt="디지털온도" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>디지털온도</h3>
+                            <p class="partner-industry">디지털 센서</p>
+                        </div>
                     </div>
+                </div>
 
-                    <!-- 협력사 5 -->
-                    <div class="partner-card">
-                        <div class="partner-logo">
-                            <img src="images/partner5.jpg" alt="JKL 인포메이션" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                <!-- 대형 제조업 -->
+                <div class="partner-category">
+                    <h3 class="category-title">대형 제조업</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <div class="partner-logo">
+                                <img src="images/manufacturing1.jpg" alt="글로벌제조" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
+                            </div>
+                            <h3>에스틸</h3>
+                            <p class="partner-industry">굴삭기 제조업, 굴착기, PLIE DRIVER, 웨이트</p>
                         </div>
-                        <h3>JKL 인포메이션</h3>
-                        <p class="partner-industry">데이터 분석</p>
-                    </div>
 
-                    <!-- 협력사 6 -->
-                    <div class="partner-card">
-                        <div class="partner-logo">
-                            <img src="images/partner6.jpg" alt="MNO 커뮤니케이션" onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                        </div>
-                        <h3>MNO 커뮤니케이션</h3>
-                        <p class="partner-industry">커뮤니케이션</p>
                     </div>
                 </div>
             </div>
@@ -448,7 +522,7 @@
                         <div class="stat-label">총 협력사</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">150+</div>
+                        <div class="stat-number">50+</div>
                         <div class="stat-label">완료 프로젝트</div>
                     </div>
                     <div class="stat-item">
