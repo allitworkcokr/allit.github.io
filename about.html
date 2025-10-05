@@ -3,161 +3,295 @@
 <head>
     <title>올아이티 - 회사소개</title>
     <script src="js/head-loader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        .about-hero {
-            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 히어로 섹션 */
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: white;
-            padding: 120px 0 80px;
+            padding: 120px 0 100px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .about-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
         }
 
-        .about-hero p {
-            font-size: 1.3rem;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
             margin-bottom: 30px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(45deg, #ffffff, #a8d8ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
             opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            letter-spacing: 0.02em;
         }
 
-        .company-section {
-            padding: 80px 0;
-            background-color: white;
-        }
-
-        .company-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #04080f;
-        }
-
-        .company-content {
+        .hero-description {
+            font-size: 1.2rem;
+            font-weight: 400;
             max-width: 800px;
             margin: 0 auto;
+            opacity: 0.8;
             line-height: 1.8;
         }
 
-        .company-content p {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: #04080f;
-            text-align: justify;
+        /* 회사 소개 섹션 */
+        .company-intro {
+            padding: 100px 0;
+            background: #ffffff;
         }
 
-        .company-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-            padding: 40px 0;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
+        .section-title {
+            font-size: 3rem;
             font-weight: 700;
-            color: #507dbc;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #04080f;
-            font-weight: 600;
-        }
-
-        .mission-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-
-        .mission-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .mission-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
             text-align: center;
-            color: #04080f;
+            margin-bottom: 60px;
+            color: #1a1a2e;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
         }
 
-        .mission-content p {
+        .company-text {
+            font-size: 1.3rem;
+            line-height: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 80px;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .highlight-text {
+            color: white;
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        /* 핵심사업 섹션 */
+        .core-business {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .business-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #0f3460;
+        }
+
+        .business-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .business-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+        }
+
+        .business-description {
             font-size: 1.1rem;
-            margin-bottom: 25px;
-            color: #04080f;
-            text-align: justify;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
         }
 
-        .values-section {
-            padding: 80px 0;
-            background-color: white;
+        .business-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .business-features li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .business-features li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #0f3460;
+            font-size: 0.8rem;
+        }
+
+        /* 핵심가치 섹션 */
+        .core-values {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .values-intro {
+            font-size: 1.3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #555;
+            line-height: 1.8;
         }
 
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
-        .value-item {
+        .value-card {
             text-align: center;
-            padding: 30px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
 
-        .value-item:hover {
+        .value-card:hover {
+            border-color: #0f3460;
             transform: translateY(-5px);
         }
 
-        .value-item h3 {
-            font-size: 1.5rem;
+        .value-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f3460;
             margin-bottom: 15px;
-            color: #507dbc;
+            letter-spacing: -0.01em;
         }
 
-        .value-item p {
-            color: #04080f;
+        .value-description {
+            font-size: 1rem;
+            color: #666;
             line-height: 1.6;
         }
 
+        /* 비전 섹션 */
+        .vision-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .vision-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .vision-content {
+            font-size: 1.3rem;
+            line-height: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .vision-highlight {
+            color: #a8d8ea;
+            font-weight: 600;
+        }
+
+        /* 반응형 디자인 */
         @media (max-width: 768px) {
-            .about-hero h1 {
+            .hero-title {
                 font-size: 2.5rem;
             }
             
-            .about-hero p {
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .company-text {
                 font-size: 1.1rem;
             }
             
-            .company-section h2,
-            .mission-content h2 {
-                font-size: 2rem;
+            .business-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
             
-            .company-stats {
-                grid-template-columns: repeat(2, 1fr);
+            .business-card {
+                padding: 30px 25px;
             }
             
             .values-grid {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .vision-title {
+                font-size: 2.2rem;
+            }
+            
+            .vision-content {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -176,91 +310,103 @@
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
         <!-- 히어로 섹션 -->
-        <section class="about-hero">
+        <section class="hero-section">
             <div class="container">
-                <h1>회사소개</h1>
-                <p>혁신적인 기술과 창의적인 솔루션으로 미래를 만들어가는 올아이티입니다</p>
-            </div>
-        </section>
-
-        <!-- 회사 소개 섹션 -->
-        <section class="company-section">
-            <div class="container">
-                <h2>올아이티에 대하여</h2>
-                <div class="company-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-
-                <!-- 회사 통계 -->
-                <div class="company-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">완료 프로젝트</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">만족한 고객</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5년</div>
-                        <div class="stat-label">업계 경험</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">고객 지원</div>
-                    </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">회사소개</h1>
+                    <p class="hero-subtitle">고객이 최고의 품질을 경험하도록 만드는 IT 파트너</p>
+                    <p class="hero-description">
+                        <span class="highlight-text">올아이티(ALL IT)</span>는 제조현장의 디지털 혁신을 선도하는 MES 및 그라비아 특화 ERP 전문기업입니다.
+                        우리는 단순한 시스템 구축이 아니라, 고객이 직접 체감할 수 있는 품질 중심의 솔루션을 제공합니다.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 미션 섹션 -->
-        <section class="mission-section">
+        <!-- 핵심사업 섹션 -->
+        <section class="core-business">
             <div class="container">
-                <div class="mission-content">
-                    <h2>우리의 미션</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                <h2 class="section-title">핵심사업</h2>
+                <div class="business-grid">
+                    <div class="business-card">
+                        <h3 class="business-title">MES 솔루션</h3>
+                        <p class="business-description">
+                            생산, 품질, 자재, 설비 데이터를 통합 관리하여
+                            현장의 효율성과 정확성을 극대화합니다.
+                        </p>
+                        <ul class="business-features">
+                            <li>실시간 생산 현황 모니터링</li>
+                            <li>품질 데이터 통합 관리</li>
+                            <li>자재 추적 및 관리</li>
+                            <li>설비 상태 모니터링</li>
+                        </ul>
+                    </div>
                     
-                    <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+                    <div class="business-card">
+                        <h3 class="business-title">그라비아 특화 ERP 솔루션</h3>
+                        <p class="business-description">
+                            인쇄·라벨·패키징 산업에 최적화된 ERP로
+                            공정별 원가, 재고, Lot 추적을 정밀하게 지원합니다.
+                        </p>
+                        <ul class="business-features">
+                            <li>공정별 원가 계산</li>
+                            <li>재고 실시간 관리</li>
+                            <li>Lot 추적 시스템</li>
+                            <li>산업별 맞춤 기능</li>
+                        </ul>
+                    </div>
                     
-                    <p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus.</p>
+                    <div class="business-card">
+                        <h3 class="business-title">WEB SI 사업</h3>
+                        <p class="business-description">
+                            기업 맞춤형 웹 시스템을
+                            기획부터 개발까지 One-Stop으로 제공합니다.
+                        </p>
+                        <ul class="business-features">
+                            <li>기획 및 설계</li>
+                            <li>개발 및 구축</li>
+                            <li>운영 및 유지보수</li>
+                            <li>맞춤형 솔루션</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 핵심 가치 섹션 -->
-        <section class="values-section">
+        <!-- 핵심가치 섹션 -->
+        <section class="core-values">
             <div class="container">
-                <h2>핵심 가치</h2>
+                <h2 class="section-title">핵심가치</h2>
+                <p class="values-intro">
+                    올아이티는 정확성·효율성·신뢰성을 기반으로
+                    고객이 최고의 품질을 경험할 수 있는 솔루션을 만드는 것을 최우선 가치로 삼습니다.
+                </p>
                 <div class="values-grid">
-                    <div class="value-item">
-                        <h3>혁신</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <div class="value-card">
+                        <h3 class="value-title">정확성</h3>
+                        <p class="value-description">데이터 중심의 의사결정 지원</p>
                     </div>
-                    <div class="value-item">
-                        <h3>품질</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                    <div class="value-card">
+                        <h3 class="value-title">효율성</h3>
+                        <p class="value-description">자동화와 최적화를 통한 생산성 향상</p>
                     </div>
-                    <div class="value-item">
-                        <h3>신뢰</h3>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>협력</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>지속가능성</h3>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
-                    </div>
-                    <div class="value-item">
-                        <h3>고객 중심</h3>
-                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                    <div class="value-card">
+                        <h3 class="value-title">신뢰성</h3>
+                        <p class="value-description">안정적인 서비스와 지속적인 기술지원</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 비전 섹션 -->
+        <section class="vision-section">
+            <div class="container">
+                <h2 class="vision-title">비전</h2>
+                <p class="vision-content">
+                    올아이티는 제조기업의 디지털 전환을 이끄는 <span class="vision-highlight">기술 파트너</span>입니다.
+                    품질과 데이터를 중심으로,
+                    고객의 경쟁력을 강화하는 스마트 제조 환경을 만들어 갑니다.
+                </p>
             </div>
         </section>
     </main>
