@@ -52,7 +52,7 @@
     text-decoration: none;
     font-weight: 500;
     padding: 10px 0;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
     position: relative;
 }
 
@@ -64,7 +64,7 @@
     width: 0;
     height: 2px;
     background-color: #a1c6ea;
-    transition: width 0.3s ease;
+    transition: width 0.2s ease-in-out;
 }
 
 .nav-link:hover::after {
@@ -87,7 +87,7 @@
 
 .submenu {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 5px); /* 간격을 줄여서 마우스 이벤트 끊김 방지 */
     left: 0;
     background: rgba(4, 8, 15, 0.98);
     backdrop-filter: blur(10px);
@@ -97,16 +97,26 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out; /* 더 빠른 전환으로 반응성 개선 */
     z-index: 1001;
     padding: 8px 0;
     border: 1px solid rgba(161, 198, 234, 0.3);
+    pointer-events: none; /* 초기에는 마우스 이벤트 비활성화 */
 }
 
 .has-submenu:hover .submenu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto; /* hover 시 마우스 이벤트 활성화 */
+}
+
+/* 서브메뉴 자체에 hover 시에도 유지되도록 */
+.submenu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .submenu li {
@@ -120,7 +130,7 @@
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
     border-left: 3px solid transparent;
 }
 
@@ -134,7 +144,7 @@
 .dropdown-arrow {
     font-size: 0.7rem;
     margin-left: 4px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease-in-out;
     display: inline-block;
 }
 

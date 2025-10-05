@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
+    const submenuItems = document.querySelectorAll('.has-submenu');
+
+    // 서브메뉴 hover 효과를 위한 타이머
+    let hoverTimer = null;
 
     // 햄버거 메뉴 토글
     hamburger.addEventListener('click', function() {
@@ -16,6 +20,53 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
+        });
+    });
+
+    // 서브메뉴 hover 효과 개선
+    submenuItems.forEach(item => {
+        const submenu = item.querySelector('.submenu');
+        
+        // 마우스 진입 시
+        item.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => {
+                submenu.style.opacity = '1';
+                submenu.style.visibility = 'visible';
+                submenu.style.transform = 'translateY(0)';
+                submenu.style.pointerEvents = 'auto';
+            }, 50); // 짧은 지연으로 안정성 확보
+        });
+
+        // 마우스 벗어남 시
+        item.addEventListener('mouseleave', function() {
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => {
+                submenu.style.opacity = '0';
+                submenu.style.visibility = 'hidden';
+                submenu.style.transform = 'translateY(-10px)';
+                submenu.style.pointerEvents = 'none';
+            }, 100); // 약간의 지연으로 깜빡임 방지
+        });
+
+        // 서브메뉴 자체에 마우스 진입 시
+        submenu.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimer);
+            submenu.style.opacity = '1';
+            submenu.style.visibility = 'visible';
+            submenu.style.transform = 'translateY(0)';
+            submenu.style.pointerEvents = 'auto';
+        });
+
+        // 서브메뉴에서 마우스 벗어남 시
+        submenu.addEventListener('mouseleave', function() {
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => {
+                submenu.style.opacity = '0';
+                submenu.style.visibility = 'hidden';
+                submenu.style.transform = 'translateY(-10px)';
+                submenu.style.pointerEvents = 'none';
+            }, 100);
         });
     });
 
