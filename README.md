@@ -2,6 +2,8 @@
 
 Allit 회사 웹사이트입니다.
 
+https://allitworkcokr.github.io/allit.github.io/
+
 ## 로컬 개발 환경 설정
 
 ### 방법 1: Node.js 사용 (권장)
