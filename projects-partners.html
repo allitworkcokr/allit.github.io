@@ -147,7 +147,7 @@
         .partner-card {
             background: white;
             border-radius: 15px;
-            padding: 25px;
+            padding: 20px 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #e9ecef;
@@ -155,8 +155,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 180px;
+            justify-content: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #507dbc, #a1c6ea);
         }
 
         .partner-card:hover {
@@ -164,59 +175,45 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
-        .partner-logo {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #507dbc, #a1c6ea);
-            border-radius: 12px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .partner-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 12px;
-        }
-
-        .partner-logo::before {
-            content: "🏢";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5rem;
-            z-index: 1;
-        }
-
-        .partner-logo.has-image::before {
-            display: none;
-        }
-
         .partner-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
             color: #04080f;
             font-weight: 600;
+            flex-shrink: 0;
+            position: relative;
+            padding-top: 8px;
+        }
+
+        .partner-card h3::before {
+            content: '▸';
+            color: #507dbc;
+            margin-right: 8px;
+            font-size: 0.9rem;
         }
 
         .partner-industry {
             font-size: 0.9rem;
             color: #6c757d;
             font-weight: 500;
+            line-height: 1.6;
+            margin: 0;
+            padding-top: 4px;
         }
 
         /* 협력사 카테고리 스타일 */
         .partner-category {
             margin-bottom: 60px;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .partner-category:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+
+        .partner-category:nth-child(even) {
+            background-color: white;
         }
 
         .partner-category:last-child {
@@ -347,7 +344,7 @@
                     <!-- 프로젝트 1 -->
                     <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                        <h3>HPM 글로벌 MES 시스템 고도화</h3>
+                        <h3>A기업 MES 시스템 고도화</h3>
                         <p>생산실적, 자재 투입, 품질검사 데이터를 통합 관리하는 MES 시스템을 고도화 개발 중입니다.
                             공정별 실시간 모니터링과 Lot 추적 기능을 통해 불량률 감소와 생산 효율 향상을 목표로 합니다.</p>
 
@@ -364,7 +361,7 @@
                     <!-- 프로젝트 2 -->
                     <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                        <h3>나업체 그라비아 ERP 고도화</h3>
+                        <h3>B업체 그라비아 ERP 고도화</h3>
                         <p>인쇄·라벨 제조공정에 특화된 ERP 솔루션을 커스터마이징 중입니다.
                             BOM, 원가계산, 재고·입출고 관리 모듈을 통합하여 생산정보를 실시간으로 연동합니다.</p>
 
@@ -381,7 +378,7 @@
                     <!-- 프로젝트 3 -->
                     <div class="project-card">
                         <span class="project-status status-ongoing">진행중</span>
-                        <h3>라업체 Web SI 통합포털 구축</h3>
+                        <h3>C업체 Web SI 통합포털 구축</h3>
                         <p>업무별 웹 시스템을 하나의 포털로 통합하는 Web SI 프로젝트를 진행 중입니다.
                             사용자 맞춤 대시보드와 데이터 시각화 기능을 통해 관리 효율을 극대화합니다.</p>
 
@@ -394,6 +391,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -414,32 +412,48 @@
                     <h3 class="category-title">그라비아 인쇄</h3>
                     <div class="partners-grid">
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/poongsan.svg" alt="풍산그라비아"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>풍산그라비아</h3>
                             <p class="partner-industry">그라비아 인쇄, 10도 인쇄, 티다이, 솔벤트, 제대, 슬리팅, 레이저, 실링 </p>
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo has-image">
-                                <img src="images/hpm.svg" alt="HPM"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>HPM 글로벌</h3>
-                            <p class="partner-industry">고품질 인쇄, 팻 food 패키징 </p>
+                            <p class="partner-industry">고품질 인쇄, 팻 food 패키징, 제대, 친환경 제품 개발, 재활용 포장재, 포장재 설계 및 디자인 </p>
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/gravure3.jpg" alt="아트프린트"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>KWC</h3>
-                            <p class="partner-industry">그라이바 인쇄</p>
+                            <p class="partner-industry">수축필름 및 친환경 코팅 사업, 그라비아 인쇄, PET 수축라벨, OPS 수축라벨, PP 수축필름, 생분해성 식품지
+                                코팅</p>
                         </div>
                     </div>
+
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <h3>새롬</h3>
+                            <p class="partner-industry">디자인, 탄소응용식품 포장지, 인쇄 7/9도기, 솔벤트 드라이기, EC코팅기, 슬리터 </p>
+                        </div>
+                        <div class="partner-card">
+                            <h3>정명하이텍</h3>
+                            <p class="partner-industry">그라비아 인쇄, 슬리팅, 합지 </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="partner-category">
+                    <h3 class="category-title">라벨 인쇄</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <h3>영신피앤엘</h3>
+                            <p class="partner-industry">ESG경영, 옵셋, 간결식, 플로타리, 플렉소, 디지털, 하이브리드, 평압, 친환경종이라벨, 틱톡캡 라벨,
+                                이중라벨, 이지필 리무벌 띠지라벨 </p>
+                        </div>
+
+                    </div>
+
                 </div>
 
                 <!-- 박스 패키징 업체 -->
@@ -447,31 +461,47 @@
                     <h3 class="category-title">박스 패키징</h3>
                     <div class="partners-grid">
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/gravure1.jpg" alt="양지디앤피"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>양지디앤피</h3>
-                            <p class="partner-industry">박스 패키징, 옵셋, 플렉소, 하이브리드, 평압</p>
+                            <p class="partner-industry">푸드패키지(베이커리), 컬럼박스 연구 개발, 농수산물 패키지, 건강기능식품, 단상자, 싸바리, 달력/다이어리,
+                                전단지,리플렛, 쇼핑백, 라벨 </p>
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/gravure2.jpg" alt="프리미엄프린팅"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
-                            <h3>풍산그라비아</h3>
-                            <p class="partner-industry">고품질 인쇄</p>
+                            <h3>대흥</h3>
+                            <p class="partner-industry">박스 패키징, 샘플기, CTP, 재단기, 코팅기, 앰보기, 금박기, 골갯터, 톰슨기 </p>
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/gravure3.jpg" alt="아트프린트"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
-                            <h3>아트프린트</h3>
-                            <p class="partner-industry">예술 인쇄</p>
+                            <h3>아트팩</h3>
+                            <p class="partner-industry">프리미엄 패키징 전문 기업, 싸바리, 시딩박스, 프레스킷, 단상자, 지관, 표지바리, 쇼핑백, 일반 케이스</p>
                         </div>
+                    </div>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <h3>유한팩</h3>
+                            <p class="partner-industry">수축라벨 일등기업, 인몰드, 리드지, 파우치, 인쇄, 경화, 슬리팅, 타공, 씰링, 제대, 스파우트, 포장 </p>
+                        </div>
+
+                        <div class="partner-card">
+                            <h3>신풍</h3>
+                            <p class="partner-industry">칼라박스, 합지, 싸바리, 제함박스, 카톤박스, 택배박스, 커스텀 박스 </p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- 대형 제조업 -->
+                <div class="partner-category">
+                    <h3 class="category-title">소재/의약/식품</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <h3>다인소재</h3>
+                            <p class="partner-industry">식품첨가물, 화장품원료, 원료의약품, 유산균 발효 천연보존료, 유통기한 연장제, 천연보존료, 기능성 감미료,
+                                증점안정제</p>
+                        </div>
+
                     </div>
                 </div>
 
@@ -480,30 +510,19 @@
                     <h3 class="category-title">온도센서 제조업</h3>
                     <div class="partners-grid">
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/sensor1.jpg" alt="온도기술"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>온도기술</h3>
                             <p class="partner-industry">온도센서 제조, Sensor System, Flow System, Control System</p>
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/sensor2.jpg" alt="한국쎄미텍"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>한국쎄미텍</h3>
                             <p class="partner-industry">정밀 센서, Surge Absorber, 전류디바이스, 적외선센서</p>
                         </div>
 
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/sensor3.jpg" alt="디지털온도"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
-                            <h3>디지털온도</h3>
-                            <p class="partner-industry">디지털 센서</p>
+                            <h3>푸름케이디</h3>
+                            <p class="partner-industry">산업용 저항기, 메탈클래드저항기, 크레인저항기, 시멘트 저항기, 권선 저항기, 코일 저항기, LOAD BANK,
+                                철도차량 전장품, 철도차량 저항기, EV 전장품, 전기포크레인, 산업용 전장품</p>
                         </div>
                     </div>
                 </div>
@@ -513,10 +532,6 @@
                     <h3 class="category-title">대형 제조업</h3>
                     <div class="partners-grid">
                         <div class="partner-card">
-                            <div class="partner-logo">
-                                <img src="images/manufacturing1.jpg" alt="글로벌제조"
-                                    onerror="this.style.display='none'; this.parentElement.classList.remove('has-image');">
-                            </div>
                             <h3>에스틸</h3>
                             <p class="partner-industry">굴삭기 제조업, 굴착기, PLIE DRIVER, 웨이트</p>
                         </div>
@@ -560,28 +575,6 @@
     <script src="js/banner-loader.js"></script>
     <script src="js/footer-loader.js"></script>
 
-    <script>
-        // 협력사 이미지 로드 실패 시 기본 아이콘 표시
-        document.addEventListener('DOMContentLoaded', function () {
-            const partnerLogos = document.querySelectorAll('.partner-logo img');
-
-            partnerLogos.forEach(img => {
-                // 이미 로드된 이미지 처리
-                if (img.complete && img.naturalHeight !== 0) {
-                    img.parentElement.classList.add('has-image');
-                }
-
-                img.addEventListener('error', function () {
-                    this.style.display = 'none';
-                    this.parentElement.classList.remove('has-image');
-                });
-
-                img.addEventListener('load', function () {
-                    this.parentElement.classList.add('has-image');
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

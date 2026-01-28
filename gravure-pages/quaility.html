@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>올아이티 - 품질 관리</title>
+    <script src="../js/head-loader.js"></script>
+    <link rel="stylesheet" href="../css/gravure-pages-common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>품질 관리</h1>
+                <p>검사 기준과 불량 분석을 표준화해 품질 리스크를 줄이고 고객 신뢰도를 높입니다.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">품질 관리 화면</h2>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/quality1.png" alt="제품검사" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">제품검사</h3>
+                        <ul class="screen-list">
+                            <li>제품별 검사 기준과 샘플링 규칙을 관리할 수 있습니다.</li>
+                            <li>생산 완료된 제품에 대한 검사를 진행하여 불량을 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/quality2.png" alt="공정불량취소" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">공정불량취소</h3>
+                        <ul class="screen-list">
+                            <li>생산 시 발생한 불량정보를 취소 할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/quality3.png" alt="수입검사(원단)" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">수입검사(원단)</h3>
+                        <ul class="screen-list">
+                            <li>원단이 검사품일 경우 수입검사를 진행할 수 있습니다.</li>
+                            <li>검사 내용을 수량, 색상, 검사결과로 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/quality4.png" alt="검사항목 등록" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">검사항목 등록</h3>
+                        <ul class="screen-list">
+                            <li>공정별 검사항목을 등록 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-map">
+                    <h3 class="menu-map-title">품질관리 구성도</h3>
+                    <div class="menu-map-grid">
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">제품 검사</span>
+                            <ul class="menu-map-items">
+                                <li>제품검사</li>
+                                <li>공정불량취소</li>
+                                <li>공정검사대장</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">수입 검사</span>
+                            <ul class="menu-map-items">
+                                <li>수입검사(원단)</li>
+                                <li>수입검사(잉크)</li>
+                                <li>기타입고의뢰수입검사</li>
+                                <li>수입검사내역</li>
+                                <li>입고반송현황</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">판정관리</span>
+                            <ul class="menu-map-items">
+                                <li>공정별 검사항목 등록</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">폐기관리</span>
+                            <ul class="menu-map-items">
+                                <li>부적합등록</li>
+                                <li>폐기확정</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-quick-links></div>
+
+                <div style="margin-top: 32px; text-align: center;">
+                    <a href="gravure-mes.html" class="back-link">← 제품 소개로 돌아가기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="image-modal-content">
+            <button type="button" class="modal-close" aria-label="닫기">×</button>
+            <button type="button" class="modal-nav modal-prev" aria-label="이전 이미지">‹</button>
+            <button type="button" class="modal-nav modal-next" aria-label="다음 이미지">›</button>
+            <img src="" alt="" id="imageModalContent">
+        </div>
+    </div>
+
+    <script src="../js/nav-loader.js"></script>
+    <script src="../js/banner-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+    <script src="../js/gravure-quick-links-loader.js"></script>
+    <script src="../js/image-modal.js"></script>
+</body>
+
+</html>

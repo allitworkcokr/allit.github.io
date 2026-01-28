@@ -1,4 +1,24 @@
 // 네비게이션 로더
+function getBasePath() {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    if (pathParts.length <= 1) {
+        return '';
+    }
+    return '../'.repeat(pathParts.length - 1);
+}
+
+function isRelativeLink(href) {
+    return (
+        href &&
+        !href.startsWith('http://') &&
+        !href.startsWith('https://') &&
+        !href.startsWith('mailto:') &&
+        !href.startsWith('tel:') &&
+        !href.startsWith('#') &&
+        !href.startsWith('/')
+    );
+}
+
 class NavLoader {
     constructor() {
         this.navContainer = null;
@@ -7,19 +27,31 @@ class NavLoader {
 
     // 네비게이션 로드
     async loadNavigation() {
+        this.navContainer = document.querySelector('.navbar');
+        if (this.navContainer) {
+            this.navContainer.classList.add('is-loading');
+        }
         try {
-            const response = await fetch('components/nav.html');
+            const basePath = getBasePath();
+            const response = await fetch(`${basePath}components/nav.html`);
             const navHtml = await response.text();
             
             // 네비게이션 요소 찾기
-            this.navContainer = document.querySelector('.navbar');
             if (this.navContainer) {
                 this.navContainer.innerHTML = navHtml;
+                this.rewriteLinks(basePath);
                 this.setCurrentPage();
                 this.initializeNavigation();
+                requestAnimationFrame(() => {
+                    this.navContainer.classList.add('is-loaded');
+                    this.navContainer.classList.remove('is-loading');
+                });
             }
         } catch (error) {
             console.error('네비게이션 로드 실패:', error);
+            if (this.navContainer) {
+                this.navContainer.classList.remove('is-loading');
+            }
         }
     }
 
@@ -30,9 +62,25 @@ class NavLoader {
         // 현재 페이지 메뉴 활성화
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === this.currentPage || (this.currentPage === '' && href === 'index.html')) {
+            const href = link.getAttribute('href') || '';
+            const hrefTarget = href.split('#')[0];
+            const hrefPage = hrefTarget.split('/').pop();
+            if (hrefPage === this.currentPage || (this.currentPage === '' && hrefPage === 'index.html')) {
                 link.classList.add('active');
+            }
+        });
+    }
+
+    rewriteLinks(basePath) {
+        if (!this.navContainer || !basePath) {
+            return;
+        }
+
+        const links = this.navContainer.querySelectorAll('a[href]');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (isRelativeLink(href)) {
+                link.setAttribute('href', `${basePath}${href}`);
             }
         });
     }

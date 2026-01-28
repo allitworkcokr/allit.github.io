@@ -1,0 +1,54 @@
+ .quick-links {
+     margin-top: 50px;
+ }
+
+ .quick-links-title {
+     font-size: 1.6rem;
+     text-align: center;
+     margin-bottom: 24px;
+     color: #04080f;
+     font-weight: 600;
+ }
+
+ .quick-links-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 18px;
+ }
+
+ .quick-link-card {
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+     padding: 18px 20px;
+     border-radius: 14px;
+     border: 1px solid #e9ecef;
+     background: #ffffff;
+     text-decoration: none;
+     color: inherit;
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .quick-link-card:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+ }
+
+ .quick-link-title {
+     font-size: 1rem;
+     font-weight: 600;
+     color: #04080f;
+ }
+
+ .quick-link-desc {
+     font-size: 0.9rem;
+     color: #6c757d;
+     line-height: 1.4;
+ }
+
+ .quick-link-cta {
+     font-size: 0.9rem;
+     font-weight: 600;
+     color: #507dbc;
+ }

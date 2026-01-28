@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>올아이티 - 영업 관리</title>
+    <script src="../js/head-loader.js"></script>
+    <link rel="stylesheet" href="../css/gravure-pages-common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>수주(주문) 기반 영업 관리</h1>
+                <p>수주, 출고, 매출까지 전 과정을 연결하여 영업팀과 현장이 같은 데이터를 기준으로 움직입니다.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">영업 관리 화면</h2>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/sales1.png" alt="수주(주문) 등록" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">수주(주문) 등록</h3>
+                        <ul class="screen-list">
+                            <li>고객의 수주(주문) 정보를 등록하고 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/sales2.png" alt="출고지시" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">출고지시</h3>
+                        <ul class="screen-list">
+                            <li>수주(주문)을 기반으로 한 출고지시를 관리할 수 있습니다.</li>
+                            <li>출고별 운송방법, 운송비 정보를 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/sales3.png" alt="출고처리(로트)" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">출고처리(로트)</h3>
+                        <ul class="screen-list">
+                            <li>실제 출고될 제품을 로트 단위로 등록할 수 있습니다.</li>
+                            <li>Lot에 기반하여 출고 수량을 분할 출고 할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/sales4.png" alt="기타 출고" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">기타 출고</h3>
+                        <ul class="screen-list">
+                            <li>수주(주문)를 수동으로 연결하고 출고수량과 단가를 별도로 처리를 할 수 있습니다.</li>
+                            <li>출고 정보를 직접 입력합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-map">
+                    <h3 class="menu-map-title">영업관리 구성도</h3>
+                    <div class="menu-map-grid">
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">수주 관리</span>
+                            <ul class="menu-map-items">
+                                <li>수주(주문) 등록</li>
+                                <li>수주현황</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">출고 관리</span>
+                            <ul class="menu-map-items">
+                                <li>출고지시</li>
+                                <li>출고내역(내수)</li>
+                                <li>출고내역(수출)</li>
+                                <li>출고현황</li>
+                                <li>출고집계표</li>
+                                <li>출고처리(Lot)</li>
+                                <li>출고내역 조회</li>
+                                <li>기타출고</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">운송 관리</span>
+                            <ul class="menu-map-items">
+                                <li>운송마감관리</li>
+                                <li>운송원장</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">임가공관리</span>
+                            <ul class="menu-map-items">
+                                <li>임가공단가관리</li>
+                                <li>임가공매출마감</li>
+                                <li>임가공매출현황</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div data-quick-links></div>
+
+                <div style="margin-top: 32px; text-align: center;">
+                    <a href="gravure-mes.html" class="back-link">← 제품 소개로 돌아가기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="image-modal-content">
+            <button type="button" class="modal-close" aria-label="닫기">×</button>
+            <button type="button" class="modal-nav modal-prev" aria-label="이전 이미지">‹</button>
+            <button type="button" class="modal-nav modal-next" aria-label="다음 이미지">›</button>
+            <img src="" alt="" id="imageModalContent">
+        </div>
+    </div>
+
+    <script src="../js/nav-loader.js"></script>
+    <script src="../js/banner-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+    <script src="../js/gravure-quick-links-loader.js"></script>
+    <script src="../js/image-modal.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,12 @@
 // 배너 로더
+function getBasePath() {
+    const pathParts = window.location.pathname.split('/').filter(Boolean);
+    if (pathParts.length <= 1) {
+        return '';
+    }
+    return '../'.repeat(pathParts.length - 1);
+}
+
 class BannerLoader {
     constructor() {
         this.bannerContainer = null;
@@ -7,7 +15,8 @@ class BannerLoader {
     // 배너 로드
     async loadBanner() {
         try {
-            const response = await fetch('components/banner.html');
+            const basePath = getBasePath();
+            const response = await fetch(`${basePath}components/banner.html`);
             const bannerHtml = await response.text();
 
             // 배너 요소 찾기

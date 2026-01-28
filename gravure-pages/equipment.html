@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>올아이티 - 설비 관리</title>
+    <script src="../js/head-loader.js"></script>
+    <link rel="stylesheet" href="../css/gravure-pages-common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>설비 관리</h1>
+                <p>설비의 가동 상태와 유지보수 이력을 통합해 안정적인 생산 운영을 지원합니다.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">설비 관리 화면</h2>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/equipment1.png" alt="설비정보" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">설비정보</h3>
+                        <ul class="screen-list">
+                            <li>설비 정보를 등록/조회 할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/equipment2.png" alt="수리내역등록" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">수리내역등록</h3>
+                        <ul class="screen-list">
+                            <li>설비 수리 내역을 등록/조회 할 수 있습니다.</li>
+                            <li>처리 비용 및 처리 시간을 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/equipment3.png" alt="비가동등록" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">비가동등록/확인</h3>
+                        <ul class="screen-list">
+                            <li>비가동 내역을 수동으로 등록/수정합니다.</li>
+                            <li>생산 실적 등록 시 입력한 비가동 내역을 확인하고 수정할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-map">
+                    <h3 class="menu-map-title">설비관리 구성도</h3>
+                    <div class="menu-map-grid">
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">설비기준관리</span>
+                            <ul class="menu-map-items">
+                                <li>설비 등록</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">수리이력 관리</span>
+                            <ul class="menu-map-items">
+                                <li>수리이력등록</li>
+                                <li>수리내역조회</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">비가동관리</span>
+                            <ul class="menu-map-items">
+                                <li>비가동기준정보등록</li>
+                                <li>비가동수동등록</li>
+                                <li>비가동내역조회</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-quick-links></div>
+
+                <div style="margin-top: 32px; text-align: center;">
+                    <a href="gravure-mes.html" class="back-link">← 제품 소개로 돌아가기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="image-modal-content">
+            <button type="button" class="modal-close" aria-label="닫기">×</button>
+            <button type="button" class="modal-nav modal-prev" aria-label="이전 이미지">‹</button>
+            <button type="button" class="modal-nav modal-next" aria-label="다음 이미지">›</button>
+            <img src="" alt="" id="imageModalContent">
+        </div>
+    </div>
+
+    <script src="../js/nav-loader.js"></script>
+    <script src="../js/banner-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+    <script src="../js/gravure-quick-links-loader.js"></script>
+    <script src="../js/image-modal.js"></script>
+</body>
+
+</html>

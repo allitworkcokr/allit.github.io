@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>올아이티 - 그라비아 인쇄 특화 MES</title>
+    <script src="../js/head-loader.js"></script>
+    <link rel="stylesheet" href="../css/gravure-pages-common.css">
+    <style>
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: nowrap;
+        }
+
+        .section:nth-child(odd) {
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #04080f;
+        }
+
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: #04080f;
+            margin-bottom: 20px;
+        }
+
+        .overview-image {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto 0;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+            background: #ffffff;
+        }
+
+        /* 그라비아 인쇄 특화 스타일 */
+        .gravure-overview {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .overview-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e9ecef;
+            text-align: center;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .overview-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #507dbc;
+        }
+
+        .overview-card h3 {
+            font-size: 1.5rem;
+            color: #04080f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .overview-card p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        /* 특화 기능 스타일 */
+        .specialized-features {
+            margin-top: 50px;
+        }
+
+        .feature-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-size: 2rem;
+            color: #04080f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+            color: #507dbc;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: #04080f;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            color: #04080f;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #507dbc;
+            font-weight: bold;
+        }
+
+        /* 프로세스 스타일 */
+        .process-flow {
+            margin-top: 50px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #507dbc;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #507dbc, #a1c6ea);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            color: #04080f;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* 장점 스타일 */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #507dbc;
+        }
+
+        .benefit-title {
+            font-size: 1.2rem;
+            color: #04080f;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .benefit-description {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        /* 바로가기 메뉴 */
+        .shortcut-section {
+            padding-top: 60px;
+        }
+
+        .shortcut-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .shortcut-card {
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .shortcut-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .shortcut-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #f1f3f5;
+        }
+
+        .shortcut-body {
+            padding: 20px 22px 24px;
+        }
+
+        .shortcut-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #04080f;
+        }
+
+        .shortcut-description {
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .shortcut-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.95rem;
+            color: #507dbc;
+            font-weight: 600;
+        }
+
+        /* CTA 섹션 */
+        .cta-section {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #a1c6ea;
+            color: #04080f;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            color: #04080f;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .overview-grid,
+            .features-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <!-- 왼쪽 배너 -->
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main-content">
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="container">
+                <h1>그라비아 인쇄 특화 MES</h1>
+                <p>그라비아 인쇄 업계의 특수한 요구사항을 <br />완벽하게 반영한 맞춤형 제조 실행 시스템</p>
+            </div>
+        </section>
+
+
+        <!-- 바로가기 메뉴 섹션 -->
+        <section class="section shortcut-section">
+            <div class="container">
+                <h2 class="section-title">그라비아 인쇄 MES 개요</h2>
+                <div class="section-intro">
+                    <p>그라비아 인쇄 공정의 핵심 데이터를 표준화하여 수주, 공정, 품질, 출하까지 하나의 흐름으로 연결합니다.</p>
+                    <p>현장 맞춤형 화면 구성과 자동화된 추적 관리로 생산성과 품질을 동시에 높이는 특화 MES입니다.</p>
+                </div>
+                <img src="../images/gravure/gravure-mes-overview.png" alt="그라비아 인쇄 MES 개요 다이어그램" class="overview-image">
+                <div data-quick-links></div>
+            </div>
+        </section>
+
+        <!-- CTA 섹션 -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">그라비아 인쇄의 혁신을 시작하세요</h2>
+                    <p class="cta-description">
+                        올아이티의 그라비아 인쇄 특화 MES로 인쇄 품질과 생산성을 혁신적으로 향상시켜보세요.<br>
+                        그라비아 인쇄 전문가들이 함께하여 최적의 솔루션을 제공합니다.
+                    </p>
+                    <a href="tel:010-8015-0400" class="cta-button">전화상담 010-8015-0400</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <script src="../js/nav-loader.js"></script>
+    <script src="../js/banner-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+    <script src="../js/gravure-quick-links-loader.js"></script>
+</body>
+
+</html>

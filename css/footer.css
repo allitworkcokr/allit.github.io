@@ -3,6 +3,16 @@
     background-color: #04080f;
     color: #ecf0f1;
     margin-top: auto;
+    transition: opacity 0.2s ease-in;
+    will-change: opacity;
+}
+
+.footer.is-loading {
+    opacity: 0;
+}
+
+.footer.is-loaded {
+    opacity: 1;
 }
 
 .footer-container {

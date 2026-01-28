@@ -1,0 +1,9 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Process monitoring screen capture">
+  <rect width="800" height="450" fill="#f1f3f5"/>
+  <rect x="40" y="40" width="720" height="370" rx="16" fill="#ffffff" stroke="#dfe3e8"/>
+  <rect x="70" y="70" width="240" height="26" rx="6" fill="#507dbc"/>
+  <rect x="70" y="120" width="430" height="250" rx="10" fill="#eef2f7"/>
+  <rect x="520" y="120" width="210" height="120" rx="10" fill="#eef2f7"/>
+  <rect x="520" y="250" width="210" height="120" rx="10" fill="#eef2f7"/>
+  <text x="85" y="88" font-size="16" fill="#ffffff" font-family="Arial, sans-serif">Monitoring</text>
+</svg>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>올아이티 - 구매자재 관리</title>
+    <script src="../js/head-loader.js"></script>
+    <link rel="stylesheet" href="../css/gravure-pages-common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>구매자재 관리</h1>
+                <p>구매 요청부터 발주, 입고, 재고까지의 흐름을 한 화면에서 관리해 공급망 안정성과 원가 관리 정확도를 높입니다.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">구매자재 관리 화면</h2>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/purchase1.png" alt="수주별원단발주" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">수주별원단발주</h3>
+                        <ul class="screen-list">
+                            <li>수주(주문)의 생산 작업을 위해 필요한 원단을 발주를 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/purchase2.png" alt="개별원단발주" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">개별원단발주</h3>
+                        <ul class="screen-list">
+                            <li>수주(주문)과 관련없이 자재를 발주하여 재고를 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/purchase3.png" alt="원단입고" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">원단입고</h3>
+                        <ul class="screen-list">
+                            <li>수주별원단발주 또는 개별원단발주 원단을 입고할 수 있습니다.</li>
+                            <li>입고 자재는 개별 로트가 자동 발행되어 재고로 관리됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/purchase4.png" alt="원단라벨출력" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">원단라벨출력</h3>
+                        <ul class="screen-list">
+                            <li>입고 시 발행된 Lot를 기반으로 한 라벨이 출력됩니다.</li>
+                            <li>자재 외부에 발행된 라벨을 부착하여 자재 투입 시 추적이 가능합니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/purchase5.png" alt="원단입고마감" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">원단입고마감</h3>
+                        <ul class="screen-list">
+                            <li>입고 내역에 대한 금액 마감을 관리할 수 있습니다.</li>
+                            <li>시점에 따라 변경된 금액 정보를 마감 데이터로 변경 입력 가능합니다.</li>
+                            <li>마감 처리 시 자동으로 마감 처리 이력이 기록됩니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="screen-layout">
+                    <img src="../images/gravure/purchase6.png" alt="창고이동전표" class="screen-image" data-modal-image>
+                    <div class="margin-top-sm">
+                        <h3 class="section-subtitle">창고이동전표</h3>
+                        <ul class="screen-list">
+                            <li>자재 투입을 위해 창고간 자재 이동을 관리할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-map">
+                    <h3 class="menu-map-title">구매자재관리 구성도</h3>
+                    <div class="menu-map-grid">
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">발주 관리</span>
+                            <ul class="menu-map-items">
+                                <li>수주별원단발주</li>
+                                <li>개별원단발주</li>
+                                <li>발주서출력</li>
+                                <li>잉크발주</li>
+                                <li>부자재발주</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">입고 관리</span>
+                            <ul class="menu-map-items">
+                                <li>원단입고</li>
+                                <li>원단라벨출력</li>
+                                <li>원단입고현황</li>
+                                <li>원단입고집계표</li>
+                                <li>재고선점현황</li>
+                                <li>원단사용현황</li>
+                                <li>임가공원단입고</li>
+                                <li>임가공재공품입고</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">원부자재마감</span>
+                            <ul class="menu-map-items">
+                                <li>원단입고마감</li>
+                                <li>기타입고마감</li>
+                                <li>창고이동전표</li>
+                            </ul>
+                        </div>
+                        <div class="menu-map-col">
+                            <span class="menu-map-subtitle menu-map-subtitle-item">상품관리</span>
+                            <ul class="menu-map-items">
+                                <li>상품발주</li>
+                                <li>상품입고</li>
+                                <li>상품입고마감</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-quick-links></div>
+
+                <div style="margin-top: 32px; text-align: center;">
+                    <a href="gravure-mes.html" class="back-link">← 제품 소개로 돌아가기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="image-modal-content">
+            <button type="button" class="modal-close" aria-label="닫기">×</button>
+            <button type="button" class="modal-nav modal-prev" aria-label="이전 이미지">‹</button>
+            <button type="button" class="modal-nav modal-next" aria-label="다음 이미지">›</button>
+            <img src="" alt="" id="imageModalContent">
+        </div>
+    </div>
+
+    <script src="../js/nav-loader.js"></script>
+    <script src="../js/banner-loader.js"></script>
+    <script src="../js/footer-loader.js"></script>
+    <script src="../js/gravure-quick-links-loader.js"></script>
+    <script src="../js/image-modal.js"></script>
+</body>
+
+</html>

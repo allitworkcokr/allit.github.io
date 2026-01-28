@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>올아이티 - 생산 실적 화면</title>
+    <script src="js/head-loader.js"></script>
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #04080f;
+        }
+
+        .screen-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+
+        .screen-image {
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .screen-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .screen-list li {
+            padding: 12px 0 12px 26px;
+            position: relative;
+            color: #04080f;
+            line-height: 1.6;
+        }
+
+        .screen-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #507dbc;
+            font-weight: 700;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #507dbc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
+    </nav>
+
+    <aside class="banner">
+        <!-- 배너가 여기에 동적으로 로드됩니다 -->
+    </aside>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>생산 실적</h1>
+                <p>라인별 실적과 목표 대비 성과를 체계적으로 분석하는 화면입니다.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">화면 구성</h2>
+                <div class="screen-layout">
+                    <img src="images/screen-production.svg" alt="생산 실적 화면 캡쳐" class="screen-image">
+                    <ul class="screen-list">
+                        <li>작업지시별 생산량과 불량률을 한 번에 확인합니다.</li>
+                        <li>라인별 가동률과 다운타임을 시각화합니다.</li>
+                        <li>목표 대비 실적을 누적 그래프로 비교합니다.</li>
+                        <li>교대별 실적을 빠르게 분리 조회할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 32px; text-align: center;">
+                    <a href="gravure-pages/gravure-mes.html" class="back-link">← 제품 소개로 돌아가기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
+    </footer>
+
+    <script src="js/nav-loader.js"></script>
+    <script src="js/banner-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+</body>
+</html>
