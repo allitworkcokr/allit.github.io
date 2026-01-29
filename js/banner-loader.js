@@ -1,10 +1,18 @@
 // 배너 로더
 function getBasePath() {
     const pathParts = window.location.pathname.split('/').filter(Boolean);
-    if (pathParts.length <= 1) {
+    const lastPart = pathParts[pathParts.length - 1];
+    if (lastPart && lastPart.includes('.')) {
+        pathParts.pop();
+    }
+    if (pathParts.length === 0) {
         return '';
     }
-    return '../'.repeat(pathParts.length - 1);
+    const baseDepth = pathParts[0].includes('.github.io') ? pathParts.length - 1 : pathParts.length;
+    if (baseDepth <= 0) {
+        return '';
+    }
+    return '../'.repeat(baseDepth);
 }
 
 class BannerLoader {
