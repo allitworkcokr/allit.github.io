@@ -33,6 +33,7 @@ function isRelativeLink(href) {
 
 function loadHead() {
     const basePath = getBasePath();
+    const baseUrl = new URL(basePath || './', window.location.href);
     fetch(`${basePath}components/head.html`)
         .then(response => response.text())
         .then(data => {
@@ -40,6 +41,13 @@ function loadHead() {
             const head = document.head;
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = data;
+
+            tempDiv.querySelectorAll('link[href]').forEach(link => {
+                const href = link.getAttribute('href');
+                if (isRelativeLink(href)) {
+                    link.setAttribute('href', new URL(href, baseUrl).href);
+                }
+            });
 
             // 각 요소를 head에 추가
             while (tempDiv.firstChild) {
