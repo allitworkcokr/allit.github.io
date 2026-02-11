@@ -83,18 +83,168 @@
 
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>올아이티에 오신 것을 환영합니다</h1>
-                <p>모던하고 반응형 웹사이트입니다</p>
-                <a href="#about" class="cta-button">자세히 보기</a>
+        <section class="hero hero--main">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <h1>올아이티에 오신 것을 환영합니다</h1>
+                    <p>그라비아 특화 MES부터 표준 MES, WEB MES까지 디지털 전환을 한 번에 제안합니다.</p>
+                    <div class="hero-actions">
+                        <a href="#solutions" class="cta-button">솔루션 보기</a>
+                        <a href="about.html" class="ghost-button">회사 소개</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <svg viewBox="0 0 560 380" role="img" aria-label="올아이티 솔루션 개요 일러스트">
+                        <defs>
+                            <linearGradient id="heroGradient" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#5b8def"/>
+                                <stop offset="100%" stop-color="#2f3f9f"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="560" height="380" rx="28" fill="url(#heroGradient)"/>
+                        <circle cx="120" cy="120" r="58" fill="#f8c948" opacity="0.9"/>
+                        <circle cx="430" cy="260" r="86" fill="#80ed99" opacity="0.75"/>
+                        <rect x="70" y="200" width="220" height="120" rx="18" fill="#ffffff" opacity="0.92"/>
+                        <rect x="310" y="90" width="180" height="110" rx="18" fill="#ffffff" opacity="0.85"/>
+                        <path d="M110 230h140" stroke="#2f3f9f" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M110 260h120" stroke="#5b8def" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M110 290h80" stroke="#80ed99" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M330 130h120" stroke="#2f3f9f" stroke-width="8" stroke-linecap="round"/>
+                        <path d="M330 160h90" stroke="#f8c948" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>올아이티 주요 솔루션</h2>
+                    <p>네비게이션의 핵심 메뉴를 기준으로 메인 화면을 구성했습니다.</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-media" aria-hidden="true">
+                            <svg viewBox="0 0 420 236" role="img" aria-label="그라비아 특화 MES 이미지">
+                                <defs>
+                                    <linearGradient id="gravureGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#2d6a4f"/>
+                                        <stop offset="100%" stop-color="#74c69d"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="420" height="236" rx="18" fill="url(#gravureGrad)"/>
+                                <rect x="36" y="48" width="150" height="140" rx="16" fill="#f8f9fa" opacity="0.92"/>
+                                <rect x="210" y="58" width="170" height="60" rx="14" fill="#f8f9fa" opacity="0.85"/>
+                                <rect x="210" y="134" width="110" height="54" rx="14" fill="#f8f9fa" opacity="0.78"/>
+                                <circle cx="110" cy="120" r="34" fill="#ffdd57"/>
+                                <path d="M80 120h60" stroke="#2d6a4f" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-body">
+                            <h3>그라비아 특화 MES</h3>
+                            <p>제품관리부터 동판, 품질, 설비까지 그라비아 인쇄 공정을 통합 관리합니다.</p>
+                            <div class="feature-links">
+                                <a href="gravure-pages/product-registration.html">제품관리</a>
+                                <a href="gravure-pages/production.html">생산관리</a>
+                                <a href="gravure-pages/quaility.html">품질관리</a>
+                                <a href="gravure-pages/equipment.html">설비관리</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-media" aria-hidden="true">
+                            <svg viewBox="0 0 420 236" role="img" aria-label="표준 MES 이미지">
+                                <defs>
+                                    <linearGradient id="standardGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#3a0ca3"/>
+                                        <stop offset="100%" stop-color="#4361ee"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="420" height="236" rx="18" fill="url(#standardGrad)"/>
+                                <rect x="50" y="40" width="150" height="80" rx="14" fill="#ffffff" opacity="0.9"/>
+                                <rect x="50" y="130" width="320" height="70" rx="14" fill="#ffffff" opacity="0.85"/>
+                                <circle cx="300" cy="76" r="28" fill="#fca311"/>
+                                <path d="M90 170h230" stroke="#3a0ca3" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M90 150h150" stroke="#4361ee" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-body">
+                            <h3>표준 MES</h3>
+                            <p>제조 현장의 핵심 데이터를 표준 프로세스로 연결하여 운영 효율을 높입니다.</p>
+                            <div class="feature-links">
+                                <a href="mes-solution.html">솔루션 보기</a>
+                                <a href="gravure-pages/gravure-mes.html#section1">도입 개요</a>
+                                <a href="gravure-pages/gravure-mes.html#section2">핵심 기능</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-media" aria-hidden="true">
+                            <svg viewBox="0 0 420 236" role="img" aria-label="WEB MES 이미지">
+                                <defs>
+                                    <linearGradient id="webGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#0f4c5c"/>
+                                        <stop offset="100%" stop-color="#5a9bd4"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="420" height="236" rx="18" fill="url(#webGrad)"/>
+                                <rect x="40" y="50" width="160" height="120" rx="16" fill="#ffffff" opacity="0.92"/>
+                                <rect x="220" y="50" width="160" height="120" rx="16" fill="#ffffff" opacity="0.8"/>
+                                <path d="M70 90h100" stroke="#0f4c5c" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M70 120h80" stroke="#5a9bd4" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M250 90h110" stroke="#0f4c5c" stroke-width="8" stroke-linecap="round"/>
+                                <circle cx="300" cy="150" r="24" fill="#f4d35e"/>
+                            </svg>
+                        </div>
+                        <div class="feature-body">
+                            <h3>WEB MES</h3>
+                            <p>웹 기반으로 실시간 생산 모니터링과 협업 환경을 빠르게 제공합니다.</p>
+                            <div class="feature-links">
+                                <a href="web-development.html">개발 소개</a>
+                                <a href="web-development.html#section1">기능 1</a>
+                                <a href="web-development.html#section2">기능 2</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-media" aria-hidden="true">
+                            <svg viewBox="0 0 420 236" role="img" aria-label="회사소개 이미지">
+                                <defs>
+                                    <linearGradient id="aboutGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#ef476f"/>
+                                        <stop offset="100%" stop-color="#ffd166"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="420" height="236" rx="18" fill="url(#aboutGrad)"/>
+                                <rect x="44" y="60" width="140" height="120" rx="16" fill="#ffffff" opacity="0.9"/>
+                                <rect x="210" y="80" width="170" height="80" rx="16" fill="#ffffff" opacity="0.82"/>
+                                <circle cx="120" cy="120" r="30" fill="#118ab2"/>
+                                <path d="M240 120h110" stroke="#ef476f" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M240 140h70" stroke="#ffd166" stroke-width="8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="feature-body">
+                            <h3>회사소개</h3>
+                            <p>올아이티의 비전과 프로젝트, 채용 정보를 한눈에 확인하세요.</p>
+                            <div class="feature-links">
+                                <a href="about.html">올아이티 소개</a>
+                                <a href="projects-partners.html">프로젝트</a>
+                                <a href="careers.html">채용정보</a>
+                                <a href="news.html">뉴스</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
         <section id="about" class="about-section">
             <div class="container">
-                <h2>소개</h2>
-                <p>이 웹사이트는 공통 네비게이션을 사용하는 샘플 페이지들로 구성되어 있습니다.</p>
+                <h2>디지털 전환 파트너</h2>
+                <p>올아이티는 현장 맞춤형 MES와 웹 솔루션으로 제조 경쟁력을 높이는 팀입니다.</p>
             </div>
         </section>
     </main>
