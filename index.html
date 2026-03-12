@@ -85,12 +85,57 @@
     <main class="main-content">
         <section class="hero hero--main">
             <div class="container hero-layout">
-                <div class="hero-content">
-                    <h1>올아이티에 오신 것을 환영합니다</h1>
-                    <p>그라비아 특화 MES부터 표준 MES, WEB MES까지 디지털 전환을 한 번에 제안합니다.</p>
-                    <div class="hero-actions">
-                        <a href="#solutions" class="cta-button">솔루션 보기</a>
-                        <a href="about.html" class="ghost-button">회사 소개</a>
+                <div class="hero-content" data-hero-slider>
+                    <div class="hero-slider-track">
+                        <article class="hero-slide is-active" style="--hero-slide-bg: url('/images/main.png');">
+                            <div class="hero-slide-content">
+                                <h1>올아이티에 오신 것을 환영합니다</h1>
+                                <p>그라비아 특화 MES부터 표준 MES, WEB MES까지 디지털 전환을 한 번에 제안합니다.</p>
+                                <div class="hero-actions">
+                                    <a href="#solutions" class="cta-button">솔루션 보기</a>
+                                    <a href="about.html" class="ghost-button">회사 소개</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="hero-slide" style="--hero-slide-bg: url('/images/steel.png');">
+                            <div class="hero-slide-content">
+                                <p class="hero-slide-meta">프로젝트 · 2026.03</p>
+                                <h2>에스틸 MES기반 ERP SI 구축사업 1차</h2>
+                                <p>핵심 업무를 하나의 흐름으로 통합해 ERP 운영 기반을 고도화합니다.</p>
+                                <div class="hero-actions">
+                                    <a href="news.html" class="cta-button">최신 프로젝트 보기</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="hero-slide" style="--hero-slide-bg: url('/images/dynesoze.png');">
+                            <div class="hero-slide-content">
+                                <p class="hero-slide-meta">프로젝트 · 2026.03</p>
+                                <h2>다인소재 스마트ERP 개선 1차 프로젝트</h2>
+                                <p>현장 중심의 업무 프로세스 개선으로 스마트ERP 활용도를 높입니다.</p>
+                                <div class="hero-actions">
+                                    <a href="news.html" class="cta-button">최신 프로젝트 보기</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="hero-slide" style="--hero-slide-bg: url('/images/yangji.png');">
+                            <div class="hero-slide-content">
+                                <p class="hero-slide-meta">프로젝트 · 2026.03</p>
+                                <h2>양지디엔피 박스MES 개선작업 완료</h2>
+                                <p>생산 운영 효율과 데이터 정확도를 높이는 개선 작업을 완료했습니다.</p>
+                                <div class="hero-actions">
+                                    <a href="news.html" class="cta-button">최신 프로젝트 보기</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="hero-slider-controls">
+                        <button type="button" class="hero-slider-arrow hero-slider-prev" data-hero-prev aria-label="이전 배너">‹</button>
+                        <div class="hero-slider-dots" data-hero-dots></div>
+                        <button type="button" class="hero-slider-arrow hero-slider-next" data-hero-next aria-label="다음 배너">›</button>
                     </div>
                 </div>
             </div>
@@ -183,6 +228,7 @@
 
     <script src="js/nav-loader.js"></script>
     <script src="js/banner-loader.js"></script>
+    <script src="js/hero-slider.js"></script>
     <script src="js/footer-loader.js"></script>
 </body>
 </html> 

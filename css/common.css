@@ -62,21 +62,99 @@ body {
 .hero--main .hero-content {
     max-width: 100%;
     min-height: 420px;
-    padding: 40px max(20px, calc((100vw - 1200px) / 2 + 20px));
+    position: relative;
     border-radius: 0;
+    overflow: hidden;
+}
+
+.hero-layout {
+    display: block;
+}
+
+.hero-slider-track {
+    display: flex;
+    width: 100%;
+    min-height: 420px;
+    transition: transform 0.55s ease;
+    will-change: transform;
+}
+
+.hero-slide {
+    flex: 0 0 100%;
     background-image:
         linear-gradient(120deg, rgba(4, 8, 15, 0.72) 0%, rgba(4, 8, 15, 0.45) 50%, rgba(4, 8, 15, 0.3) 100%),
-        url('../images/main.png');
+        var(--hero-slide-bg);
     background-size: cover;
     background-position: center 35%;
     background-repeat: no-repeat;
+}
+
+.hero-slide-content {
+    min-height: 420px;
+    padding: 40px max(20px, calc((100vw - 1200px) / 2 + 20px));
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.hero-layout {
-    display: block;
+.hero-slide-content h2 {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-slide-meta {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #c3dcfb;
+}
+
+.hero-slider-controls {
+    position: absolute;
+    right: max(20px, calc((100vw - 1200px) / 2 + 20px));
+    bottom: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-slider-arrow {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    background: rgba(4, 8, 15, 0.35);
+    color: #ffffff;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.hero-slider-arrow:hover {
+    background: rgba(4, 8, 15, 0.6);
+}
+
+.hero-slider-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-slider-dot {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+    cursor: pointer;
+    padding: 0;
+}
+
+.hero-slider-dot.is-active {
+    background: #a1c6ea;
 }
 
 .hero-actions {
@@ -269,7 +347,37 @@ body {
     .hero--main .hero-content {
         max-width: none;
         min-height: 280px;
-        padding: 28px 22px;
+    }
+
+    .hero-slide-content {
+        min-height: 280px;
+        padding: 28px 22px 64px;
+    }
+
+    .hero-slider-track {
+        min-height: 280px;
+    }
+
+    .hero-slide-content h2 {
+        font-size: 1.7rem;
+        margin-bottom: 14px;
+    }
+
+    .hero-slide-meta {
+        font-size: 0.82rem;
+        margin-bottom: 8px;
+    }
+
+    .hero-slider-controls {
+        right: 22px;
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .hero-slider-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
     }
 
     .hero-actions {
