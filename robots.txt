@@ -2,15 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://allit.github.io/sitemap.xml
+Sitemap: https://allitwork.co.kr/sitemap.xml
 
-# Disallow certain directories
+# Disallow only non-public directories
 Disallow: /node_modules/
-Disallow: /css/
-Disallow: /js/
-Disallow: /components/
-
-# Allow important files
-Allow: /images/
-Allow: /*.html
-Allow: /*.xml
