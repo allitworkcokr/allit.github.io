@@ -33,7 +33,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/footer.css">
     
     <!-- Preconnect for performance -->
@@ -121,6 +120,31 @@
             margin: 0 auto;
             opacity: 0.8;
             line-height: 1.8;
+        }
+
+        .hero-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 24px;
+            padding: 12px 22px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #4a90e2, #8cb4e5);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            box-shadow: 0 14px 28px rgba(74, 144, 226, 0.35);
+        }
+
+        .hero-contact strong {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        .hero-contact span {
+            font-size: 0.95rem;
         }
 
         /* 회사 소개 섹션 */
@@ -365,6 +389,10 @@
                         <span class="highlight-text">올아이티(ALL IT)</span>는 제조현장의 디지털 혁신을 선도하는 MES 및 그라비아 특화 ERP 전문기업입니다.
                         우리는 단순한 시스템 구축이 아니라, 고객이 직접 체감할 수 있는 품질 중심의 솔루션을 제공합니다.
                     </p>
+                    <div class="hero-contact">
+                        <strong>010-8015-0400</strong>
+                        <span>MES 도입문의</span>
+                    </div>
                 </div>
             </div>
         </section>

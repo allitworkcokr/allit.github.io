@@ -1,137 +1,52 @@
 /* 플로팅 배너 스타일 */
 .banner {
     position: fixed;
-    left: 20px;
-    top: 40%;
-    transform: translateY(-50%);
-    width: 180px;
-    height: auto;
-    background: #04080f;
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    right: 24px;
+    bottom: 80px;
+    width: 240px;
+    background: transparent;
     z-index: 1000;
-    overflow: visible;
-    transition: all 0.3s ease;
-}
-
-.banner:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .banner-container {
-    padding: 12px;
-    height: auto;
-    overflow: visible;
+    padding: 0;
 }
 
-.banner-content {
+.banner-callout {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    padding: 16px;
+    border-radius: 16px;
+    background: rgba(4, 8, 15, 0.96);
+    color: #ffffff;
+    box-shadow: 0 16px 35px rgba(4, 8, 15, 0.35);
+    border: 1px solid rgba(161, 198, 234, 0.35);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* 프로모션 배너 스타일 */
-.banner-promotion {
-    background: #4a90e2;
-    border-radius: 10px;
-    padding: 12px;
-    border: 2px solid #7bb3f0;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+.banner-callout:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(4, 8, 15, 0.45);
 }
 
-.promotion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.promotion-header h3 {
-    font-size: 0.85rem;
+.banner-label {
+    font-size: 0.75rem;
     font-weight: 700;
-    color: white;
-    margin: 0;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-.promotion-badge {
-    background: #7bb3f0;
-    color: #2c3e50;
-    padding: 3px 6px;
-    border-radius: 8px;
-    font-size: 0.6rem;
-    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #a1c6ea;
     text-transform: uppercase;
 }
 
-.highlight-number {
-    color: #e74c3c;
-    font-weight: 900;
-    font-size: 0.7rem;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-.promotion-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
-.promotion-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.promotion-icon {
-    font-size: 1rem;
-    width: 20px;
+.banner-phone {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.02em;
     text-align: center;
 }
 
-.promotion-text {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: white;
-}
-
-.promotion-contact {
-    text-align: center;
-}
-
-.promotion-contact .banner-phone {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: #fff;
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 2px solid #fff;
-    display: block;
-    text-align: center;
-    white-space: nowrap;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-    animation: phone-pulse 2s infinite;
-}
-
-@keyframes phone-pulse {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
-    }
-}
 
 /* 메인 콘텐츠 영역 조정 */
 .main-content {
@@ -141,77 +56,29 @@
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .banner {
-        left: 10px;
-        width: 160px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: auto;
+        transform: none;
     }
-    
-    .banner-container {
-        padding: 10px;
-    }
-    
-    .banner-promotion {
-        padding: 10px;
-    }
-    
-    .promotion-header h3 {
-        font-size: 0.8rem;
-    }
-    
-    .promotion-item {
-        padding: 6px;
-    }
-    
-    .promotion-icon {
-        font-size: 0.9rem;
-        width: 18px;
-    }
-    
-    .promotion-text {
-        font-size: 0.7rem;
+
+    .banner-callout {
+        border-radius: 16px 16px 0 0;
     }
 }
 
 @media (max-width: 480px) {
-    .banner {
-        left: 5px;
-        width: calc(100vw - 10px);
-        max-width: 180px;
+    .banner-callout {
+        border-radius: 14px;
+        padding: 14px;
     }
-    
-    .banner-container {
-        padding: 8px;
+
+    .banner-phone {
+        font-size: 1.1rem;
     }
-    
-    .banner-promotion {
-        padding: 8px;
-    }
-    
-    .promotion-header h3 {
-        font-size: 0.75rem;
-    }
-    
-    .promotion-badge {
-        font-size: 0.55rem;
-        padding: 2px 5px;
-    }
-    
-    .promotion-item {
-        padding: 5px;
-        gap: 6px;
-    }
-    
-    .promotion-icon {
-        font-size: 0.8rem;
-        width: 16px;
-    }
-    
-    .promotion-text {
-        font-size: 0.65rem;
-    }
-    
-    .promotion-contact .banner-phone {
-        font-size: 0.75rem;
-        padding: 6px 10px;
-        white-space: nowrap;
+
+    .banner-phone {
+        font-size: 1.05rem;
     }
 } 
