@@ -89,6 +89,14 @@ body {
     background-repeat: no-repeat;
 }
 
+/* HPM 2026 배너: 이미지 전체가 보이도록(크롭 방지) */
+.hero-slide--hpm-2026 {
+    background-color: #04080f;
+    background-size: cover, contain;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
 .hero-slide-content {
     min-height: 420px;
     padding: 40px max(20px, calc((100vw - 1200px) / 2 + 20px));
