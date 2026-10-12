@@ -2,18 +2,18 @@
 <html lang="ko">
 <head>
     <title>올아이티 - 뉴스</title>
-    <meta name="description" content="올아이티의 최신 뉴스와 프로젝트 소식을 확인하세요.">
-    <meta name="keywords" content="올아이티, 뉴스, 프로젝트, 소식">
+    <meta name="description" content="올아이티의 프로젝트 착수·완료, 제품 릴리즈, 회사 소식을 확인하세요.">
+    <meta name="keywords" content="올아이티, 뉴스, 프로젝트, 소식, MES, ERP">
     <link rel="canonical" href="https://allitworkcokr.github.io/allit.github.io/news.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://allitworkcokr.github.io/allit.github.io/news.html">
     <meta property="og:title" content="올아이티 - 뉴스">
-    <meta property="og:description" content="올아이티의 최신 뉴스와 프로젝트 소식을 확인하세요.">
+    <meta property="og:description" content="올아이티의 프로젝트 착수·완료, 제품 릴리즈, 회사 소식을 확인하세요.">
     <meta property="og:image" content="https://allitworkcokr.github.io/allit.github.io/images/og-image.jpg">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://allitworkcokr.github.io/allit.github.io/news.html">
     <meta property="twitter:title" content="올아이티 - 뉴스">
-    <meta property="twitter:description" content="올아이티의 최신 뉴스와 프로젝트 소식을 확인하세요.">
+    <meta property="twitter:description" content="올아이티의 프로젝트 착수·완료, 제품 릴리즈, 회사 소식을 확인하세요.">
     <meta property="twitter:image" content="https://allitworkcokr.github.io/allit.github.io/images/og-image.jpg">
     <script src="js/head-loader.js"></script>
     <!-- Google tag (gtag.js) -->
@@ -26,168 +26,246 @@
         gtag('config', 'G-D4MP3HBNBY');
     </script>
     <style>
-        .hero {
-            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        .section:nth-child(odd) {
-            background-color: white;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #04080f;
-        }
-
-        /* 뉴스 스타일 */
-        .news-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .news-list {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .news-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e9ecef;
-            display: flex;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .news-image {
-            width: 200px;
-            height: 150px;
-            background: linear-gradient(135deg, #507dbc, #a1c6ea);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
+        .news-hero {
             position: relative;
             overflow: hidden;
-            flex-shrink: 0;
+            color: #fff;
+            padding: 120px 0 88px;
+            background:
+                radial-gradient(ellipse 80% 60% at 15% 20%, rgba(80, 125, 188, 0.45), transparent 55%),
+                radial-gradient(ellipse 70% 50% at 90% 80%, rgba(161, 198, 234, 0.18), transparent 50%),
+                linear-gradient(160deg, #04080f 0%, #0d1a2e 45%, #1a3355 100%);
         }
 
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .news-category {
+        .news-hero::after {
+            content: '';
             position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(255, 255, 255, 0.9);
-            color: #507dbc;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
+            pointer-events: none;
         }
 
-        .news-content {
-            padding: 25px;
-            flex: 1;
+        .news-hero .container {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
         }
 
-        .news-date {
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-bottom: 10px;
+        .news-hero-kicker {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: 0.85rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #a1c6ea;
         }
 
-        .news-title {
-            font-size: 1.3rem;
+        .news-hero h1 {
+            font-size: clamp(2.4rem, 4vw, 3.4rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .news-hero p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 620px;
+        }
+
+        .news-section {
+            padding: 72px 0 96px;
+            background: #f4f7f8;
+        }
+
+        .news-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 36px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d7e0e6;
+        }
+
+        .news-toolbar h2 {
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
             color: #04080f;
-            margin-bottom: 15px;
-            font-weight: 600;
-            line-height: 1.4;
         }
 
-        .news-excerpt {
+        .news-toolbar p {
+            margin-top: 6px;
             font-size: 0.95rem;
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            color: #6a7684;
         }
 
-        .news-tags {
+        .news-filters {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
 
+        .news-filter {
+            padding: 7px 14px;
+            border: 1px solid #c5d6e8;
+            background: #fff;
+            color: #3a4654;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .news-filter:hover,
+        .news-filter.is-active {
+            background: #1a3355;
+            border-color: #1a3355;
+            color: #fff;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 24px;
+            align-items: start;
+            padding: 24px 28px;
+            background: #fff;
+            border: 1px solid #d7e0e6;
+            border-left: 4px solid #507dbc;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .news-card[data-category="릴리즈"] {
+            border-left-color: #2a9d8f;
+        }
+
+        .news-card[data-category="회사소식"] {
+            border-left-color: #6c7a89;
+        }
+
+        .news-card[data-status="완료"] {
+            border-left-color: #3d8b6e;
+        }
+
+        .news-card:hover {
+            border-color: #507dbc;
+            box-shadow: 0 12px 28px rgba(4, 8, 15, 0.08);
+        }
+
+        .news-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .news-date {
+            font-size: 0.92rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.02em;
+            color: #1a3355;
+        }
+
+        .news-category {
+            display: inline-flex;
+            width: fit-content;
+            padding: 4px 9px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: #1a3355;
+            background: #e8f0f8;
+        }
+
+        .news-card[data-category="릴리즈"] .news-category {
+            color: #0f5c54;
+            background: #d9f2ee;
+        }
+
+        .news-card[data-category="회사소식"] .news-category {
+            color: #3a4654;
+            background: #e8eef2;
+        }
+
+        .news-card[data-status="완료"] .news-category {
+            color: #0b3d1f;
+            background: #d8f3e3;
+        }
+
+        .news-content {
+            min-width: 0;
+        }
+
+        .news-title {
+            font-size: 1.22rem;
+            letter-spacing: -0.02em;
+            line-height: 1.4;
+            color: #04080f;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .news-excerpt {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #3a4654;
+            margin-bottom: 14px;
+        }
+
+        .news-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
         .news-tag {
-            background: #f8f9fa;
+            padding: 3px 9px;
+            font-size: 0.75rem;
+            font-weight: 600;
             color: #507dbc;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            background: #eef4fa;
+            border: 1px solid #c5d6e8;
+        }
+
+        .news-card.is-hidden {
+            display: none;
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .news-hero {
+                padding: 100px 0 64px;
             }
-            
-            .hero p {
-                font-size: 1.1rem;
+
+            .news-section {
+                padding: 48px 0 72px;
             }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
+
             .news-card {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 20px;
             }
-            
-            .news-image {
-                width: 100%;
-                height: 200px;
+
+            .news-meta {
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
             }
         }
     </style>
@@ -205,266 +283,352 @@
 
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
-        <!-- 히어로 섹션 -->
-        <section class="hero">
+        <section class="news-hero">
             <div class="container">
+                <p class="news-hero-kicker">News & Updates</p>
                 <h1>뉴스</h1>
-                <p>올아이티의 최신 소식과 업데이트를 확인하세요</p>
+                <p>프로젝트 착수·완료, 제품 릴리즈, 회사 소식을 한곳에서 확인하세요.
+                    제조 현장의 MES·ERP·웹 시스템 구축 진행 현황을 공유합니다.</p>
             </div>
         </section>
 
-        <!-- 뉴스 섹션 -->
-        <section class="section">
+        <section class="news-section">
             <div class="container">
-                <div class="news-container">
-                    <!-- 뉴스 리스트 -->
-                    <div class="news-list">
-                        <!-- 뉴스 카드 0-0 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>✅</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2026.06</div>
-                                <h3 class="news-title">HPM 글로벌 AS 지원 사업 성공 완료</h3>
-                                <p class="news-excerpt">
-                                    HPM 글로벌 AS 지원 사업을 성공적으로 완료하여 현장 운영 안정성과 시스템 지원 체계를 강화했습니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">프로젝트</span>
-                                    <span class="news-tag">AS 지원</span>
-                                    <span class="news-tag">완료</span>
-                                    <span class="news-tag">HPM글로벌</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 0-1 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>✅</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2026.06</div>
-                                <h3 class="news-title">에스틸 대중소 상생형 MES 고도화 성공 완료</h3>
-                                <p class="news-excerpt">
-                                    에스틸 대중소 상생형 MES 고도화 사업을 성공적으로 완료하여 생산 운영 효율과 데이터 연계 수준을 높였습니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">프로젝트</span>
-                                    <span class="news-tag">대중소 상생형</span>
-                                    <span class="news-tag">고도화</span>
-                                    <span class="news-tag">에스틸</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 0-2 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>🏭</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2026.05</div>
-                                <h3 class="news-title">HPM글로벌 2026 경기도형 스마트공장 사업</h3>
-                                <p class="news-excerpt">
-                                    HPM글로벌 2026 경기도형 스마트공장 사업을 통해 현장 데이터 기반의 생산 운영 체계를 고도화합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">프로젝트</span>
-                                    <span class="news-tag">스마트공장</span>
-                                    <span class="news-tag">경기도형</span>
-                                    <span class="news-tag">HPM글로벌</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 0-3 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>🏢</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2026.03</div>
-                                <h3 class="news-title">에스틸 MES기반 ERP SI 구축사업 1차</h3>
-                                <p class="news-excerpt">
-                                    에스틸 MES기반 ERP SI 구축사업 1차를 통해 핵심 업무를 통합하고 운영 기반을 고도화합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">프로젝트</span>
-                                    <span class="news-tag">ERP SI</span>
-                                    <span class="news-tag">에스틸</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 0-4 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>🏭</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2026.03</div>
-                                <h3 class="news-title">다인소재 스마트ERP 개선 1차 프로젝트</h3>
-                                <p class="news-excerpt">
-                                    다인소재 스마트ERP 개선 1차 프로젝트를 착수하여 핵심 업무 프로세스 고도화를 진행합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">프로젝트</span>
-                                    <span class="news-tag">스마트ERP</span>
-                                    <span class="news-tag">다인소재</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 0-5 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>📦</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2026.03</div>
-                                <h3 class="news-title">양지디엔피 박스MES 개선작업 완료</h3>
-                                <p class="news-excerpt">
-                                    양지디엔피 박스MES 개선작업을 완료하여 현장 운영 효율과 데이터 정확도를 향상했습니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">프로젝트</span>
-                                    <span class="news-tag">박스MES</span>
-                                    <span class="news-tag">양지디엔피</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- 뉴스 카드 1 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>🚀</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2025.09</div>
-                                <h3 class="news-title">에스틸 대중소 상생형 MES 고도화</h3>
-                                <p class="news-excerpt">
-                                    스마트팩토리 인천 항만공사 대중소 상생형 MES 고도화 작업을 진행합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">대중소 상생형</span>
-                                    <span class="news-tag">고도화</span>
-                                    <span class="news-tag">에스틸</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 2 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>💼</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2025.06</div>
-                                <h3 class="news-title">정명하이텍 그라비아 특화 MES 신규 도입</h3>
-                                <p class="news-excerpt">
-                                    정명하이텍에서는 올아이티의 그라비아 특화 MES를 신규 도입하여 그라비아 인쇄 특화 MES를 구축합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">그라비아</span>
-                                    <span class="news-tag">특화 MES</span>
-                                    <span class="news-tag">정명하이텍</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 3 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">릴리즈</div>
-                                <span>📱</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2025.05</div>
-                                <h3 class="news-title">DevExpress 최신 버전 적용</h3>
-                                <p class="news-excerpt">
-                                    DevExpress 24.2 버전을 적용하여 성능 향상과 새로운 기능을 제공합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">DevExpress</span>
-                                    <span class="news-tag">24.2</span>
-                                    <span class="news-tag">성능향상</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 4 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">회사소식</div>
-                                <span>🏢</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2025.05</div>
-                                <h3 class="news-title">스마트팩토리 공급기업 자격 재심사 승인</h3>
-                                <p class="news-excerpt">
-                                    스마트팩토리 재심사 절차를 완료하고 재심사 승인을 받았습니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">스마트팩토리</span>
-                                    <span class="news-tag">재심사</span>
-                                    <span class="news-tag">승인</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 5 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>🔧</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2025.01</div>
-                                <h3 class="news-title">HPM 글로벌 AS 지원 사업</h3>
-                                <p class="news-excerpt">
-                                    업무 프로세스 변경에 대응한 시스쳄 고도화 작업을 진행합니다.
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">고도화</span>
-                                    <span class="news-tag">프로세스 혁신</span>
-                                    <span class="news-tag">재고관리 고도화</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 뉴스 카드 6 -->
-                        <div class="news-card">
-                            <div class="news-image">
-                                <div class="news-category">프로젝트</div>
-                                <span>☁️</span>
-                            </div>
-                            <div class="news-content">
-                                <div class="news-date">2025.01</div>
-                                <h3 class="news-title">영신피엔앨 WEB MES 프로젝트</h3>
-                                <p class="news-excerpt">
-                                    업무 PI와 더불어 영신피엔앨의 업무 시스템 전반을 WEB 기반 솔루션으로 구축합니다.
-                                    데이터 기반의 효율적인 업무 처리와 데이터 기반의 효율적인 업무 처리를 위한 솔루션을 구축합니다.
-
-                                </p>
-                                <div class="news-tags">
-                                    <span class="news-tag">WEB MES</span>
-                                    <span class="news-tag">일부 ERP 모듈</span>
-                                    <span class="news-tag">라벨 인쇄 프로세스</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="news-toolbar">
+                    <div>
+                        <h2>최신 소식</h2>
+                        <p>최신순으로 정렬된 올아이티 업데이트입니다.</p>
                     </div>
+                    <div class="news-filters" role="tablist" aria-label="뉴스 카테고리 필터">
+                        <button type="button" class="news-filter is-active" data-filter="all">전체</button>
+                        <button type="button" class="news-filter" data-filter="프로젝트">프로젝트</button>
+                        <button type="button" class="news-filter" data-filter="릴리즈">릴리즈</button>
+                        <button type="button" class="news-filter" data-filter="회사소식">회사소식</button>
+                    </div>
+                </div>
+
+                <div class="news-list">
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2026.10</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">다인소재 스마트ERP 개선 2차 프로젝트 시작</h3>
+                            <p class="news-excerpt">
+                                1차 개선 성과를 바탕으로 구매·생산·재고·품질 프로세스를 확장합니다.
+                                식품첨가물·원료 제조 현장의 ERP 활용도와 데이터 정합성을 높입니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">스마트ERP</span>
+                                <span class="news-tag">다인소재</span>
+                                <span class="news-tag">착수</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2026.10</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">삼민산업(주) MES 신규 구축 사업 시작</h3>
+                            <p class="news-excerpt">
+                                라미네이팅·코팅 신소재 제조기업 삼민산업(주)에 MES를 신규 도입합니다.
+                                생산실적·공정·품질 이력을 데이터로 관리하는 운영 체계를 구축합니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">MES</span>
+                                <span class="news-tag">라미네이팅</span>
+                                <span class="news-tag">삼민산업</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="회사소식">
+                        <div class="news-meta">
+                            <div class="news-date">2026.09</div>
+                            <span class="news-category">회사소식</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">연포장 그라비아인쇄 제조관리 ERP v2.0 저작권 등록 완료</h3>
+                            <p class="news-excerpt">
+                                연포장 그라비아인쇄 제조관리 ERP v2.0의 저작권 등록을 완료했습니다.
+                                그라비아 인쇄 현장의 제조·품질·재고 운영을 지원하는 솔루션의 권리를 확보했습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">저작권</span>
+                                <span class="news-tag">그라비아 ERP</span>
+                                <span class="news-tag">v2.0</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="회사소식">
+                        <div class="news-meta">
+                            <div class="news-date">2026.09</div>
+                            <span class="news-category">회사소식</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">박스제조 및 옵셋인쇄 제조관리 ERP 저작권 등록 완료</h3>
+                            <p class="news-excerpt">
+                                박스제조 및 옵셋인쇄 제조관리 ERP의 저작권 등록을 완료했습니다.
+                                박스·옵셋 인쇄 공정의 제조관리 솔루션에 대한 권리를 확보했습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">저작권</span>
+                                <span class="news-tag">박스 ERP</span>
+                                <span class="news-tag">옵셋인쇄</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트" data-status="완료">
+                        <div class="news-meta">
+                            <div class="news-date">2026.08</div>
+                            <span class="news-category">완료</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">다인소재 스마트ERP 개선 1차 성공 완료</h3>
+                            <p class="news-excerpt">
+                                다인소재 스마트ERP 개선 1차 프로젝트를 성공적으로 완료했습니다.
+                                핵심 업무 프로세스 고도화 성과를 바탕으로 2차 개선으로 이어갑니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">스마트ERP</span>
+                                <span class="news-tag">다인소재</span>
+                                <span class="news-tag">완료</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트" data-status="완료">
+                        <div class="news-meta">
+                            <div class="news-date">2026.06</div>
+                            <span class="news-category">완료</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">HPM글로벌 AS 지원 사업 성공 완료</h3>
+                            <p class="news-excerpt">
+                                업무 프로세스 변경에 대응한 시스템 고도화 및 AS 지원을 완료했습니다.
+                                현장 운영 안정성과 지속 지원 체계를 강화했습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">AS 지원</span>
+                                <span class="news-tag">HPM글로벌</span>
+                                <span class="news-tag">완료</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트" data-status="완료">
+                        <div class="news-meta">
+                            <div class="news-date">2026.06</div>
+                            <span class="news-category">완료</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">에스틸 대중소 상생형 MES 고도화 성공 완료</h3>
+                            <p class="news-excerpt">
+                                인천항만공사 대중소 상생형 MES 고도화 사업을 성공적으로 완료했습니다.
+                                생산 운영 효율과 MES·업무 데이터 연계 수준을 높였습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">대중소 상생형</span>
+                                <span class="news-tag">에스틸</span>
+                                <span class="news-tag">완료</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2026.05</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">HPM글로벌 2026 경기도형 스마트공장 사업</h3>
+                            <p class="news-excerpt">
+                                펫푸드·친환경 패키징 현장의 데이터 수집과 공정 운영을 연결하는
+                                경기도형 스마트공장 구축을 진행합니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">스마트공장</span>
+                                <span class="news-tag">경기도형</span>
+                                <span class="news-tag">HPM글로벌</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2026.03</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">에스틸 MES기반 ERP SI 구축지원 1차</h3>
+                            <p class="news-excerpt">
+                                굴삭기·중장비 부품 제조 업무를 MES와 ERP로 연계하는 SI 구축을 지원합니다.
+                                핵심 업무 흐름을 통합해 운영 기반을 고도화합니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">ERP SI</span>
+                                <span class="news-tag">MES</span>
+                                <span class="news-tag">에스틸</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2026.03</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">다인소재 스마트ERP 개선 1차 프로젝트</h3>
+                            <p class="news-excerpt">
+                                다인소재 스마트ERP 개선 1차를 착수하여 핵심 업무 프로세스 고도화를 진행했습니다.
+                                이후 2026.08 성공 완료, 2026.10 2차 개선으로 이어졌습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">스마트ERP</span>
+                                <span class="news-tag">다인소재</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트" data-status="완료">
+                        <div class="news-meta">
+                            <div class="news-date">2026.03</div>
+                            <span class="news-category">완료</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">양지디엔피 박스MES 개선작업 완료</h3>
+                            <p class="news-excerpt">
+                                푸드·단상자 패키징 현장의 박스MES 개선을 완료했습니다.
+                                현장 운영 효율과 생산·재고 데이터 정확도를 향상했습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">박스MES</span>
+                                <span class="news-tag">양지디엔피</span>
+                                <span class="news-tag">완료</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2025.09</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">에스틸 대중소 상생형 MES 고도화</h3>
+                            <p class="news-excerpt">
+                                스마트팩토리 인천항만공사 대중소 상생형 MES 고도화 작업을 진행했습니다.
+                                이후 2026.06 성공 완료로 이어졌습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">대중소 상생형</span>
+                                <span class="news-tag">고도화</span>
+                                <span class="news-tag">에스틸</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2025.06</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">정명하이텍 그라비아 특화 MES 신규 도입</h3>
+                            <p class="news-excerpt">
+                                정명하이텍에 그라비아 인쇄 특화 MES를 신규 도입했습니다.
+                                인쇄·슬리팅·합지 공정의 생산·품질 운영을 표준화합니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">그라비아</span>
+                                <span class="news-tag">특화 MES</span>
+                                <span class="news-tag">정명하이텍</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="릴리즈">
+                        <div class="news-meta">
+                            <div class="news-date">2025.05</div>
+                            <span class="news-category">릴리즈</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">DevExpress 최신 버전 적용</h3>
+                            <p class="news-excerpt">
+                                DevExpress 24.2를 적용해 UI 성능과 그리드·리포트 기능을 개선했습니다.
+                                고객사 MES·ERP 화면의 안정성과 사용성을 높였습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">DevExpress</span>
+                                <span class="news-tag">24.2</span>
+                                <span class="news-tag">성능향상</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="회사소식">
+                        <div class="news-meta">
+                            <div class="news-date">2025.05</div>
+                            <span class="news-category">회사소식</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">스마트팩토리 공급기업 자격 재심사 승인</h3>
+                            <p class="news-excerpt">
+                                스마트팩토리 공급기업 재심사 절차를 완료하고 승인을 받았습니다.
+                                제조 현장 디지털 전환 사업을 안정적으로 수행할 기반을 유지합니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">스마트팩토리</span>
+                                <span class="news-tag">재심사</span>
+                                <span class="news-tag">승인</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2025.01</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">HPM글로벌 AS 지원 사업</h3>
+                            <p class="news-excerpt">
+                                업무 프로세스 변경에 대응한 시스템 고도화 및 재고관리 개선을 지원했습니다.
+                                이후 AS 지원 사업 완료로 이어졌습니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">고도화</span>
+                                <span class="news-tag">재고관리</span>
+                                <span class="news-tag">HPM글로벌</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="프로젝트">
+                        <div class="news-meta">
+                            <div class="news-date">2025.01</div>
+                            <span class="news-category">프로젝트</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">영신피앤엘 WEB MES 프로젝트</h3>
+                            <p class="news-excerpt">
+                                라벨 인쇄 업무 PI와 함께 WEB 기반 MES·일부 ERP 모듈을 구축했습니다.
+                                옵셋·플렉소·디지털 등 다공정 라벨 현장의 데이터 기반 운영을 지원합니다.
+                            </p>
+                            <div class="news-tags">
+                                <span class="news-tag">WEB MES</span>
+                                <span class="news-tag">라벨</span>
+                                <span class="news-tag">영신피앤엘</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -478,5 +642,25 @@
     <script src="js/nav-loader.js"></script>
     <script src="js/banner-loader.js"></script>
     <script src="js/footer-loader.js"></script>
+    <script>
+        (function () {
+            const filters = document.querySelectorAll('.news-filter');
+            const cards = document.querySelectorAll('.news-card');
+
+            filters.forEach((button) => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+
+                    filters.forEach((item) => item.classList.toggle('is-active', item === button));
+
+                    cards.forEach((card) => {
+                        const category = card.getAttribute('data-category');
+                        const match = filter === 'all' || category === filter;
+                        card.classList.toggle('is-hidden', !match);
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
-</html> 
+</html>
