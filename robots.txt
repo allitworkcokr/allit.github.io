@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
+# 중복·레거시 페이지는 색인 우선순위 낮춤 (canonical/noindex와 병행)
+Disallow: /node_modules/
+Disallow: /components/
+
 # Sitemap
 Sitemap: https://allitwork.co.kr/sitemap.xml
-
-# Disallow only non-public directories
-Disallow: /node_modules/
