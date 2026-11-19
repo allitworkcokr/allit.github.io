@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>그라비아인쇄 프로그램 | 자재 관리 화면 - 올아이티</title>
-    <meta name="description" content="그라비아인쇄 프로그램(자재 관리) 화면 소개. 그라비아 특화 MES 데모 화면입니다.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
+    <title>자재 관리 화면 | 그라비아 MES · 올아이티</title>
+    <meta name="description" content="잉크와 인쇄 기재의 입출고, 현재고와 안전재고를 보여주는 화면입니다. 자재 로트별 사용 이력과 소모 패턴을 확인할 수 있습니다.">
     <meta name="keywords" content="그라비아인쇄 프로그램, 그라비아 MES, 자재 관리, 올아이티">
     <link rel="canonical" href="https://allitwork.co.kr/gravure-screen-materials.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://allitwork.co.kr/gravure-screen-materials.html">
-    <meta property="og:title" content="그라비아인쇄 프로그램 | 자재 관리 화면 - 올아이티">
-    <meta property="og:description" content="그라비아인쇄 프로그램(자재 관리) 화면 소개. 그라비아 특화 MES 데모 화면입니다.">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/gravure-screen-materials.html">
-    <meta property="twitter:title" content="올아이티 - 자재 관리 화면">
-    <meta property="twitter:description" content="자재 입출고와 재고 흐름을 관리하는 자재 관리 화면을 소개합니다.">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    <script src="js/head-loader.js"></script>
+    <meta property="og:title" content="자재 관리 화면 | 그라비아 MES · 올아이티">
+    <meta property="og:description" content="잉크와 인쇄 기재의 입출고, 현재고와 안전재고를 보여주는 화면입니다. 자재 로트별 사용 이력과 소모 패턴을 확인할 수 있습니다.">
+    <meta property="og:image" content="https://allitwork.co.kr/images/home-press.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/gravure-screen-materials.html">
+    <meta name="twitter:title" content="자재 관리 화면 | 그라비아 MES · 올아이티">
+    <meta name="twitter:description" content="잉크와 인쇄 기재의 입출고, 현재고와 안전재고를 보여주는 화면입니다. 자재 로트별 사용 이력과 소모 패턴을 확인할 수 있습니다.">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/home-press.jpg">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4MP3HBNBY"></script>
     <script>
@@ -117,15 +125,46 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    </aside>
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html">올아이티 소개</a></li>
+                    <li><a href="careers.html">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <main class="main-content">
+        <!-- include:breadcrumb -->
+<nav class="page-breadcrumb" aria-label="현재 위치">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="./"><span itemprop="name">홈</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="gravure-pages/gravure-mes.html"><span itemprop="name">그라비아인쇄 프로그램</span></a><meta itemprop="position" content="2"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">자재 관리</span><meta itemprop="position" content="3"></li>
+    </ol>
+</nav>
+<!-- endinclude -->
         <section class="hero">
             <div class="container">
                 <h1>자재 관리</h1>
@@ -153,11 +192,55 @@
     </main>
 
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
 </body>
 </html>

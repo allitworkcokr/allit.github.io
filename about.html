@@ -2,7 +2,14 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
     <title>회사소개 | 그라비아인쇄 프로그램·MES·ERP 전문 - 올아이티</title>
     <meta name="description" content="올아이티 회사소개. 그라비아인쇄 프로그램, 그라비아·패키징·소재 제조 MES·ERP·WEB 시스템을 구축하고 운영·AS까지 함께하는 IT 파트너입니다.">
     <meta name="keywords" content="올아이티, 회사소개, 그라비아인쇄 프로그램, MES, 그라비아 ERP, 스마트공장, 제조업솔루션">
@@ -17,14 +24,14 @@
     <meta property="og:url" content="https://allitwork.co.kr/about.html">
     <meta property="og:title" content="회사소개 | 그라비아인쇄 프로그램·MES·ERP 전문 - 올아이티">
     <meta property="og:description" content="그라비아인쇄 프로그램과 MES·ERP로 제조 현장 디지털 전환을 지원하는 올아이티">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-about.jpg">
+    <meta property="og:image" content="https://allitwork.co.kr/images/allit_phase2.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/about.html">
-    <meta property="twitter:title" content="회사소개 | 그라비아인쇄 프로그램·MES·ERP 전문 - 올아이티">
-    <meta property="twitter:description" content="그라비아인쇄 프로그램과 MES·ERP로 제조 현장 디지털 전환을 지원하는 올아이티">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-about.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/about.html">
+    <meta name="twitter:title" content="회사소개 | 그라비아인쇄 프로그램·MES·ERP 전문 - 올아이티">
+    <meta name="twitter:description" content="그라비아인쇄 프로그램과 MES·ERP로 제조 현장 디지털 전환을 지원하는 올아이티">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/allit_phase2.jpg">
 
     <script type="application/ld+json">
     {
@@ -38,20 +45,11 @@
             "name": "올아이티",
             "url": "https://allitwork.co.kr",
             "telephone": "+82-10-8015-0400",
-            "email": "blackgun12@naver.com",
+            "email": "shhong@allitwork.co.kr",
             "knowsAbout": ["그라비아인쇄 프로그램", "MES", "제조관리 ERP", "WEB MES", "스마트공장"]
         }
     }
     </script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/footer.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4MP3HBNBY"></script>
@@ -62,537 +60,183 @@
 
         gtag('config', 'G-D4MP3HBNBY');
     </script>
-    <style>
-        .about-hero {
-            position: relative;
-            overflow: hidden;
-            color: #fff;
-            padding: 120px 0 88px;
-            background:
-                radial-gradient(ellipse 80% 60% at 15% 20%, rgba(80, 125, 188, 0.45), transparent 55%),
-                radial-gradient(ellipse 70% 50% at 90% 80%, rgba(161, 198, 234, 0.18), transparent 50%),
-                linear-gradient(160deg, #04080f 0%, #0d1a2e 45%, #1a3355 100%);
-        }
-
-        .about-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 48px 48px;
-            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
-            pointer-events: none;
-        }
-
-        .about-hero .container {
-            position: relative;
-            z-index: 1;
-            max-width: 820px;
-        }
-
-        .about-kicker {
-            display: inline-block;
-            margin-bottom: 18px;
-            font-size: 0.85rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #a1c6ea;
-        }
-
-        .about-hero h1 {
-            font-size: clamp(2.4rem, 4vw, 3.4rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 18px;
-            line-height: 1.2;
-        }
-
-        .about-hero-lead {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.92);
-            margin-bottom: 16px;
-            max-width: 640px;
-        }
-
-        .about-hero-desc {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.78);
-            max-width: 680px;
-            margin-bottom: 28px;
-        }
-
-        .about-hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .about-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 18px;
-            background: #507dbc;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            border: 1px solid transparent;
-            transition: background 0.2s ease;
-        }
-
-        .about-cta:hover {
-            background: #3f6aa8;
-        }
-
-        .about-cta span {
-            font-size: 0.85rem;
-            font-weight: 500;
-            opacity: 0.9;
-        }
-
-        .about-ghost {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 18px;
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.2s ease, border-color 0.2s ease;
-        }
-
-        .about-ghost:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.55);
-        }
-
-        .about-section {
-            padding: 88px 0;
-            background: #f4f7f8;
-        }
-
-        .about-section--alt {
-            background: #fff;
-        }
-
-        .about-section--dark {
-            padding: 88px 0;
-            background: #04080f;
-            color: #fff;
-        }
-
-        .about-section-head {
-            max-width: 720px;
-            margin: 0 auto 48px;
-            text-align: center;
-        }
-
-        .about-section-head h2 {
-            font-size: clamp(1.9rem, 3vw, 2.4rem);
-            letter-spacing: -0.02em;
-            color: #04080f;
-            margin-bottom: 16px;
-        }
-
-        .about-section--dark .about-section-head h2 {
-            color: #fff;
-        }
-
-        .about-section-head p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #3a4654;
-        }
-
-        .about-section--dark .about-section-head p {
-            color: rgba(255, 255, 255, 0.78);
-        }
-
-        .about-facts {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 40px;
-        }
-
-        .about-fact {
-            padding: 22px 20px;
-            background: #fff;
-            border: 1px solid #d7e0e6;
-            border-top: 3px solid #507dbc;
-        }
-
-        .about-fact strong {
-            display: block;
-            font-size: 1.5rem;
-            letter-spacing: -0.02em;
-            color: #1a3355;
-            margin-bottom: 6px;
-        }
-
-        .about-fact span {
-            font-size: 0.9rem;
-            color: #6a7684;
-            line-height: 1.45;
-        }
-
-        .business-list {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            max-width: 920px;
-            margin: 0 auto;
-        }
-
-        .business-item {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            gap: 24px;
-            padding: 28px 30px;
-            background: #fff;
-            border: 1px solid #d7e0e6;
-            border-left: 4px solid #507dbc;
-            transition: border-color 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .business-item:hover {
-            border-color: #507dbc;
-            box-shadow: 0 12px 28px rgba(4, 8, 15, 0.08);
-        }
-
-        .business-index {
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            color: #507dbc;
-            margin-bottom: 8px;
-        }
-
-        .business-item h3 {
-            font-size: 1.2rem;
-            letter-spacing: -0.02em;
-            color: #04080f;
-            line-height: 1.35;
-        }
-
-        .business-item p {
-            color: #3a4654;
-            line-height: 1.7;
-            margin-bottom: 14px;
-        }
-
-        .business-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .business-features li {
-            padding: 4px 10px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: #1a3355;
-            background: #e8f0f8;
-            border: 1px solid #c5d6e8;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            max-width: 980px;
-            margin: 0 auto;
-        }
-
-        .value-card {
-            padding: 28px 24px;
-            background: #f4f7f8;
-            border: 1px solid transparent;
-            transition: border-color 0.25s ease, background 0.25s ease;
-        }
-
-        .value-card:hover {
-            background: #fff;
-            border-color: #507dbc;
-        }
-
-        .value-card h3 {
-            font-size: 1.25rem;
-            letter-spacing: -0.02em;
-            color: #1a3355;
-            margin-bottom: 12px;
-        }
-
-        .value-card p {
-            font-size: 0.98rem;
-            line-height: 1.7;
-            color: #3a4654;
-        }
-
-        .vision-content {
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.15rem;
-            line-height: 1.85;
-            color: rgba(255, 255, 255, 0.88);
-        }
-
-        .vision-content strong {
-            color: #a1c6ea;
-            font-weight: 700;
-        }
-
-        .vision-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
-        .vision-links a {
-            display: inline-flex;
-            padding: 12px 18px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .vision-links .about-cta {
-            background: #507dbc;
-        }
-
-        .vision-links .about-ghost {
-            border-color: rgba(255, 255, 255, 0.35);
-            color: #fff;
-        }
-
-        @media (max-width: 900px) {
-            .about-facts,
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-hero {
-                padding: 100px 0 64px;
-            }
-
-            .about-section,
-            .about-section--dark {
-                padding: 64px 0;
-            }
-
-            .about-facts,
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .business-item {
-                grid-template-columns: 1fr;
-                gap: 10px;
-                padding: 22px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <!-- 네비게이션 -->
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <!-- 왼쪽 배너 -->
-    <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    </aside>
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html" aria-current="page">올아이티 소개</a></li>
+                    <li><a href="careers.html">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <!-- 메인 콘텐츠 -->
-    <main class="main-content">
-        <section class="about-hero">
-            <div class="container">
-                <p class="about-kicker">About ALL IT</p>
-                <h1>회사소개</h1>
-                <p class="about-hero-lead">제조 현장의 MES·ERP를 현장 언어로 설계하는 IT 파트너</p>
-                <p class="about-hero-desc">
-                    올아이티는 그라비아 인쇄, 박스·라벨 패키징, 소재·중장비 제조 현장에
-                    MES·제조관리 ERP·WEB 시스템을 구축합니다.
-                    구축으로 끝내지 않고, 운영·고도화·AS까지 함께합니다.
-                </p>
-                <div class="about-hero-actions">
-                    <a class="about-cta" href="tel:01080150400">
-                        010-8015-0400
-                        <span>MES·ERP 도입문의</span>
-                    </a>
-                    <a class="about-ghost" href="projects-partners.html">프로젝트 & 협력사</a>
+    <main class="main-content home company">
+        <!-- include:breadcrumb -->
+<nav class="page-breadcrumb" aria-label="현재 위치">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="./"><span itemprop="name">홈</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">올아이티 회사소개</span><meta itemprop="position" content="2"></li>
+    </ol>
+</nav>
+<!-- endinclude -->
+        <header class="company-intro">
+            <div class="home-frame">
+                <h1>올아이티 회사소개</h1>
+                <p>그라비아 인쇄·패키징부터 소재·중장비 제조까지, 현장의 공정에 맞춰 MES와 ERP를 설계합니다. 구축 후에도 운영과 개선을 함께합니다.</p>
+                <div class="company-actions">
+                    <a class="company-projects" href="projects-partners.html">프로젝트·협력사 보기 <span aria-hidden="true">→</span></a>
+                    <a class="company-phone" href="tel:01080150400">도입 문의 010-8015-0400</a>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section class="about-section">
-            <div class="container">
-                <div class="about-section-head">
-                    <h2>우리가 하는 일</h2>
-                    <p>
-                        단순 시스템 납품이 아니라, 생산·품질·재고·원가 데이터를 하나의 흐름으로 연결합니다.
-                        업종별 공정 특성을 반영한 특화 솔루션으로 현장 운영 품질을 높입니다.
-                    </p>
-                </div>
-
-                <div class="about-facts">
-                    <div class="about-fact">
-                        <strong>그라비아·패키징</strong>
-                        <span>인쇄·라벨·박스 현장 특화</span>
-                    </div>
-                    <div class="about-fact">
-                        <strong>MES · ERP</strong>
-                        <span>제조실행 + 업무통합</span>
-                    </div>
-                    <div class="about-fact">
-                        <strong>WEB SI</strong>
-                        <span>웹 MES·포털 구축</span>
-                    </div>
-                    <div class="about-fact">
-                        <strong>저작권 등록</strong>
-                        <span>제조관리 ERP 솔루션</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-section about-section--alt">
-            <div class="container">
-                <div class="about-section-head">
-                    <h2>핵심사업</h2>
-                    <p>고객사 공정에 맞춰 표준 MES부터 그라비아·박스 특화 ERP, WEB MES까지 제공합니다.</p>
-                </div>
-
-                <div class="business-list">
-                    <article class="business-item">
-                        <div>
-                            <p class="business-index">01</p>
-                            <h3>MES 솔루션</h3>
-                        </div>
-                        <div>
-                            <p>
-                                생산실적, 품질검사, 자재 투입, 설비 상태를 실시간으로 연결합니다.
-                                현장 Lot 추적과 모니터링으로 불량 감소와 공정 가시성을 확보합니다.
-                            </p>
-                            <ul class="business-features">
-                                <li>실시간 생산 모니터링</li>
-                                <li>품질·Lot 추적</li>
-                                <li>자재·재고 연동</li>
-                                <li>설비 상태 관리</li>
-                            </ul>
-                        </div>
+        <section id="core-values" class="company-principles" aria-labelledby="principles-title">
+            <div class="home-frame">
+                <h2 id="principles-title">올아이티의 핵심가치</h2>
+                <article class="principle-lead">
+                    <h3><strong>사람의 시간</strong>을 소중히 여깁니다.</h3>
+                    <p class="principles-statement">사람은 자신의 시간을 어디에 쓸지 스스로 선택할 수 있어야 합니다.</p>
+                    <p>누구에게나 하루는 한 번뿐입니다. 회사의 결정 하나가 누군가에게는 되풀이해야 할 일이 되고, 누군가에게는 새로운 일을 시작할 여유가 됩니다. 올아이티는 우리가 하는 일이 사람들에게 어떤 시간을 돌려줄 수 있는지 먼저 생각합니다.</p>
+                </article>
+                <div class="principles-grid">
+                    <article>
+                        <h3>함께 만든 성과를 공정하게 나눕니다.</h3>
+                        <p>일이 잘 끝난 날에는 문제가 되기 전에 먼저 알아챈 사람, 동료가 끝까지 해낼 수 있게 곁을 지킨 사람의 수고가 잘 보이지 않습니다. 올아이티는 그 기여를 찾아 이름을 부르고, 인정과 보상에 반영하겠습니다.</p>
                     </article>
-
-                    <article class="business-item">
-                        <div>
-                            <p class="business-index">02</p>
-                            <h3>그라비아·패키징 특화 ERP</h3>
-                        </div>
-                        <div>
-                            <p>
-                                연포장 그라비아인쇄 제조관리 ERP v2.0, 박스·옵셋인쇄 제조관리 ERP 등
-                                업종 특화 솔루션으로 공정별 원가·재고·생산을 정밀하게 관리합니다.
-                            </p>
-                            <ul class="business-features">
-                                <li>공정별 원가</li>
-                                <li>재고·입출고</li>
-                                <li>Lot·작업지시</li>
-                                <li>저작권 등록 솔루션</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="business-item">
-                        <div>
-                            <p class="business-index">03</p>
-                            <h3>WEB SI · WEB MES</h3>
-                        </div>
-                        <div>
-                            <p>
-                                라벨·다공정 현장에 맞춘 WEB MES와 업무 포털을 구축합니다.
-                                기획부터 개발·운영까지 One-Stop으로 지원합니다.
-                            </p>
-                            <ul class="business-features">
-                                <li>WEB MES</li>
-                                <li>업무 포털</li>
-                                <li>대시보드</li>
-                                <li>운영·유지보수</li>
-                            </ul>
-                        </div>
+                    <article>
+                        <h3>익숙한 일에도 질문할 용기를 지킵니다.</h3>
+                        <p>“왜 이렇게 해야 하나요?” 처음 온 사람이 건넨 질문에 오래 일한 사람도 답하기 어려울 때가 있습니다. 올아이티에서는 누구나 그 질문을 꺼낼 수 있고, 결정할 권한이 있는 사람에게는 그 이유를 설명하고 다시 생각할 책임이 있습니다.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="about-section">
-            <div class="container">
-                <div class="about-section-head">
-                    <h2>핵심가치</h2>
-                    <p>정확성·효율성·신뢰성을 기준으로, 현장에서 바로 쓰는 품질을 만듭니다.</p>
-                </div>
-
-                <div class="values-grid">
-                    <article class="value-card">
-                        <h3>정확성</h3>
-                        <p>생산·품질·재고 데이터를 일치시켜 의사결정의 기준을 명확히 합니다.
-                            현장 입력과 관리 화면의 정합성을 최우선으로 설계합니다.</p>
-                    </article>
-                    <article class="value-card">
-                        <h3>효율성</h3>
-                        <p>반복 업무를 줄이고 공정 흐름을 자동화·표준화합니다.
-                            작업자와 관리자가 같은 화면 언어로 협업할 수 있게 합니다.</p>
-                    </article>
-                    <article class="value-card">
-                        <h3>신뢰성</h3>
-                        <p>구축 이후 AS·고도화까지 이어지는 운영 파트너십을 유지합니다.
-                            안정적인 서비스와 지속적인 기술 지원을 약속합니다.</p>
-                    </article>
-                </div>
+        <section id="vision" class="home-frame company-vision company-columns" aria-labelledby="vision-title">
+            <h2 id="vision-title">올아이티의 비전</h2>
+            <div>
+                <h3>미래를 만드는 힘이 더 많은 사람에게</h3>
+                <p>올아이티는 누구나 자신이 바라는 변화를 직접 만들어 낼 수 있어야 한다고 믿습니다.</p>
+                <p>한 작업자가 매일 쓰는 도구의 손잡이를 자기 손에 맞게 고칩니다. 그 모양을 디지털 설계도로 나누면, 멀리 떨어진 작은 공장에서도 손잡이를 만들어 볼 수 있습니다. 그곳의 작업자는 두꺼운 장갑을 끼고도 편하게 쥘 수 있도록 모양을 조금 바꿉니다. 그렇게 한 사람의 아이디어가 다른 사람의 경험을 만나 더 나은 도구가 됩니다.</p>
+                <p>우리는 IT와 제조가 함께 바꿀 미래를 이 장면에서 봅니다. 올아이티는 필요한 것을 가장 잘 아는 사람이 자기 생각을 시험하고, 직접 만들고, 그 성과를 나눌 수 있도록 상상과 제작 사이의 문턱을 낮추겠습니다.</p>
+                <a href="news.html">올아이티 소식 보기 <span aria-hidden="true">→</span></a>
             </div>
         </section>
 
-        <section class="about-section--dark">
-            <div class="container">
-                <div class="about-section-head">
-                    <h2>비전</h2>
-                    <p>
-                        올아이티는 제조기업의 디지털 전환을 이끄는 <strong>기술 파트너</strong>입니다.
-                        품질과 데이터를 중심으로, 고객의 경쟁력을 높이는 스마트 제조 환경을 만듭니다.
-                    </p>
+        <section class="solutions home-frame" aria-labelledby="business-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="business-title">핵심 사업</h2>
+                    <p>생산·품질·재고·원가 데이터를 연결하는 세 가지 사업을 소개합니다.</p>
                 </div>
-                <p class="vision-content">
-                    그라비아부터 패키징·소재·중장비까지,
-                    현장마다 다른 공정 언어를 시스템에 담아
-                    <strong>운영 가능한 디지털 전환</strong>을 완성합니다.
-                </p>
-                <div class="vision-links">
-                    <a class="about-cta" href="news.html">최신 뉴스 보기</a>
-                    <a class="about-ghost" href="mes-solution.html">MES 솔루션</a>
-                </div>
+            </div>
+            <div class="solution-grid">
+                <a class="solution-tile" href="mes-solution.html">
+                    <div class="solution-photo"><img src="images/home-factory.jpg" width="800" height="400" alt=""></div>
+                    <div class="solution-name"><h3>일반 MES 솔루션</h3><span aria-hidden="true">→</span></div>
+                    <p>생산 실적과 설비 상태를 실시간으로 확인하고, 투입 자재와 품질 검사 결과를 생산 로트별로 추적합니다.</p>
+                </a>
+                <a class="solution-tile" href="gravure-pages/gravure-mes.html">
+                    <div class="solution-photo"><img src="images/home-gravure.jpg" width="800" height="400" alt=""></div>
+                    <div class="solution-name"><h3>그라비아·패키징 특화 ERP</h3><span aria-hidden="true">→</span></div>
+                    <p>저작권을 등록한 연포장 그라비아 제조관리 ERP v2.0과 박스·옵셋인쇄 ERP로 작업 지시, 공정별 원가와 입출고를 관리합니다.</p>
+                </a>
+                <a class="solution-tile" href="web-development.html">
+                    <div class="solution-photo"><img src="images/home-workstation.jpg" width="800" height="400" alt=""></div>
+                    <div class="solution-name"><h3>웹 기반 MES·업무 포털</h3><span aria-hidden="true">→</span></div>
+                    <p>라벨 인쇄 등 여러 공정을 거치는 현장에 맞춰 웹 MES와 대시보드를 구축합니다. 기획과 개발부터 운영·유지보수까지 지원합니다.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="company-values" aria-labelledby="values-title">
+            <div class="home-frame company-columns">
+                <h2 id="values-title">일하는 기준</h2>
+                <dl>
+                    <div><dt>정확성</dt><dd>현장에서 입력한 생산·품질·재고 수치가 관리 화면에도 일치하도록 설계합니다.</dd></div>
+                    <div><dt>효율성</dt><dd>반복 입력을 줄이고 공정을 표준화해 작업자와 관리자가 같은 기준으로 일할 수 있게 합니다.</dd></div>
+                    <div><dt>신뢰성</dt><dd>구축 후에도 현장의 문의와 장애에 대응하고, 공정 변화에 맞춰 시스템을 개선합니다.</dd></div>
+                </dl>
             </div>
         </section>
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
 </body>
 </html>

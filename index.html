@@ -2,8 +2,17 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
     <title>올아이티 | 그라비아인쇄 프로그램 · MES·ERP 전문</title>
+    <meta name="naver-site-verification" content="28e777f29925fee38093c3a8d3c9e907b687e76d">
+    <link rel="stylesheet" href="css/home.css">
     <meta name="description" content="그라비아인쇄 프로그램, 그라비아 특화 MES·ERP, 표준 MES, WEB MES를 제공하는 올아이티. 인쇄·패키징·제조 현장의 디지털 전환을 지원합니다.">
     <meta name="keywords" content="그라비아인쇄 프로그램, 그라비아인쇄프로그램, 그라비아 MES, 그라비아 ERP, 올아이티, MES, 웹개발, 스마트공장">
     <link rel="canonical" href="https://allitwork.co.kr/">
@@ -17,27 +26,14 @@
     <meta property="og:url" content="https://allitwork.co.kr/">
     <meta property="og:title" content="올아이티 | 그라비아인쇄 프로그램 · MES·ERP 전문">
     <meta property="og:description" content="그라비아인쇄 프로그램과 MES·ERP로 제조 현장 디지털 전환을 지원하는 올아이티">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-image.jpg">
+    <meta property="og:image" content="https://allitwork.co.kr/images/home-press.jpg">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/">
-    <meta property="twitter:title" content="올아이티 | 그라비아인쇄 프로그램 · MES·ERP 전문">
-    <meta property="twitter:description" content="그라비아인쇄 프로그램과 MES·ERP로 제조 현장 디지털 전환을 지원하는 올아이티">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/footer.css">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/">
+    <meta name="twitter:title" content="올아이티 | 그라비아인쇄 프로그램 · MES·ERP 전문">
+    <meta name="twitter:description" content="그라비아인쇄 프로그램과 MES·ERP로 제조 현장 디지털 전환을 지원하는 올아이티">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/home-press.jpg">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -58,7 +54,7 @@
                 "@id": "https://allitwork.co.kr/#organization",
                 "name": "올아이티",
                 "url": "https://allitwork.co.kr",
-                "logo": "https://allitwork.co.kr/images/logo.png",
+
                 "description": "그라비아인쇄 프로그램, 그라비아 특화 MES·ERP, 일반 MES, WEB MES를 제공하는 제조 IT 회사",
                 "knowsAbout": [
                     "그라비아인쇄 프로그램",
@@ -72,7 +68,7 @@
                     "telephone": "+82-10-8015-0400",
                     "contactType": "customer service",
                     "availableLanguage": "Korean",
-                    "email": "blackgun12@naver.com"
+                    "email": "shhong@allitwork.co.kr"
                 },
                 "sameAs": ["https://allitwork.co.kr"],
                 "foundingDate": "2009",
@@ -117,16 +113,37 @@
         gtag('config', 'G-D4MP3HBNBY');
     </script>
 </head>
-<body>
+<body class="home">
     <!-- 네비게이션 -->
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <!-- 왼쪽 배너 -->
-    <!-- <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    <!-- </aside> -->
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html" aria-current="page"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html">올아이티 소개</a></li>
+                    <li><a href="careers.html">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <!-- 메인 콘텐츠 -->
     <main class="main-content">
@@ -135,7 +152,7 @@
                 <div class="hero-content" data-hero-slider>
                     <div class="hero-slider-track">
 
-                        <article class="hero-slide" style="--hero-slide-bg: url('/images/dynesoze.png');">
+                        <article class="hero-slide hero-slide--dynesoze">
                             <div class="hero-slide-content">
                                 <p class="hero-slide-meta">프로젝트 · 2026.10</p>
                                 <h2>다인소재 스마트ERP 개선 2차 프로젝트 시작</h2>
@@ -146,7 +163,7 @@
                             </div>
                         </article>
 
-                        <article class="hero-slide" style="--hero-slide-bg: url('/images/sammin.jpg');">
+                        <article class="hero-slide hero-slide--sammin">
                             <div class="hero-slide-content">
                                 <p class="hero-slide-meta">프로젝트 · 2026.10</p>
                                 <h2>삼민산업(주) MES 신규 구축 사업 시작</h2>
@@ -156,8 +173,8 @@
                                 </div>
                             </div>
                         </article>
-                        
-                        <article class="hero-slide" style="--hero-slide-bg: url('/images/hpm_2026.png');">
+
+                        <article class="hero-slide hero-slide--hpm">
                             <div class="hero-slide-content">
                                 <p class="hero-slide-meta">프로젝트 · 2026.05</p>
                                 <h2>HPM글로벌 2026 경기도형 스마트공장 사업</h2>
@@ -167,9 +184,9 @@
                                 </div>
                             </div>
                         </article>
-                        
-                        
-                        <article class="hero-slide" style="--hero-slide-bg: url('/images/steel.png');">
+
+
+                        <article class="hero-slide hero-slide--steel">
                             <div class="hero-slide-content">
                                 <p class="hero-slide-meta">프로젝트 · 2026.03</p>
                                 <h2>에스틸 MES기반 ERP SI 구축사업 1차</h2>
@@ -181,10 +198,10 @@
                         </article>
 
 
-                        <article class="hero-slide is-active" style="--hero-slide-bg: url('/images/allit_phase2.jpg');">
+                        <article class="hero-slide is-active hero-slide--phase2">
                             <div class="hero-slide-content">
-                                <p class="hero-slide-meta">ALL IT · PHASE 2</p>
-                                <h1>올아이티 페이즈2 시작</h1>
+                                <p class="hero-slide-meta">올아이티 · PHASE 2</p>
+                                <h2>올아이티 페이즈2 시작</h2>
                                 <p>가산디지털단지에서 올아이티 페이즈2를 시작합니다. MES·ERP 전문 역량을 한층 더 강화합니다.</p>
                                 <div class="hero-actions">
                                     <a href="about.html" class="cta-button">회사 소개</a>
@@ -204,94 +221,96 @@
             </div>
         </section>
 
-        <section id="solutions" class="features-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>올아이티 핵심 솔루션</h2>
-                    <p>제조 현장에 바로 적용할 수 있는 MES·WEB 기반 서비스를 한눈에 확인하세요.</p>
-                </div>
-                <div class="features-grid">
-                    <article class="feature-card">
-                        <div class="feature-media">
-                            <img src="images/gravure_mes.png" alt="그라비아인쇄 프로그램 · 그라비아 특화 MES" loading="lazy" decoding="async">
-                        </div>
-                        <div class="feature-body">
-                            <h3>그라비아인쇄 프로그램</h3>
-                            <p>그라비아 특화 MES·ERP로 제품·동판·품질·설비까지 인쇄 공정을 통합 관리합니다.</p>
-                            <div class="feature-links">
-                                <a href="gravure-pages/gravure-mes.html">프로그램 소개</a>
-                                <a href="gravure-pages/product-registration.html">제품관리</a>
-                                <a href="gravure-pages/production.html">생산관리</a>
-                                <a href="gravure-pages/quaility.html">품질관리</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-media">
-                            <img src="images/basic-mes.png" alt="표준 MES 이미지" loading="lazy" decoding="async">
-                        </div>
-                        <div class="feature-body">
-                            <h3>표준 MES</h3>
-                            <p>제조 현장의 핵심 데이터를 표준 프로세스로 연결하여 운영 효율을 높입니다.</p>
-                            <div class="feature-links">
-                                <a href="mes-solution.html">솔루션 보기</a>
-                                <!-- <a href="gravure-pages/gravure-mes.html#section1">도입 개요</a>
-                                <a href="gravure-pages/gravure-mes.html#section2">핵심 기능</a> -->
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-media">
-                            <img src="images/web-mes.png" alt="WEB MES 이미지" loading="lazy" decoding="async">
-                        </div>
-                        <div class="feature-body">
-                            <h3>WEB MES</h3>
-                            <p>웹 기반으로 실시간 생산 모니터링과 협업 환경을 빠르게 제공합니다.</p>
-                            <div class="feature-links">
-                                <a href="web-development.html">개발 소개</a>
-                                <!-- <a href="web-development.html#section1">기능 1</a>
-                                <a href="web-development.html#section2">기능 2</a> -->
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-media">
-                            <img src="images/company.png" alt="회사소개 이미지" loading="lazy" decoding="async">
-                        </div>
-                        <div class="feature-body">
-                            <h3>회사소개</h3>
-                            <p>올아이티의 비전과 프로젝트, 채용 정보를 한눈에 확인하세요.</p>
-                            <div class="feature-links">
-                                <a href="about.html">올아이티 소개</a>
-                                <a href="projects-partners.html">프로젝트</a>
-                                <a href="careers.html">채용정보</a>
-                                <a href="news.html">뉴스</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+        <section class="solutions home-frame" id="solutions" aria-labelledby="solution-heading">
+            <div class="section-heading">
+                <h1 id="solution-heading">현장에 맞는 MES 솔루션</h1>
+            </div>
+            <div class="solution-grid">
+                <a class="solution-tile" href="gravure-pages/gravure-mes.html">
+                    <span class="solution-photo"><img src="images/home-gravure.jpg" width="800" height="400" loading="lazy" alt=""></span>
+                    <div class="solution-name"><h3>그라비아 인쇄 MES</h3><span aria-hidden="true">↗</span></div>
+                    <p>동판·원단·잉크부터 수주별 생산과 출하 이력까지 관리합니다.</p>
+                </a>
+                <a class="solution-tile" href="mes-solution.html">
+                    <span class="solution-photo"><img src="images/home-factory.jpg" width="800" height="400" loading="lazy" alt=""></span>
+                    <div class="solution-name"><h3>표준 MES</h3><span aria-hidden="true">↗</span></div>
+                    <p>작업지시와 실적, 자재, 품질 정보를 생산 공정별로 관리합니다.</p>
+                </a>
+                <a class="solution-tile" href="web-development.html">
+                    <span class="solution-photo"><img src="images/home-workstation.jpg" width="800" height="400" loading="lazy" alt=""></span>
+                    <div class="solution-name"><h3>웹 기반 MES</h3><span aria-hidden="true">↗</span></div>
+                    <p>브라우저에서 공정 현황을 조회하고 생산 데이터를 입력합니다.</p>
+                </a>
             </div>
         </section>
 
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>디지털 전환 파트너</h2>
-                <p>올아이티는 현장 맞춤형 MES와 웹 솔루션으로 제조 경쟁력을 높이는 팀입니다.</p>
+        <section class="home-news" aria-labelledby="home-news-heading">
+            <div class="news-layout home-frame">
+                <div>
+                    <h2 id="home-news-heading">올아이티 소식</h2>
+                    <a href="news.html">뉴스 전체 보기 <span aria-hidden="true">→</span></a>
+                </div>
+                <ul>
+                    <li><a href="news.html#dain-erp"><time datetime="2026-10">2026.10</time><span>다인소재 스마트ERP 개선 2차 프로젝트 착수</span><span aria-hidden="true">↗</span></a></li>
+                    <li><a href="news.html#sammin-mes"><time datetime="2026-10">2026.10</time><span>삼민산업 MES 신규 구축 사업 착수</span><span aria-hidden="true">↗</span></a></li>
+                    <li><a href="news.html#gravure-erp-copyright"><time datetime="2026-09">2026.09</time><span>연포장 그라비아인쇄 제조관리 ERP v2.0 저작권 등록</span><span aria-hidden="true">↗</span></a></li>
+                </ul>
             </div>
         </section>
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
     <script src="js/hero-slider.js"></script>
-    <script src="js/footer-loader.js"></script>
 </body>
 </html> 

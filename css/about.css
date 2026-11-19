@@ -1,0 +1,115 @@
+.company .page-breadcrumb { background: #f9faf7; border-color: #d7dfd9; }
+.company-intro {
+    --company-photo: url("../images/allit_phase2.jpg");
+    padding-block: clamp(48px, 5.4vw, 88px);
+    background: linear-gradient(90deg, #102420e8, #102420bf 40%, transparent 72%),
+        var(--company-photo) center / cover #142925;
+    color: white;
+}
+.company-intro h1 {
+    font-size: clamp(36px, 4vw, 66px);
+    letter-spacing: -.065em;
+    line-height: 1.2;
+}
+.company-intro p {
+    max-width: 33em;
+    margin: 16px 0 24px;
+    font-size: clamp(16px, 1.25vw, 20px);
+    color: #f2f7f4;
+    line-height: 1.75;
+}
+.company-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; }
+.company-actions a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 650; }
+.company-projects {
+    padding: 10px 16px;
+    gap: 12px;
+    border-radius: 8px;
+    color: #193831;
+    background: white;
+    text-decoration: none;
+}
+.company-projects:hover { background: #e6eee9; }
+.company-phone { color: white; text-underline-offset: 4px; }
+.company-principles {
+    padding-block: clamp(40px, 4.5vw, 72px);
+    scroll-margin-top: 80px;
+    background: #eaf0eb;
+}
+.company-principles h2 { color: #285647; font-size: 18px; }
+.principle-lead { margin: 12px 0 clamp(24px, 3vw, 44px); }
+.principle-lead h3 {
+    font-size: clamp(30px, 4.4vw, 70px);
+    letter-spacing: -.055em;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+.principle-lead h3 strong { color: #145440; font-weight: 800; }
+.principle-lead p { max-width: 48em; color: #465a50; line-height: 1.8; }
+.principle-lead .principles-statement {
+    margin: 16px 0 8px;
+    color: #142925;
+    font-weight: 650;
+    font-size: clamp(17px, 1.5vw, 22px);
+}
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(20px, 3vw, 44px);
+}
+.principles-grid article { border-top: 1px solid #aebeb7; padding-top: 16px; }
+.principles-grid h3 { font-size: clamp(18px, 1.5vw, 23px); line-height: 1.45; letter-spacing: -.04em; }
+.principles-grid p { margin-top: 9px; color: #465a50; line-height: 1.8; }
+.company .section-heading p { margin-top: 10px; }
+.company-values, .company-vision { padding-block: clamp(44px, 5vw, 80px); }
+.company-values { background: #eaf0eb; }
+.company-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 32px;
+    align-items: start;
+}
+.company-columns h2 {
+    font-size: clamp(31px, 2.7vw, 46px);
+    letter-spacing: -.065em;
+    line-height: 1.25;
+}
+.company-values dl { border-top: 1px solid #aebeb7; }
+.company-values dl > div {
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    align-items: baseline;
+    gap: 16px;
+    padding-block: 18px;
+    border-bottom: 1px solid #c9d5cf;
+}
+.company-values dt { font-size: 19px; font-weight: 700; }
+.company-values dd, .company-vision p { color: #465a50; line-height: 1.8; }
+.company-vision { scroll-margin-top: 80px; }
+.company-vision h3 { font-size: clamp(21px, 2vw, 30px); line-height: 1.35; }
+.company-vision p { margin-top: 14px; }
+.company-vision a {
+    display: inline-block;
+    padding-block: 12px;
+    color: #1c6656;
+    font-weight: 650;
+    text-underline-offset: 4px;
+}
+.company a:focus-visible { outline: 3px solid #5087b1; outline-offset: 3px; }
+@media (min-width: 761px) {
+    .company-intro p, .company-actions { width: 54%; }
+}
+@media (max-width: 760px) {
+    .principles-grid { grid-template-columns: 1fr; }
+    .company-columns { grid-template-columns: 1fr; gap: 20px; }
+    .company-intro { padding-bottom: 0; background: #142925; }
+    .company-intro::after {
+        content: "";
+        display: block;
+        height: clamp(128px, 29vw, 178px);
+        margin-top: 24px;
+        background: var(--company-photo) right center / cover;
+    }
+}
+@media (max-width: 440px) {
+    .company-values dl > div { grid-template-columns: 1fr; gap: 5px; }
+}

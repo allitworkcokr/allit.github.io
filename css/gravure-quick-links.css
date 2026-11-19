@@ -1,54 +1,58 @@
- .quick-links {
-     margin-top: 50px;
- }
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+}
 
- .quick-links-title {
-     font-size: 1.6rem;
-     text-align: center;
-     margin-bottom: 24px;
-     color: #04080f;
-     font-weight: 600;
- }
+.quick-link-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start;
+    align-items: center;
+    gap: 8px 12px;
+    padding: clamp(18px, 2vw, 30px);
+    border: 1px solid #d7dfe4;
+    border-radius: 14px;
+    background: #fff;
+    color: #1b2c3d;
+    text-decoration: none;
+}
 
- .quick-links-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-     gap: 18px;
- }
+.quick-link-title {
+    font-size: clamp(19px, 1.55vw, 25px);
+    font-weight: 700;
+    letter-spacing: -.045em;
+}
 
- .quick-link-card {
-     display: flex;
-     flex-direction: column;
-     gap: 8px;
-     padding: 18px 20px;
-     border-radius: 14px;
-     border: 1px solid #e9ecef;
-     background: #ffffff;
-     text-decoration: none;
-     color: inherit;
-     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-     transition: transform 0.2s ease, box-shadow 0.2s ease;
- }
+.quick-link-desc {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    color: #526170;
+    font-size: 15px;
+}
 
- .quick-link-card:hover {
-     transform: translateY(-2px);
-     box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
- }
+.quick-link-cta {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #eef3f8;
+    color: #355570;
+    font-size: 0;
+}
 
- .quick-link-title {
-     font-size: 1rem;
-     font-weight: 600;
-     color: #04080f;
- }
+.quick-link-cta::after { content: "→" / ""; font-size: 18px; }
+.quick-link-card:hover { border-color: #95a9bb; }
+.quick-link-card:hover .quick-link-cta { background: #203751; color: white; }
 
- .quick-link-desc {
-     font-size: 0.9rem;
-     color: #6c757d;
-     line-height: 1.4;
- }
+@media (max-width: 900px) {
+    .quick-links-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
- .quick-link-cta {
-     font-size: 0.9rem;
-     font-weight: 600;
-     color: #507dbc;
- }
+@media (max-width: 540px) {
+    .quick-links-grid { grid-template-columns: 1fr; }
+}

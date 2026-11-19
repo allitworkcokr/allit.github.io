@@ -1,0 +1,158 @@
+:is(.gravure-overview, .solution-overview) {
+    background: #f9faf7;
+    color: #142925;
+    font-family: "Segoe UI Variable", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.product-frame {
+    width: 90%;
+    max-width: 1392px;
+    margin-inline: auto;
+}
+
+:is(.gravure-overview, .solution-overview) .page-breadcrumb {
+    background: #f9faf7;
+    border-color: #d7dfd9;
+}
+
+.product-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #142925;
+    color: #fff;
+}
+
+.product-intro-copy {
+    align-self: center;
+    padding: clamp(48px, 5.5vw, 92px) 5% clamp(48px, 5.5vw, 92px) max(5vw, calc((100vw - 1392px) / 2));
+}
+
+.product-intro h1 {
+    max-width: 11em;
+    font-size: clamp(36px, 4vw, 70px);
+    letter-spacing: -.065em;
+    line-height: 1.18;
+}
+
+.product-intro p {
+    margin: 20px 0 26px;
+    font-size: clamp(16px, 1.2vw, 20px);
+    line-height: 1.75;
+    color: #dfebe5;
+}
+
+:is(.cylinder-photo, .product-photo) {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+
+.intro-button, .product-contact a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 46px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #fff;
+    color: #193831;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.product-details, .demo-directory, .product-contact {
+    padding-block: clamp(44px, 5vw, 80px);
+}
+
+:is(.gravure-overview, .solution-overview) h2, .quick-links-title {
+    font-size: clamp(27px, 2.5vw, 42px);
+    line-height: 1.25;
+    letter-spacing: -.055em;
+}
+
+.process-summary {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+    align-items: center;
+    gap: clamp(30px, 6vw, 112px);
+}
+
+.process-summary p, .product-contact p {
+    max-width: 37em;
+    margin-top: 16px;
+    line-height: 1.85;
+    color: #50605c;
+}
+
+.diagram-link {
+    display: inline-block;
+    padding-block: 12px;
+    color: #1c6656;
+    font-weight: 650;
+    text-underline-offset: 4px;
+}
+
+.process-diagram {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #d7dfe4;
+    border-radius: 14px;
+}
+
+#workflows {
+    margin-top: clamp(36px, 4vw, 68px);
+    scroll-margin-top: 100px;
+}
+
+:is(.gravure-overview, .solution-overview) a:focus-visible { outline: 3px solid #5087b1; outline-offset: 3px; }
+
+.demo-directory { background: #eaf0eb; }
+.demo-layout, .product-contact {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    align-items: start;
+    gap: 32px;
+}
+
+.demo-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
+    list-style: none;
+}
+
+.demo-links li { border-bottom: 1px solid #bfcdc5; }
+.demo-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-block: 17px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.demo-links a::after { content: "→" / ""; color: #456456; }
+.demo-links a:hover, .diagram-link:hover { color: #076a59; text-decoration: underline; }
+.product-contact { grid-template-columns: 1fr auto; align-items: center; }
+.product-contact a { background: #193831; color: #fff; }
+.product-contact a:hover { background: #275248; }
+.intro-button:hover { background: #e6eee9; }
+
+@media (max-width: 760px) {
+    .product-frame, :is(.gravure-overview, .solution-overview) .page-breadcrumb ol { width: 88%; }
+    .product-intro, .process-summary, .demo-layout, .product-contact { grid-template-columns: 1fr; }
+    .product-intro-copy { padding: 40px 6%; }
+    :is(.cylinder-photo, .product-photo) { height: clamp(150px, 33vw, 230px); }
+    .product-contact { justify-items: start; gap: 20px; }
+}
+
+@media (max-width: 540px) {
+    .demo-links { grid-template-columns: 1fr; }
+}

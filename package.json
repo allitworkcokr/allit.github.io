@@ -1,16 +1,23 @@
 {
   "name": "allit-website",
   "version": "1.0.0",
-  "description": "Allit Company Website",
+  "description": "올아이티 홈페이지",
   "main": "index.html",
   "scripts": {
     "start": "npx http-server . -p 3000 -o",
-    "dev": "npx live-server --port=3000 --open=/",
-    "build": "echo 'Static site - no build needed'",
-    "serve": "python3 -m http.server 3000"
+    "dev": "live-server --host=127.0.0.1 --port=3000 --no-browser",
+    "build": "node scripts/build.mjs",
+    "serve": "python3 -m http.server 3000",
+    "predev": "npm run build"
   },
-  "keywords": ["website", "static", "html", "css", "javascript"],
-  "author": "Allit",
+  "keywords": [
+    "website",
+    "static",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "올아이티",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^14.1.1",

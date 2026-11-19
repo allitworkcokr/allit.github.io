@@ -1,78 +1,26 @@
- .menu-map {
-     margin-top: 36px;
-     background: #ffffff;
-     border: 1px solid #e9ecef;
-     border-radius: 16px;
-     padding: 28px;
-     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
- }
-
- .menu-map-title {
-     font-size: 1.35rem;
-     font-weight: 700;
-     color: #2457a7;
-     text-align: center;
-     margin-bottom: 18px;
-     letter-spacing: -0.01em;
- }
-
- .menu-map-header {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 10px;
-     justify-content: center;
-     margin-bottom: 22px;
- }
-
- .menu-map-pill {
-     display: inline-flex;
-     align-items: center;
-     padding: 6px 14px;
-     border-radius: 999px;
-     background: #f1f3f5;
-     color: #04080f;
-     font-weight: 600;
-     font-size: 0.95rem;
- }
-
- .menu-map-grid {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-     gap: 22px;
- }
-
- .menu-map-col {
-     display: grid;
-     gap: 10px;
-     align-content: start;
- }
-
- .menu-map-subtitle {
-     display: inline-flex;
-     align-items: center;
-     justify-content: center;
-     padding: 6px 12px;
-     border-radius: 999px;
-     background: #f8f9fa;
-     color: #04080f;
-     font-weight: 600;
-     font-size: 0.9rem;
-     min-height: 32px;
-     letter-spacing: -0.01em;
- }
-
- .menu-map-subtitle-item {
-     background: #e7f1ff;
-     color: #2457a7;
- }
-
- .menu-map-items {
-     list-style: none;
-     margin: 0;
-     padding: 0;
-     display: grid;
-     gap: 6px;
-     color: #5c6670;
-     font-size: 0.92rem;
-     line-height: 1.6;
- }
+.menu-map {
+    padding: clamp(20px, 3vw, 44px);
+    border-radius: 14px;
+    background: #eaf0eb;
+    color: #142925;
+}
+.menu-map-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+.menu-map-col { border-top: 1px solid #b8c9bf; padding-top: 10px; }
+.menu-map-subtitle { font-weight: 700; }
+.menu-map-items {
+    margin-top: 8px;
+    list-style: none;
+    color: #465a50;
+    font-size: 15px;
+    line-height: 1.85;
+}
+.menu-map-col:only-child .menu-map-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+    gap: 4px 16px;
+}

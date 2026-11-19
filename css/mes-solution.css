@@ -1,0 +1,86 @@
+.mes-overview-list {
+    margin: 0;
+    border-top: 1px solid #aebeb7;
+}
+
+.mes-overview-list > div {
+    display: grid;
+    grid-template-columns: minmax(8em, 1fr) 2fr;
+    gap: 16px;
+    align-items: baseline;
+    padding-block: 18px;
+    border-bottom: 1px solid #d5dfd9;
+}
+
+.mes-overview-list dt, .mes-benefit-list dt {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -.035em;
+}
+
+.mes-overview-list dd, .mes-benefit-list dd, .mes-feature p {
+    color: #50605c;
+    line-height: 1.75;
+}
+
+.mes-features {
+    scroll-margin-top: 100px;
+    padding-bottom: clamp(44px, 5vw, 80px);
+}
+
+.mes-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.mes-feature {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(20px, 2vw, 32px);
+    border: 1px solid #d7dfe4;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.mes-feature h3 {
+    color: #1b2c3d;
+    font-size: clamp(21px, 1.75vw, 28px);
+    letter-spacing: -.05em;
+    line-height: 1.35;
+}
+
+.mes-feature p { margin: 10px 0 18px; }
+.mes-feature ul {
+    display: grid;
+    gap: 5px;
+    border-top: 1px solid #e0e6e2;
+    margin-top: auto;
+    padding: 14px 0 0 1.15em;
+    font-size: 15px;
+}
+.mes-feature li::marker { color: #668476; }
+
+.mes-benefits {
+    padding-block: clamp(44px, 5vw, 80px);
+    background: #eaf0eb;
+}
+
+.mes-benefit-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 28px;
+}
+.mes-benefit-list > div { border-top: 1px solid #bfcdc5; padding-top: 12px; }
+.mes-benefit-list dd { margin-top: 6px; }
+
+@media (max-width: 960px) {
+    .mes-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .mes-feature-grid, .mes-benefit-list, .mes-overview-list > div { grid-template-columns: 1fr; }
+    .mes-overview-list > div { gap: 4px; padding-block: 14px; }
+    .mes-features { scroll-margin-top: 80px; }
+}

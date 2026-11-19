@@ -2,7 +2,16 @@
 <html lang="ko">
 
 <head>
-    <title>프로젝트 & 협력사 | 그라비아·패키징 MES 레퍼런스 - 올아이티</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
+    <title>프로젝트·협력사 | 그라비아·패키징 MES 레퍼런스 - 올아이티</title>
     <meta name="description" content="올아이티 프로젝트·협력사. 그라비아인쇄 프로그램, 스마트공장, MES·ERP 구축 실적과 인쇄·패키징·소재 고객사를 소개합니다.">
     <meta name="keywords" content="올아이티 프로젝트, 협력사, 레퍼런스, 그라비아인쇄 프로그램, MES, ERP, 스마트공장">
     <link rel="canonical" href="https://allitwork.co.kr/projects-partners.html">
@@ -10,24 +19,23 @@
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="올아이티">
     <meta property="og:url" content="https://allitwork.co.kr/projects-partners.html">
-    <meta property="og:title" content="프로젝트 & 협력사 | 그라비아·패키징 MES 레퍼런스 - 올아이티">
+    <meta property="og:title" content="프로젝트·협력사 | 그라비아·패키징 MES 레퍼런스 - 올아이티">
     <meta property="og:description" content="그라비아인쇄 프로그램·MES·ERP 구축 실적과 협력사를 소개합니다.">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/projects-partners.html">
-    <meta property="twitter:title" content="프로젝트 & 협력사 | 그라비아·패키징 MES 레퍼런스 - 올아이티">
-    <meta property="twitter:description" content="그라비아인쇄 프로그램·MES·ERP 구축 실적과 협력사를 소개합니다.">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-image.jpg">
+    <meta property="og:image" content="https://allitwork.co.kr/images/home-press.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/projects-partners.html">
+    <meta name="twitter:title" content="프로젝트·협력사 | 그라비아·패키징 MES 레퍼런스 - 올아이티">
+    <meta name="twitter:description" content="그라비아인쇄 프로그램·MES·ERP 구축 실적과 협력사를 소개합니다.">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/home-press.jpg">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "올아이티 프로젝트 & 협력사",
+        "name": "올아이티 프로젝트·협력사",
         "url": "https://allitwork.co.kr/projects-partners.html",
         "description": "그라비아·패키징·소재 제조 MES·ERP 구축 실적과 협력사"
     }
     </script>
-    <script src="js/head-loader.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4MP3HBNBY"></script>
     <script>
@@ -37,459 +45,124 @@
 
         gtag('config', 'G-D4MP3HBNBY');
     </script>
-    <style>
-        .pp-hero {
-            position: relative;
-            overflow: hidden;
-            color: #fff;
-            padding: 120px 0 88px;
-            background:
-                radial-gradient(ellipse 80% 60% at 15% 20%, rgba(80, 125, 188, 0.45), transparent 55%),
-                radial-gradient(ellipse 70% 50% at 90% 80%, rgba(161, 198, 234, 0.18), transparent 50%),
-                linear-gradient(160deg, #04080f 0%, #0d1a2e 45%, #1a3355 100%);
-        }
-
-        .pp-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 48px 48px;
-            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
-            pointer-events: none;
-        }
-
-        .pp-hero .container {
-            position: relative;
-            z-index: 1;
-            max-width: 760px;
-        }
-
-        .pp-hero-kicker {
-            display: inline-block;
-            margin-bottom: 18px;
-            font-size: 0.85rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #a1c6ea;
-        }
-
-        .pp-hero h1 {
-            font-size: clamp(2.4rem, 4vw, 3.4rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 18px;
-            line-height: 1.2;
-        }
-
-        .pp-hero p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.88);
-            max-width: 620px;
-        }
-
-        .pp-section {
-            padding: 88px 0;
-            background: #f4f7f8;
-        }
-
-        .pp-section--alt {
-            background: #fff;
-        }
-
-        .pp-section-head {
-            max-width: 720px;
-            margin: 0 auto 52px;
-            text-align: center;
-        }
-
-        .pp-section-head h2 {
-            font-size: clamp(1.9rem, 3vw, 2.4rem);
-            letter-spacing: -0.02em;
-            color: #04080f;
-            margin-bottom: 16px;
-        }
-
-        .pp-section-head p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #3a4654;
-        }
-
-        /* 프로젝트 */
-        .project-list {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-        }
-
-        .project-item {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 28px;
-            align-items: start;
-            padding: 28px 32px;
-            background: #fff;
-            border: 1px solid #d7e0e6;
-            border-left: 4px solid #507dbc;
-            transition: border-color 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .project-item:hover {
-            border-color: #507dbc;
-            box-shadow: 0 12px 28px rgba(4, 8, 15, 0.08);
-        }
-
-        .project-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .project-status {
-            display: inline-flex;
-            align-items: center;
-            width: fit-content;
-            padding: 5px 10px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            color: #0b3d1f;
-            background: #d8f3e3;
-        }
-
-        .project-status--done {
-            color: #3a4654;
-            background: #e8eef2;
-        }
-
-        .project-period {
-            font-size: 0.88rem;
-            color: #6a7684;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .project-body h3 {
-            font-size: 1.35rem;
-            letter-spacing: -0.02em;
-            color: #04080f;
-            margin-bottom: 8px;
-        }
-
-        .project-company {
-            margin-bottom: 12px;
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: #507dbc;
-        }
-
-        .project-body p {
-            color: #3a4654;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tech-tag {
-            padding: 4px 10px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: #1a3355;
-            background: #e8f0f8;
-            border: 1px solid #c5d6e8;
-        }
-
-        /* 협력사 */
-        .partner-category {
-            margin-bottom: 48px;
-        }
-
-        .partner-category:last-child {
-            margin-bottom: 0;
-        }
-
-        .category-title {
-            display: flex;
-            align-items: baseline;
-            gap: 14px;
-            margin-bottom: 22px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #d7e0e6;
-            font-size: 1.35rem;
-            letter-spacing: -0.02em;
-            color: #04080f;
-        }
-
-        .category-title span {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #6a7684;
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .partner-card {
-            padding: 22px 22px 20px;
-            background: #f4f7f8;
-            border: 1px solid transparent;
-            transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-        }
-
-        .pp-section--alt .partner-card {
-            background: #f4f7f8;
-        }
-
-        .partner-card:hover {
-            background: #fff;
-            border-color: #507dbc;
-            transform: translateY(-2px);
-        }
-
-        .partner-card h3 {
-            font-size: 1.12rem;
-            letter-spacing: -0.02em;
-            color: #04080f;
-            margin-bottom: 6px;
-        }
-
-        .partner-legal {
-            display: block;
-            margin-bottom: 12px;
-            font-size: 0.78rem;
-            font-weight: 500;
-            color: #6a7684;
-        }
-
-        .partner-focus {
-            margin-bottom: 14px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            line-height: 1.45;
-            color: #1a3355;
-        }
-
-        .partner-industry {
-            margin: 0;
-            font-size: 0.88rem;
-            line-height: 1.65;
-            color: #3a4654;
-        }
-
-        .partner-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 14px;
-        }
-
-        .partner-tag {
-            padding: 3px 8px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: #507dbc;
-            background: #fff;
-            border: 1px solid #c5d6e8;
-        }
-
-        .pp-section--alt .partner-tag {
-            background: #eef4fa;
-        }
-
-        /* 통계 */
-        .stats-section {
-            padding: 64px 0;
-            background: #04080f;
-            color: #fff;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.6rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: #a1c6ea;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.78);
-        }
-
-        @media (max-width: 900px) {
-            .partners-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .pp-hero {
-                padding: 100px 0 64px;
-            }
-
-            .pp-section {
-                padding: 64px 0;
-            }
-
-            .project-item {
-                grid-template-columns: 1fr;
-                gap: 14px;
-                padding: 22px;
-            }
-
-            .partners-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/projects-partners.css">
 </head>
 
 <body>
     <!-- 네비게이션 -->
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <!-- 왼쪽 배너 -->
-    <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    </aside>
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html" aria-current="page">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html">올아이티 소개</a></li>
+                    <li><a href="careers.html">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <!-- 메인 콘텐츠 -->
-    <main class="main-content">
-        <section class="pp-hero">
-            <div class="container">
-                <p class="pp-hero-kicker">Projects & Partners</p>
-                <h1>프로젝트 & 협력사</h1>
-                <p>그라비아·패키징·소재·설비 현장의 MES·ERP·웹 시스템을 구축하고,
-                    구축 이후 운영까지 함께하는 제조 IT 파트너십을 이어갑니다.</p>
-            </div>
-        </section>
-
-        <!-- 프로젝트 섹션 -->
-        <section class="pp-section">
-            <div class="container">
-                <div class="pp-section-head">
-                    <h2>현재 진행 중인 프로젝트</h2>
-                    <p>고객사 현장의 생산·품질·재고 데이터를 하나의 흐름으로 연결하는 프로젝트를 진행합니다.
-                        아래는 2026년 기준 실제 착수·진행 중인 대표 사업입니다.</p>
+    <main class="main-content home portfolio">
+        <!-- include:breadcrumb -->
+<nav class="page-breadcrumb" aria-label="현재 위치">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="./"><span itemprop="name">홈</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">프로젝트·협력사</span><meta itemprop="position" content="2"></li>
+    </ol>
+</nav>
+<!-- endinclude -->
+        <header class="portfolio-intro">
+            <div class="home-frame portfolio-heading">
+                <div>
+                    <h1>프로젝트·협력사</h1>
+                    <p>인쇄·패키징부터 소재·중장비까지, 올아이티가 제조 현장에서 구축하고 운영하는 MES·ERP·웹 시스템을 소개합니다.</p>
                 </div>
+                <nav aria-label="페이지 바로가기">
+                    <a href="#projects">진행 프로젝트 <strong>4건</strong></a>
+                    <a href="#partners">협력사 <strong>17개사</strong></a>
+                </nav>
+            </div>
+        </header>
 
-                <div class="project-list">
-                    <article class="project-item">
-                        <div class="project-meta">
-                            <span class="project-status">진행중</span>
-                            <span class="project-period">2026.10 ~</span>
-                        </div>
-                        <div class="project-body">
+        <section id="projects" class="portfolio-section home-frame" aria-labelledby="projects-title">
+            <h2 id="projects-title">2026년 진행 프로젝트</h2>
+            <div class="project-grid">
+                    <article class="project-card">
+                        <img src="images/banner-dain-ingredients.jpg" alt="">
+                        <div class="project-copy">
+                            <div class="project-meta"><strong>다인소재</strong><time datetime="2026-10">2026.10 착수</time></div>
                             <h3>스마트ERP 개선 2차</h3>
-                            <p class="project-company">다인소재</p>
-                            <p>식품첨가물·화장품원료·원료의약품 제조 현장에 맞춰 1차 개선 성과를 확장합니다.
-                                구매·생산·재고·품질 프로세스의 ERP 활용도를 높이고 현장 데이터 정합성을 강화합니다.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">스마트ERP</span>
-                                <span class="tech-tag">.NET</span>
-                                <span class="tech-tag">SQL Server</span>
-                                <span class="tech-tag">DevExpress</span>
-                            </div>
+                            <p>식품첨가물·화장품원료·원료의약품 제조 현장에 맞춰 1차 개선 성과를 확장합니다. 구매·생산·재고·품질 프로세스의 ERP 활용도를 높이고 현장 데이터 정합성을 강화합니다.</p>
+                            <p class="project-tools">스마트ERP · .NET · SQL Server · DevExpress</p>
                         </div>
                     </article>
-
-                    <article class="project-item">
-                        <div class="project-meta">
-                            <span class="project-status">진행중</span>
-                            <span class="project-period">2026.10 ~</span>
-                        </div>
-                        <div class="project-body">
+                    <article class="project-card">
+                        <img src="images/banner-sammin-lamination.jpg" alt="">
+                        <div class="project-copy">
+                            <div class="project-meta"><strong>삼민산업(주)</strong><time datetime="2026-10">2026.10 착수</time></div>
                             <h3>MES 신규 구축</h3>
-                            <p class="project-company">삼민산업(주)</p>
-                            <p>라미네이팅·코팅 기반 신소재 제조 공정에 MES를 신규 도입합니다.
-                                생산실적, 공정 진행, 품질 이력을 데이터로 관리해 현장 운영의 가시성을 확보합니다.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">MES</span>
-                                <span class="tech-tag">.NET</span>
-                                <span class="tech-tag">SQL Server</span>
-                                <span class="tech-tag">WinForms</span>
-                            </div>
+                            <p>라미네이팅·코팅 기반 신소재 제조 공정에 MES를 신규 도입합니다. 생산실적, 공정 진행, 품질 이력을 데이터로 관리해 현장 운영의 가시성을 확보합니다.</p>
+                            <p class="project-tools">MES · .NET · SQL Server · WinForms</p>
                         </div>
                     </article>
-
-                    <article class="project-item">
-                        <div class="project-meta">
-                            <span class="project-status">진행중</span>
-                            <span class="project-period">2026.05 ~</span>
-                        </div>
-                        <div class="project-body">
+                    <article class="project-card">
+                        <img src="images/banner-hpm-packaging.jpg" alt="" loading="lazy">
+                        <div class="project-copy">
+                            <div class="project-meta"><strong>HPM글로벌</strong><time datetime="2026-05">2026.05 착수</time></div>
                             <h3>2026 경기도형 스마트공장 사업</h3>
-                            <p class="project-company">HPM글로벌</p>
-                            <p>펫푸드·친환경 패키징 현장의 데이터 수집과 공정 운영을 연결하는 스마트공장 구축을 진행합니다.
-                                생산·품질 모니터링 기반으로 제조 경쟁력 향상을 목표로 합니다.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">스마트공장</span>
-                                <span class="tech-tag">MES</span>
-                                <span class="tech-tag">경기도형</span>
-                            </div>
+                            <p>펫푸드·친환경 패키징 현장의 데이터 수집과 공정 운영을 연결하는 스마트공장 구축을 진행합니다. 생산·품질 모니터링 기반으로 제조 경쟁력 향상을 목표로 합니다.</p>
+                            <p class="project-tools">스마트공장 · MES · 경기도형</p>
                         </div>
                     </article>
-
-                    <article class="project-item">
-                        <div class="project-meta">
-                            <span class="project-status">진행중</span>
-                            <span class="project-period">2026.03 ~</span>
-                        </div>
-                        <div class="project-body">
+                    <article class="project-card">
+                        <img src="images/banner-steel-fabrication.jpg" alt="" loading="lazy">
+                        <div class="project-copy">
+                            <div class="project-meta"><strong>에스틸</strong><time datetime="2026-03">2026.03 착수</time></div>
                             <h3>MES 기반 ERP SI 구축지원 1차</h3>
-                            <p class="project-company">에스틸</p>
-                            <p>굴삭기·중장비 부품 제조 업무를 MES와 ERP로 연계하는 SI 구축을 지원합니다.
-                                핵심 업무 흐름을 통합해 운영 기반을 고도화하고 데이터 단절을 줄입니다.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">ERP SI</span>
-                                <span class="tech-tag">MES</span>
-                                <span class="tech-tag">.NET</span>
-                                <span class="tech-tag">SQL Server</span>
-                            </div>
+                            <p>굴삭기·중장비 부품 제조 업무를 MES와 ERP로 연계하는 SI 구축을 지원합니다. 핵심 업무 흐름을 통합해 운영 기반을 고도화하고 데이터 단절을 줄입니다.</p>
+                            <p class="project-tools">ERP SI · MES · .NET · SQL Server</p>
                         </div>
                     </article>
-                </div>
             </div>
         </section>
 
-        <!-- 협력사 섹션 -->
-        <section class="pp-section pp-section--alt">
-            <div class="container">
-                <div class="pp-section-head">
-                    <h2>우리의 협력사</h2>
-                    <p>시스템 납품에 그치지 않고, 구축 이후 운영·개선까지 함께하는 고객사입니다.
-                        업종별 현장 특성을 반영한 MES·ERP·웹 솔루션으로 장기 파트너십을 이어가고 있습니다.</p>
-                </div>
+        <section id="partners" class="portfolio-section partner-directory" aria-labelledby="partners-title">
+            <div class="home-frame">
+                <h2 id="partners-title">업종별 협력사</h2>
+                <nav class="industry-links" aria-label="협력사 업종 바로가기">
+                    <a href="#partners-gravure">그라비아 인쇄</a>
+                    <a href="#partners-labels">라벨 인쇄</a>
+                    <a href="#partners-packaging">박스 패키징</a>
+                    <a href="#partners-materials">소재 · 신소재</a>
+                    <a href="#partners-sensors">온도센서 · 전장</a>
+                    <a href="#partners-manufacturing">대형 제조</a>
+                </nav>
 
-                <div class="partner-category">
+                <div class="partner-category" id="partners-gravure">
                     <h3 class="category-title">그라비아 인쇄 <span>5개사</span></h3>
                     <div class="partners-grid">
                         <article class="partner-card">
-                            <h3>풍산그라비아</h3>
+                            <h4>풍산그라비아</h4>
                             <span class="partner-legal">그라비아 인쇄 전문</span>
                             <p class="partner-focus">다색 그라비아·후가공 일관 생산</p>
                             <p class="partner-industry">10도 인쇄, 티다이, 솔벤트, 제대, 슬리팅, 레이저, 실링</p>
@@ -500,7 +173,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>HPM글로벌</h3>
+                            <h4>HPM글로벌</h4>
                             <span class="partner-legal">HPM Global · 패키징</span>
                             <p class="partner-focus">펫푸드·친환경 포장재 특화</p>
                             <p class="partner-industry">고품질 인쇄, 펫푸드 패키징, 제대, 친환경·재활용 포장재, 포장 설계·디자인</p>
@@ -511,7 +184,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>KWC</h3>
+                            <h4>KWC</h4>
                             <span class="partner-legal">수축필름·코팅</span>
                             <p class="partner-focus">수축라벨·친환경 코팅 사업</p>
                             <p class="partner-industry">그라비아 인쇄, PET·OPS 수축라벨, PP 수축필름, 생분해성 식품지 코팅</p>
@@ -522,7 +195,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>새롬</h3>
+                            <h4>새롬</h4>
                             <span class="partner-legal">그라비아 인쇄·코팅</span>
                             <p class="partner-focus">디자인부터 코팅·슬리팅까지</p>
                             <p class="partner-industry">탄소응용식품 포장지, 7/9도 인쇄, 솔벤트 드라이, EC코팅, 슬리터</p>
@@ -533,7 +206,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>정명하이텍</h3>
+                            <h4>정명하이텍</h4>
                             <span class="partner-legal">그라비아 특화 MES 도입사</span>
                             <p class="partner-focus">그라비아 인쇄·슬리팅·합지</p>
                             <p class="partner-industry">그라비아 특화 MES로 생산·품질 운영을 표준화한 인쇄 현장</p>
@@ -545,11 +218,11 @@
                     </div>
                 </div>
 
-                <div class="partner-category">
+                <div class="partner-category" id="partners-labels">
                     <h3 class="category-title">라벨 인쇄 <span>1개사</span></h3>
                     <div class="partners-grid">
                         <article class="partner-card">
-                            <h3>영신피앤엘</h3>
+                            <h4>영신피앤엘</h4>
                             <span class="partner-legal">Youngshin P&amp;L · 라벨</span>
                             <p class="partner-focus">다공정 라벨·WEB MES 구축</p>
                             <p class="partner-industry">옵셋, 플렉소, 디지털·하이브리드, 친환경 종이라벨, 이중라벨, 이지필 리무버 띠지라벨</p>
@@ -561,11 +234,11 @@
                     </div>
                 </div>
 
-                <div class="partner-category">
+                <div class="partner-category" id="partners-packaging">
                     <h3 class="category-title">박스 패키징 <span>5개사</span></h3>
                     <div class="partners-grid">
                         <article class="partner-card">
-                            <h3>양지디엔피</h3>
+                            <h4>양지디엔피</h4>
                             <span class="partner-legal">Yangji D&amp;P · 박스MES</span>
                             <p class="partner-focus">푸드·칼럼박스·단상자 패키징</p>
                             <p class="partner-industry">베이커리 푸드패키지, 농수산물·건강기능식품 패키지, 싸바리, 쇼핑백, 라벨</p>
@@ -576,7 +249,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>대흥</h3>
+                            <h4>대흥</h4>
                             <span class="partner-legal">박스 패키징·후가공</span>
                             <p class="partner-focus">제함부터 금박·톰슨까지 후가공</p>
                             <p class="partner-industry">샘플기, CTP, 재단기, 코팅기, 엠보, 금박, 골컷터, 톰슨</p>
@@ -587,7 +260,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>아트팩</h3>
+                            <h4>아트팩</h4>
                             <span class="partner-legal">Art Pack · 프리미엄 패키징</span>
                             <p class="partner-focus">프리미엄 케이스·쇼핑백</p>
                             <p class="partner-industry">싸바리, 시딩박스, 프레스킷, 단상자, 지관, 표지바리, 쇼핑백, 일반 케이스</p>
@@ -598,7 +271,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>유한팩</h3>
+                            <h4>유한팩</h4>
                             <span class="partner-legal">수축라벨·파우치</span>
                             <p class="partner-focus">수축라벨·인몰드·파우치</p>
                             <p class="partner-industry">인몰드, 리드지, 파우치, 인쇄·경화·슬리팅·타공·실링·제대·스파우트·포장</p>
@@ -609,7 +282,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>신풍</h3>
+                            <h4>신풍</h4>
                             <span class="partner-legal">칼라박스·제함</span>
                             <p class="partner-focus">칼라·카톤·택배 박스 제작</p>
                             <p class="partner-industry">합지, 싸바리, 제함박스, 카톤박스, 택배박스, 커스텀 박스</p>
@@ -621,11 +294,11 @@
                     </div>
                 </div>
 
-                <div class="partner-category">
+                <div class="partner-category" id="partners-materials">
                     <h3 class="category-title">소재 · 신소재 <span>2개사</span></h3>
                     <div class="partners-grid">
                         <article class="partner-card">
-                            <h3>다인소재</h3>
+                            <h4>다인소재</h4>
                             <span class="partner-legal">식품·화장품·의약 원료</span>
                             <p class="partner-focus">기능성 소재·스마트ERP</p>
                             <p class="partner-industry">식품첨가물, 화장품원료, 원료의약품, 천연보존료, 기능성 감미료, 증점안정제</p>
@@ -636,7 +309,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>삼민산업(주)</h3>
+                            <h4>삼민산업(주)</h4>
                             <span class="partner-legal">Sammin Industrial · 시흥</span>
                             <p class="partner-focus">라미네이팅·코팅 신소재 제조</p>
                             <p class="partner-industry">베이퍼베리어(보온방습지), ALSOM® 기능성 시트, 단열·난연 소재, 위탁생산개발</p>
@@ -648,11 +321,11 @@
                     </div>
                 </div>
 
-                <div class="partner-category">
+                <div class="partner-category" id="partners-sensors">
                     <h3 class="category-title">온도센서 · 전장 <span>3개사</span></h3>
                     <div class="partners-grid">
                         <article class="partner-card">
-                            <h3>온도기술</h3>
+                            <h4>온도기술</h4>
                             <span class="partner-legal">온도센서 시스템</span>
                             <p class="partner-focus">Sensor · Flow · Control</p>
                             <p class="partner-industry">산업용 온도센서 및 계측·제어 시스템</p>
@@ -663,7 +336,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>한국쎄미텍</h3>
+                            <h4>한국쎄미텍</h4>
                             <span class="partner-legal">Korea Semitec</span>
                             <p class="partner-focus">정밀 센서·전류 디바이스</p>
                             <p class="partner-industry">Surge Absorber, 전류디바이스, 적외선센서</p>
@@ -674,7 +347,7 @@
                         </article>
 
                         <article class="partner-card">
-                            <h3>푸름케이디</h3>
+                            <h4>푸름케이디</h4>
                             <span class="partner-legal">산업용 저항기·전장</span>
                             <p class="partner-focus">저항기·철도·EV 전장품</p>
                             <p class="partner-industry">메탈클래드·크레인·시멘트·권선 저항기, LOAD BANK, 철도차량·전기포크레인 전장품</p>
@@ -686,11 +359,11 @@
                     </div>
                 </div>
 
-                <div class="partner-category">
+                <div class="partner-category" id="partners-manufacturing">
                     <h3 class="category-title">대형 제조 <span>1개사</span></h3>
                     <div class="partners-grid">
                         <article class="partner-card">
-                            <h3>에스틸</h3>
+                            <h4>에스틸</h4>
                             <span class="partner-legal">중장비·굴삭기 부품</span>
                             <p class="partner-focus">굴착기·파일드라이버·웨이트</p>
                             <p class="partner-industry">MES 고도화 및 MES 기반 ERP SI로 생산·업무 시스템을 통합 운영</p>
@@ -704,38 +377,60 @@
             </div>
         </section>
 
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">17</div>
-                        <div class="stat-label">협력 고객사</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">업종 카테고리</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">2026 진행 프로젝트</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">MES+</div>
-                        <div class="stat-label">ERP · WEB 통합</div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
 
 </body>
 

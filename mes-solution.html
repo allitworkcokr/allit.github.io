@@ -2,7 +2,14 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
     <title>표준 MES 솔루션 | 제조실행시스템 - 올아이티</title>
     <meta name="description" content="올아이티 표준 MES 솔루션. 생산·품질·자재·설비 데이터를 통합해 제조실행시스템(MES)으로 디지털 전환을 지원합니다. 그라비아인쇄 프로그램과도 연계 가능합니다.">
     <meta name="keywords" content="MES, 제조실행시스템, 표준 MES, 생산관리, 품질관리, 설비관리, 올아이티, 스마트공장">
@@ -17,14 +24,14 @@
     <meta property="og:url" content="https://allitwork.co.kr/mes-solution.html">
     <meta property="og:title" content="표준 MES 솔루션 | 제조실행시스템 - 올아이티">
     <meta property="og:description" content="생산·품질·설비 통합 표준 MES로 제조 현장 디지털 전환을 지원합니다.">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-mes.jpg">
+    <meta property="og:image" content="https://allitwork.co.kr/images/home-press.jpg">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/mes-solution.html">
-    <meta property="twitter:title" content="표준 MES 솔루션 | 제조실행시스템 - 올아이티">
-    <meta property="twitter:description" content="생산·품질·설비 통합 표준 MES로 제조 현장 디지털 전환을 지원합니다.">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-mes.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/mes-solution.html">
+    <meta name="twitter:title" content="표준 MES 솔루션 | 제조실행시스템 - 올아이티">
+    <meta name="twitter:description" content="생산·품질·설비 통합 표준 MES로 제조 현장 디지털 전환을 지원합니다.">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/home-press.jpg">
 
     <script type="application/ld+json">
     {
@@ -38,19 +45,6 @@
         "provider": { "@type": "Organization", "name": "올아이티", "url": "https://allitwork.co.kr" }
     }
     </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/footer.css">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4MP3HBNBY"></script>
@@ -61,555 +55,241 @@
 
         gtag('config', 'G-D4MP3HBNBY');
     </script>
-    <style>
-        .hero {
-            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            white-space: nowrap;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        .section:nth-child(odd) {
-            background-color: white;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #04080f;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto 60px;
-            text-align: center;
-            line-height: 1.8;
-        }
-
-        .section-intro p {
-            font-size: 1.1rem;
-            color: #04080f;
-            margin-bottom: 20px;
-        }
-
-        /* MES 소개 스타일 */
-        .mes-overview {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .overview-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e9ecef;
-            text-align: center;
-        }
-
-        .overview-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .overview-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #507dbc;
-        }
-
-        .overview-card h3 {
-            font-size: 1.5rem;
-            color: #04080f;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .overview-card p {
-            color: #6c757d;
-            line-height: 1.6;
-        }
-
-        /* 기능 소개 스타일 */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid #e9ecef;
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-3px);
-        }
-
-        .feature-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-right: 15px;
-            color: #507dbc;
-        }
-
-        .feature-title {
-            font-size: 1.3rem;
-            color: #04080f;
-            font-weight: 600;
-        }
-
-        .feature-description {
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-            color: #04080f;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .feature-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #507dbc;
-            font-weight: bold;
-        }
-
-        /* 장점 스타일 */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .benefit-item {
-            text-align: center;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #507dbc;
-        }
-
-        .benefit-title {
-            font-size: 1.2rem;
-            color: #04080f;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .benefit-description {
-            color: #6c757d;
-            line-height: 1.6;
-        }
-
-        /* 프로세스 스타일 */
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .process-step:not(:last-child)::after {
-            content: "→";
-            position: absolute;
-            right: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            color: #507dbc;
-            z-index: 1;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #507dbc, #a1c6ea);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-
-        .step-title {
-            font-size: 1.1rem;
-            color: #04080f;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .step-description {
-            color: #6c757d;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* CTA 섹션 */
-        .cta-section {
-            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .cta-description {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #a1c6ea;
-            color: #04080f;
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: white;
-            transform: translateY(-2px);
-            color: #04080f;
-            text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .overview-grid,
-            .features-grid,
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .process-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-step:not(:last-child)::after {
-                display: none;
-            }
-            
-            .cta-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/gravure-overview.css">
+    <link rel="stylesheet" href="css/mes-solution.css">
 </head>
 <body>
     <!-- 네비게이션 -->
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <!-- 왼쪽 배너 -->
-    <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    </aside>
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html" aria-current="page">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html">올아이티 소개</a></li>
+                    <li><a href="careers.html">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <!-- 메인 콘텐츠 -->
-    <main class="main-content">
-        <!-- 히어로 섹션 -->
-        <section class="hero">
-            <div class="container">
-                <h1>일반 MES 솔루션</h1>
-                <p>제조 현장의 효율성과 생산성을 혁신적으로 <br /> 향상시키는 통합 제조 실행 시스템</p>
+    <main class="main-content solution-overview">
+        <!-- include:breadcrumb -->
+<nav class="page-breadcrumb" aria-label="현재 위치">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="./"><span itemprop="name">홈</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">일반 MES 솔루션</span><meta itemprop="position" content="2"></li>
+    </ol>
+</nav>
+<!-- endinclude -->
+        <section class="product-intro" aria-labelledby="product-title">
+            <div class="product-intro-copy">
+                <h1 id="product-title">일반 MES 솔루션</h1>
+                <p>생산 계획에서 작업 실적까지 연결하는 제조실행시스템.<br>생산·품질·재고·설비 현황을 한곳에서 확인하세요.</p>
+                <a class="intro-button" href="#mes-features">주요 기능 보기 <span aria-hidden="true">↓</span></a>
+            </div>
+            <img class="product-photo" src="images/home-factory.jpg" width="800" height="400" fetchpriority="high" alt="생산 설비가 양쪽에 배치된 제조 라인">
+        </section>
+
+        <section class="product-frame product-details" aria-labelledby="mes-overview-title">
+            <div class="process-summary">
+                <div>
+                    <h2 id="mes-overview-title">제조실행시스템이란?</h2>
+                    <p>MES(Manufacturing Execution System)는 생산 계획을 현장의 작업 지시와 연결하고, 작업이 어떻게 진행되는지 기록하는 시스템입니다. 올아이티 일반 MES에서는 생산 실적과 자재 사용량, 품질 검사 결과를 함께 관리할 수 있습니다.</p>
+                </div>
+                <dl class="mes-overview-list">
+                    <div>
+                        <dt>실시간 모니터링</dt>
+                        <dd>작업 진행 상황과 설비 상태를 실시간으로 확인합니다.</dd>
+                    </div>
+                    <div>
+                        <dt>데이터 분석</dt>
+                        <dd>생산 실적과 품질 데이터를 비교해 지연과 불량의 원인을 살핍니다.</dd>
+                    </div>
+                    <div>
+                        <dt>프로세스 최적화</dt>
+                        <dd>분석한 결과를 다음 생산 계획과 현장 작업에 반영합니다.</dd>
+                    </div>
+                </dl>
             </div>
         </section>
 
-        <!-- MES 개요 섹션 -->
-        <section class="section">
-            <div class="container">
-                <div class="mes-overview">
-                    <h2 class="section-title">MES란 무엇인가요?</h2>
-                    <div class="section-intro">
-                        <p>MES(Manufacturing Execution System)는 제조 현장에서 생산 계획을 실행하고, 실시간으로 생산 활동을 관리하며, 최적의 생산성을 달성하기 위한 통합 정보 시스템입니다.</p>
-                        <p>올아이티의 MES 솔루션은 제조업의 디지털 전환을 위한 핵심 플랫폼으로, 실시간 데이터 수집부터 생산 최적화까지 모든 과정을 지원합니다.</p>
-                    </div>
-
-                    <div class="overview-grid">
-                        <div class="overview-card">
-                            <div class="overview-icon">🏭</div>
-                            <h3>실시간 모니터링</h3>
-                            <p>생산 현장의 모든 데이터를 실시간으로 수집하고 모니터링하여 즉각적인 의사결정을 지원합니다.</p>
-                        </div>
-                        <div class="overview-card">
-                            <div class="overview-icon">📊</div>
-                            <h3>데이터 분석</h3>
-                            <p>수집된 데이터를 분석하여 생산 효율성 향상과 품질 개선을 위한 인사이트를 제공합니다.</p>
-                        </div>
-                        <div class="overview-card">
-                            <div class="overview-icon">⚙️</div>
-                            <h3>프로세스 최적화</h3>
-                            <p>생산 프로세스를 지속적으로 모니터링하고 최적화하여 운영 효율성을 극대화합니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 주요 기능 섹션 -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">주요 기능</h2>
-                <div class="section-intro">
-                    <p>올아이티 MES 솔루션은 제조 현장의 모든 요구사항을 충족하는 포괄적인 기능을 제공합니다.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-header">
-                            <div class="feature-icon">📋</div>
-                            <h3 class="feature-title">생산 계획 관리</h3>
-                        </div>
-                        <p class="feature-description">ERP 시스템과 연동하여 생산 계획을 수립하고 실행 과정을 관리합니다.</p>
-                        <ul class="feature-list">
+        <section id="mes-features" class="product-frame mes-features" aria-labelledby="mes-features-title">
+            <h2 id="mes-features-title">업무별 주요 기능</h2>
+            <div class="mes-feature-grid">
+                    <article class="mes-feature">
+                        <h3>생산 계획 관리</h3>
+                        <p>ERP 시스템과 연동하여 생산 계획을 수립하고 실행 과정을 관리합니다.</p>
+                        <ul>
                             <li>생산 계획 수립 및 조정</li>
                             <li>작업 지시서 생성</li>
                             <li>자재 소요량 계획</li>
                             <li>생산 일정 최적화</li>
                         </ul>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-header">
-                            <div class="feature-icon">🔍</div>
-                            <h3 class="feature-title">품질 관리</h3>
-                        </div>
-                        <p class="feature-description">전체 생산 과정에서 품질을 모니터링하고 관리하여 일관된 품질을 보장합니다.</p>
-                        <ul class="feature-list">
+                    </article>
+                    <article class="mes-feature">
+                        <h3>품질 관리</h3>
+                        <p>전체 생산 과정에서 품질을 모니터링하고 관리하여 일관된 품질을 보장합니다.</p>
+                        <ul>
                             <li>실시간 품질 모니터링</li>
                             <li>불량품 관리</li>
                             <li>품질 검사 자동화</li>
                             <li>품질 이력 추적</li>
                         </ul>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-header">
-                            <div class="feature-icon">📦</div>
-                            <h3 class="feature-title">재고 관리</h3>
-                        </div>
-                        <p class="feature-description">원자재부터 완제품까지 모든 재고를 실시간으로 관리하고 추적합니다.</p>
-                        <ul class="feature-list">
+                    </article>
+                    <article class="mes-feature">
+                        <h3>재고 관리</h3>
+                        <p>원자재부터 완제품까지 모든 재고를 실시간으로 관리하고 추적합니다.</p>
+                        <ul>
                             <li>실시간 재고 현황</li>
                             <li>자재 입출고 관리</li>
                             <li>재고 알림 시스템</li>
                             <li>재고 최적화</li>
                         </ul>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-header">
-                            <div class="feature-icon">⚡</div>
-                            <h3 class="feature-title">설비 관리</h3>
-                        </div>
-                        <p class="feature-description">생산 설비의 상태를 모니터링하고 유지보수를 효율적으로 관리합니다.</p>
-                        <ul class="feature-list">
+                    </article>
+                    <article class="mes-feature">
+                        <h3>설비 관리</h3>
+                        <p>생산 설비의 상태를 모니터링하고 유지보수를 효율적으로 관리합니다.</p>
+                        <ul>
                             <li>설비 상태 모니터링</li>
                             <li>예방 정비 관리</li>
                             <li>고장 이력 관리</li>
                             <li>설비 효율성 분석</li>
                         </ul>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-header">
-                            <div class="feature-icon">👥</div>
-                            <h3 class="feature-title">인력 관리</h3>
-                        </div>
-                        <p class="feature-description">작업자별 생산성과 작업 시간을 관리하여 인력 효율성을 극대화합니다.</p>
-                        <ul class="feature-list">
+                    </article>
+                    <article class="mes-feature">
+                        <h3>인력 관리</h3>
+                        <p>작업자별 생산성과 작업 시간을 관리하여 인력 효율성을 극대화합니다.</p>
+                        <ul>
                             <li>작업자별 생산성 추적</li>
                             <li>작업 시간 관리</li>
                             <li>기술 숙련도 관리</li>
                             <li>교육 이력 관리</li>
                         </ul>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-header">
-                            <div class="feature-icon">📈</div>
-                            <h3 class="feature-title">성과 분석</h3>
-                        </div>
-                        <p class="feature-description">다양한 KPI를 통해 생산 성과를 분석하고 개선 방안을 제시합니다.</p>
-                        <ul class="feature-list">
+                    </article>
+                    <article class="mes-feature">
+                        <h3>성과 분석</h3>
+                        <p>다양한 KPI를 통해 생산 성과를 분석하고 개선 방안을 제시합니다.</p>
+                        <ul>
                             <li>실시간 KPI 대시보드</li>
                             <li>생산성 분석 리포트</li>
                             <li>비용 분석</li>
                             <li>트렌드 분석</li>
                         </ul>
-                    </div>
-                </div>
+                    </article>
             </div>
         </section>
 
-        <!-- 장점 섹션 -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">MES 도입의 장점</h2>
-                <div class="section-intro">
-                    <p>올아이티 MES 솔루션을 도입하면 제조 현장에서 다음과 같은 혁신적인 변화를 경험할 수 있습니다.</p>
-                </div>
-
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📈</div>
-                        <h3 class="benefit-title">생산성 향상</h3>
-                        <p class="benefit-description">실시간 모니터링과 최적화를 통해 생산성을 평균 25% 향상시킵니다.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">💰</div>
-                        <h3 class="benefit-title">비용 절감</h3>
-                        <p class="benefit-description">불필요한 재고와 낭비를 줄여 운영 비용을 15-20% 절감합니다.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🎯</div>
-                        <h3 class="benefit-title">품질 향상</h3>
-                        <p class="benefit-description">실시간 품질 모니터링으로 불량률을 30% 이상 감소시킵니다.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">⏰</div>
-                        <h3 class="benefit-title">납기 준수</h3>
-                        <p class="benefit-description">정확한 생산 계획과 실시간 관리로 납기 준수율을 95% 이상 달성합니다.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">📊</div>
-                        <h3 class="benefit-title">데이터 기반 의사결정</h3>
-                        <p class="benefit-description">실시간 데이터를 기반으로 한 과학적이고 정확한 의사결정이 가능합니다.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">🔄</div>
-                        <h3 class="benefit-title">지속적 개선</h3>
-                        <p class="benefit-description">지속적인 모니터링과 분석을 통해 프로세스를 지속적으로 개선합니다.</p>
-                    </div>
-                </div>
+        <section class="mes-benefits" aria-labelledby="mes-benefits-title">
+            <div class="product-frame demo-layout">
+                <h2 id="mes-benefits-title">MES 도입 효과</h2>
+                <dl class="mes-benefit-list">
+                        <div>
+                            <dt>생산성 향상</dt>
+                            <dd>실시간 모니터링과 최적화를 통해 생산성을 평균 25% 향상시킵니다.</dd>
+                        </div>
+                        <div>
+                            <dt>비용 절감</dt>
+                            <dd>불필요한 재고와 낭비를 줄여 운영 비용을 15-20% 절감합니다.</dd>
+                        </div>
+                        <div>
+                            <dt>품질 향상</dt>
+                            <dd>실시간 품질 모니터링으로 불량률을 30% 이상 감소시킵니다.</dd>
+                        </div>
+                        <div>
+                            <dt>납기 준수</dt>
+                            <dd>정확한 생산 계획과 실시간 관리로 납기 준수율을 95% 이상 달성합니다.</dd>
+                        </div>
+                        <div>
+                            <dt>데이터 기반 의사결정</dt>
+                            <dd>실시간 데이터를 기반으로 한 과학적이고 정확한 의사결정이 가능합니다.</dd>
+                        </div>
+                        <div>
+                            <dt>지속적 개선</dt>
+                            <dd>지속적인 모니터링과 분석을 통해 프로세스를 지속적으로 개선합니다.</dd>
+                        </div>
+                </dl>
             </div>
         </section>
 
-
-        <!-- CTA 섹션 -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">MES로 제조 혁신을 시작하세요</h2>
-                    <p class="cta-description">
-                        올아이티의 MES 솔루션으로 제조 현장의 디지털 전환을 성공적으로 이끌어보세요.<br>
-                        전문 컨설팅팀이 함께하여 최적의 솔루션을 제공합니다.
-                    </p>
-                    <a href="mailto:contact@allit.com" class="cta-button">무료 상담 신청</a>
-                </div>
+        <section class="product-contact product-frame" aria-labelledby="mes-contact-title">
+            <div>
+                <h2 id="mes-contact-title">일반 MES 도입 상담</h2>
+                <p>현재 사용 중인 ERP와 생산 현장에서 관리하고 싶은 업무를 알려주세요.</p>
             </div>
+            <a href="mailto:contact@allit.com">무료 상담 신청 <span aria-hidden="true">↗</span></a>
         </section>
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
 </body>
 </html> 

@@ -1,6 +1,6 @@
-# Allit Company Website
+# 올아이티 홈페이지
 
-Allit 회사 웹사이트입니다.
+올아이티 회사 웹사이트입니다.
 
 https://allitworkcokr.github.io/allit.github.io/
 
@@ -23,7 +23,7 @@ https://allitworkcokr.github.io/allit.github.io/
    ```bash
    npm run dev
    ```
-   - 브라우저가 자동으로 열립니다 (http://localhost:3000)
+   - 브라우저에서 http://127.0.0.1:3000/ 을 엽니다.
    - 파일 변경 시 자동으로 새로고침됩니다
 
 4. **일반 서버 실행**
@@ -62,19 +62,15 @@ allit.github.io/
 │   ├── navigation.css      # 네비게이션 스타일
 │   └── sidebar.css         # 사이드바 스타일
 ├── js/                     # JavaScript 파일
-│   ├── banner-loader.js    # 배너 로더
-│   ├── footer-loader.js    # 푸터 로더
-│   ├── head-loader.js      # 헤드 로더
-│   ├── nav-loader.js       # 네비게이션 로더
-│   ├── navigation.js       # 네비게이션 기능
-│   └── sidebar.js          # 사이드바 기능
+│   ├── navigation.js       # 반응형 메뉴와 키보드 조작
+│   └── image-modal.js      # 제품 상세 화면 확대
 └── package.json            # 프로젝트 설정
 ```
 
 ## 개발 팁
 
 - **실시간 개발**: `npm run dev` 사용 시 파일 변경이 자동으로 반영됩니다
-- **컴포넌트 수정**: `components/` 폴더의 HTML 파일들을 수정하면 모든 페이지에 반영됩니다
+- 공통 메뉴, 헤드 리소스, 푸터 또는 그라비아 바로가기를 수정한 뒤 `npm run build`를 실행하면 각 HTML과 사이트맵이 갱신됩니다. 생성된 HTML과 사이트맵도 함께 커밋합니다. 개발 서버를 시작할 때도 빌드가 실행됩니다.
 - **스타일 수정**: `css/` 폴더의 CSS 파일들을 수정하면 스타일이 업데이트됩니다
 
 ## 배포

@@ -1,0 +1,37 @@
+.career-track {
+    border-top: 1px solid #b7c8be;
+    color: #193831;
+}
+.career-track:last-child { border-bottom: 1px solid #b7c8be; }
+.career-track summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-block: 18px;
+    cursor: pointer;
+    font-size: clamp(18px, 1.5vw, 23px);
+    font-weight: 650;
+    line-height: 1.4;
+    list-style: none;
+}
+.career-track summary::-webkit-details-marker { display: none; }
+.career-track summary::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    flex: none;
+    margin-right: 6px;
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.career-track[open] summary::after { transform: rotate(225deg); }
+.career-track summary:focus-visible { outline: 3px solid #5087b1; outline-offset: 2px; }
+.track-body { padding: 4px 0 24px; }
+.track-body h3 { margin-bottom: 10px; font-size: 18px; }
+.track-duties { list-style: none; }
+.track-duties li { padding-bottom: 12px; }
+.track-body p, .track-body ol { color: #465a50; line-height: 1.75; }
+.track-body ol { padding-inline-start: 1.5em; }
+#apply { scroll-margin-top: 80px; }

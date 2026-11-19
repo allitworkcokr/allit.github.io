@@ -1,0 +1,122 @@
+.portfolio .page-breadcrumb { background: #f9faf7; border-color: #d7dfd9; }
+.portfolio-intro { background: #142925; color: #fff; }
+.portfolio-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding-block: clamp(40px, 4.5vw, 72px);
+}
+.portfolio h1 {
+    font-size: clamp(36px, 4vw, 66px);
+    line-height: 1.2;
+    letter-spacing: -.065em;
+}
+.portfolio-heading p {
+    max-width: 41em;
+    margin-top: 14px;
+    color: #dfebe5;
+    line-height: 1.75;
+}
+.portfolio-heading nav { flex: 0 0 min(256px, 30%); }
+.portfolio-heading nav a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 11px 0;
+    border-top: 1px solid #526861;
+    color: #fff;
+    text-decoration: none;
+}
+.portfolio-heading nav strong { margin-left: auto; }
+.portfolio-heading nav a::after { content: "↓" / ""; color: #b9d6cb; }
+.portfolio-heading nav a:hover { text-decoration: underline; }
+.portfolio-section { padding-block: clamp(42px, 5vw, 80px); }
+.portfolio-section, .partner-category { scroll-margin-top: 80px; }
+.portfolio h2 { font-size: clamp(30px, 2.7vw, 46px); line-height: 1.25; letter-spacing: -.06em; }
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(16px, 1.6vw, 26px);
+    margin-top: 24px;
+}
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #d7dfe4;
+    border-radius: 14px;
+    background: #fff;
+    color: #1b2c3d;
+}
+.project-card img { display: block; width: 100%; aspect-ratio: 2.8; object-fit: cover; }
+.project-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(18px, 1.7vw, 26px);
+}
+.project-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; }
+.project-meta strong { color: #1c6656; }
+.project-meta time, .partner-legal, .partner-tags { font-size: .84rem; color: #50645c; }
+.project-copy h3, .partner-card h4 {
+    margin: 7px 0;
+    font-size: clamp(20px, 1.6vw, 26px);
+    line-height: 1.35;
+    letter-spacing: -.045em;
+}
+.project-copy p, .partner-industry { color: #526170; font-size: 15px; line-height: 1.7; }
+.project-copy .project-tools { margin-top: auto; padding-top: 16px; font-size: .84rem; color: #40564d; }
+.partner-directory { background: #eaf0eb; }
+.industry-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 32px; }
+.industry-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 15px;
+    border: 1px solid #bbc9c1;
+    border-radius: 8px;
+    background: #fff;
+    color: #23483c;
+    text-decoration: none;
+    font-weight: 600;
+}
+.industry-links a:hover { border-color: #517265; background: #f9faf7; }
+.portfolio a:focus-visible { outline: 3px solid #5087b1; outline-offset: 3px; }
+.partner-category {
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) minmax(0, 3fr);
+    gap: 24px;
+    border-top: 1px solid #aebeb7;
+    padding-top: 20px;
+}
+.partner-category + .partner-category { margin-top: 30px; }
+.category-title { font-size: clamp(20px, 1.7vw, 28px); letter-spacing: -.045em; }
+.category-title span { display: block; margin-top: 4px; font-size: .9rem; color: #50645c; letter-spacing: normal; }
+.partners-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.partner-card {
+    padding: 18px 20px;
+    border: 1px solid #d5dfd9;
+    border-radius: 14px;
+    background: #fff;
+}
+.partner-card h4 { margin-top: 0; }
+.partner-focus { margin-top: 12px; font-weight: 600; }
+.partner-tags { margin-top: 12px; }
+.partner-tag + .partner-tag::before { content: "·" / ""; margin-right: .25em; }
+
+@media (min-width: 1280px) {
+    .project-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .project-card img { aspect-ratio: 2.1; }
+}
+@media (max-width: 760px) {
+    .portfolio-heading { display: grid; gap: 20px; }
+    .portfolio-heading nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+    .project-grid, .partner-category { grid-template-columns: 1fr; }
+    .partner-category { gap: 14px; }
+    .category-title span { display: inline; margin-left: 5px; }
+    .portfolio-section, .partner-category { scroll-margin-top: 68px; }
+}
+@media (max-width: 590px) {
+    .partners-grid { grid-template-columns: 1fr; }
+}

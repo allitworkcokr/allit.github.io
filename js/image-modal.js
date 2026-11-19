@@ -1,99 +1,37 @@
 (() => {
-    const modal = document.getElementById('imageModal');
-    if (!modal) {
-        return;
+    const dialog = document.getElementById('imageModal');
+    if (!dialog) return;
+
+    const previews = Array.from(document.querySelectorAll('[data-modal-image]'));
+    const image = dialog.querySelector('#imageModalContent');
+    let current = 0;
+
+    function show(index) {
+        current = (index + previews.length) % previews.length;
+        const preview = previews[current];
+        image.alt = preview.querySelector('img').alt;
+        image.src = preview.href;
     }
 
-    const modalImage = document.getElementById('imageModalContent');
-    const closeButton = modal.querySelector('.modal-close');
-    const prevButton = modal.querySelector('.modal-prev');
-    const nextButton = modal.querySelector('.modal-next');
-    const triggerImages = Array.from(document.querySelectorAll('[data-modal-image]'));
-    let currentIndex = 0;
-
-    const renderModalImage = (index) => {
-        const image = triggerImages[index];
-        if (!image || !modalImage) {
-            return;
-        }
-        modalImage.src = image.src;
-        modalImage.alt = image.alt || '';
-    };
-
-    const openModal = (index) => {
-        if (!modalImage) {
-            return;
-        }
-        currentIndex = index;
-        renderModalImage(currentIndex);
-        modal.classList.add('is-open');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeModal = () => {
-        modal.classList.remove('is-open');
-        modal.setAttribute('aria-hidden', 'true');
-        if (modalImage) {
-            modalImage.src = '';
-            modalImage.alt = '';
-        }
-        document.body.style.overflow = '';
-    };
-
-    const showPrev = () => {
-        if (triggerImages.length === 0) {
-            return;
-        }
-        currentIndex = (currentIndex - 1 + triggerImages.length) % triggerImages.length;
-        renderModalImage(currentIndex);
-    };
-
-    const showNext = () => {
-        if (triggerImages.length === 0) {
-            return;
-        }
-        currentIndex = (currentIndex + 1) % triggerImages.length;
-        renderModalImage(currentIndex);
-    };
-
-    triggerImages.forEach((image, index) => {
-        image.addEventListener('click', () => {
-            openModal(index);
+    previews.forEach((preview, index) => {
+        preview.addEventListener('click', event => {
+            if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            show(index);
+            dialog.showModal();
         });
     });
 
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
+    dialog.querySelector('.modal-prev').addEventListener('click', () => show(current - 1));
+    dialog.querySelector('.modal-next').addEventListener('click', () => show(current + 1));
+    dialog.querySelector('.modal-close').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+        if (event.target === dialog) dialog.close();
     });
-
-    if (closeButton) {
-        closeButton.addEventListener('click', closeModal);
-    }
-    if (prevButton) {
-        prevButton.addEventListener('click', showPrev);
-    }
-    if (nextButton) {
-        nextButton.addEventListener('click', showNext);
-    }
-
-    document.addEventListener('keydown', (event) => {
-        if (!modal.classList.contains('is-open')) {
-            return;
-        }
-
-        if (event.key === 'Escape') {
-            closeModal();
-        }
-
-        if (event.key === 'ArrowLeft') {
-            showPrev();
-        }
-
-        if (event.key === 'ArrowRight') {
-            showNext();
+    dialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            show(current + (event.key === 'ArrowRight' ? 1 : -1));
         }
     });
 })();

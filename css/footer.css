@@ -189,4 +189,5 @@
     .footer-bottom-links {
         gap: 15px;
     }
-} 
+}
+.footer .contact-info a { color: inherit; text-underline-offset: 3px; }

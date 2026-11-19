@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
     <title>뉴스 | 그라비아인쇄 프로그램·MES 프로젝트 소식 - 올아이티</title>
     <meta name="description" content="올아이티 뉴스. 그라비아인쇄 프로그램 저작권, MES·ERP 구축·완료, 스마트공장·AS 지원 등 최신 프로젝트와 회사 소식입니다.">
     <meta name="keywords" content="올아이티 뉴스, 그라비아인쇄 프로그램, MES 프로젝트, ERP 저작권, 스마트공장, 회사소식">
@@ -11,12 +20,12 @@
     <meta property="og:url" content="https://allitwork.co.kr/news.html">
     <meta property="og:title" content="뉴스 | 그라비아인쇄 프로그램·MES 프로젝트 소식 - 올아이티">
     <meta property="og:description" content="그라비아인쇄 프로그램·MES·ERP 구축과 회사 소식을 확인하세요.">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/news.html">
-    <meta property="twitter:title" content="뉴스 | 그라비아인쇄 프로그램·MES 프로젝트 소식 - 올아이티">
-    <meta property="twitter:description" content="그라비아인쇄 프로그램·MES·ERP 구축과 회사 소식을 확인하세요.">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-image.jpg">
+    <meta property="og:image" content="https://allitwork.co.kr/images/home-press.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/news.html">
+    <meta name="twitter:title" content="뉴스 | 그라비아인쇄 프로그램·MES 프로젝트 소식 - 올아이티">
+    <meta name="twitter:description" content="그라비아인쇄 프로그램·MES·ERP 구축과 회사 소식을 확인하세요.">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/home-press.jpg">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -27,7 +36,6 @@
         "isPartOf": { "@type": "WebSite", "name": "올아이티", "url": "https://allitwork.co.kr" }
     }
     </script>
-    <script src="js/head-loader.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4MP3HBNBY"></script>
     <script>
@@ -37,292 +45,75 @@
 
         gtag('config', 'G-D4MP3HBNBY');
     </script>
-    <style>
-        .news-hero {
-            position: relative;
-            overflow: hidden;
-            color: #fff;
-            padding: 120px 0 88px;
-            background:
-                radial-gradient(ellipse 80% 60% at 15% 20%, rgba(80, 125, 188, 0.45), transparent 55%),
-                radial-gradient(ellipse 70% 50% at 90% 80%, rgba(161, 198, 234, 0.18), transparent 50%),
-                linear-gradient(160deg, #04080f 0%, #0d1a2e 45%, #1a3355 100%);
-        }
-
-        .news-hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 48px 48px;
-            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
-            pointer-events: none;
-        }
-
-        .news-hero .container {
-            position: relative;
-            z-index: 1;
-            max-width: 760px;
-        }
-
-        .news-hero-kicker {
-            display: inline-block;
-            margin-bottom: 18px;
-            font-size: 0.85rem;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #a1c6ea;
-        }
-
-        .news-hero h1 {
-            font-size: clamp(2.4rem, 4vw, 3.4rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 18px;
-            line-height: 1.2;
-        }
-
-        .news-hero p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.88);
-            max-width: 620px;
-        }
-
-        .news-section {
-            padding: 72px 0 96px;
-            background: #f4f7f8;
-        }
-
-        .news-toolbar {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            margin-bottom: 36px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #d7e0e6;
-        }
-
-        .news-toolbar h2 {
-            font-size: 1.35rem;
-            letter-spacing: -0.02em;
-            color: #04080f;
-        }
-
-        .news-toolbar p {
-            margin-top: 6px;
-            font-size: 0.95rem;
-            color: #6a7684;
-        }
-
-        .news-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .news-filter {
-            padding: 7px 14px;
-            border: 1px solid #c5d6e8;
-            background: #fff;
-            color: #3a4654;
-            font-size: 0.82rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-        }
-
-        .news-filter:hover,
-        .news-filter.is-active {
-            background: #1a3355;
-            border-color: #1a3355;
-            color: #fff;
-        }
-
-        .news-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            max-width: 920px;
-            margin: 0 auto;
-        }
-
-        .news-card {
-            display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 24px;
-            align-items: start;
-            padding: 24px 28px;
-            background: #fff;
-            border: 1px solid #d7e0e6;
-            border-left: 4px solid #507dbc;
-            transition: border-color 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .news-card[data-category="릴리즈"] {
-            border-left-color: #2a9d8f;
-        }
-
-        .news-card[data-category="회사소식"] {
-            border-left-color: #6c7a89;
-        }
-
-        .news-card[data-status="완료"] {
-            border-left-color: #3d8b6e;
-        }
-
-        .news-card:hover {
-            border-color: #507dbc;
-            box-shadow: 0 12px 28px rgba(4, 8, 15, 0.08);
-        }
-
-        .news-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .news-date {
-            font-size: 0.92rem;
-            font-weight: 700;
-            font-variant-numeric: tabular-nums;
-            letter-spacing: 0.02em;
-            color: #1a3355;
-        }
-
-        .news-category {
-            display: inline-flex;
-            width: fit-content;
-            padding: 4px 9px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            color: #1a3355;
-            background: #e8f0f8;
-        }
-
-        .news-card[data-category="릴리즈"] .news-category {
-            color: #0f5c54;
-            background: #d9f2ee;
-        }
-
-        .news-card[data-category="회사소식"] .news-category {
-            color: #3a4654;
-            background: #e8eef2;
-        }
-
-        .news-card[data-status="완료"] .news-category {
-            color: #0b3d1f;
-            background: #d8f3e3;
-        }
-
-        .news-content {
-            min-width: 0;
-        }
-
-        .news-title {
-            font-size: 1.22rem;
-            letter-spacing: -0.02em;
-            line-height: 1.4;
-            color: #04080f;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .news-excerpt {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #3a4654;
-            margin-bottom: 14px;
-        }
-
-        .news-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .news-tag {
-            padding: 3px 9px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #507dbc;
-            background: #eef4fa;
-            border: 1px solid #c5d6e8;
-        }
-
-        .news-card.is-hidden {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .news-hero {
-                padding: 100px 0 64px;
-            }
-
-            .news-section {
-                padding: 48px 0 72px;
-            }
-
-            .news-card {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                padding: 20px;
-            }
-
-            .news-meta {
-                flex-direction: row;
-                align-items: center;
-                gap: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/news.css">
 </head>
 <body>
     <!-- 네비게이션 -->
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <!-- 왼쪽 배너 -->
-    <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    </aside>
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html">올아이티 소개</a></li>
+                    <li><a href="careers.html">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html" aria-current="page">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <!-- 메인 콘텐츠 -->
-    <main class="main-content">
-        <section class="news-hero">
-            <div class="container">
-                <p class="news-hero-kicker">News & Updates</p>
-                <h1>뉴스</h1>
-                <p>프로젝트 착수·완료, 제품 릴리즈, 회사 소식을 한곳에서 확인하세요.
-                    제조 현장의 MES·ERP·웹 시스템 구축 진행 현황을 공유합니다.</p>
+    <main class="main-content home newsroom">
+        <!-- include:breadcrumb -->
+<nav class="page-breadcrumb" aria-label="현재 위치">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="./"><span itemprop="name">홈</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">올아이티 소식</span><meta itemprop="position" content="2"></li>
+    </ol>
+</nav>
+<!-- endinclude -->
+        <header class="news-hero">
+            <div class="home-frame">
+                <h1>올아이티 소식</h1>
+                <p>제조 현장의 프로젝트 착수와 완료, 제품 업데이트, 회사 소식을 전합니다.</p>
             </div>
-        </section>
+        </header>
 
-        <section class="news-section">
-            <div class="container">
+        <section class="news-section" aria-labelledby="news-heading">
+            <div class="home-frame">
                 <div class="news-toolbar">
-                    <div>
-                        <h2>최신 소식</h2>
-                        <p>최신순으로 정렬된 올아이티 업데이트입니다.</p>
-                    </div>
-                    <div class="news-filters" role="tablist" aria-label="뉴스 카테고리 필터">
-                        <button type="button" class="news-filter is-active" data-filter="all">전체</button>
-                        <button type="button" class="news-filter" data-filter="프로젝트">프로젝트</button>
-                        <button type="button" class="news-filter" data-filter="릴리즈">릴리즈</button>
-                        <button type="button" class="news-filter" data-filter="회사소식">회사소식</button>
+                    <h2 id="news-heading">기사 목록</h2>
+                    <div class="news-filters" role="group" hidden aria-label="뉴스 카테고리 필터">
+                        <button type="button" class="news-filter" data-filter="all" aria-pressed="true">전체</button>
+                        <button type="button" class="news-filter" data-filter="프로젝트" aria-pressed="false">프로젝트</button>
+                        <button type="button" class="news-filter" data-filter="릴리즈" aria-pressed="false">릴리즈</button>
+                        <button type="button" class="news-filter" data-filter="회사소식" aria-pressed="false">회사소식</button>
                     </div>
                 </div>
 
                 <div class="news-list">
-                    <article class="news-card" data-category="프로젝트">
+                    <article id="dain-erp" class="news-card news-feature" data-category="프로젝트">
+                        <img class="news-photo" src="images/banner-dain-ingredients.jpg" alt="">
                         <div class="news-meta">
-                            <div class="news-date">2026.10</div>
+                            <time class="news-date" datetime="2026-10">2026.10</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -339,9 +130,10 @@
                         </div>
                     </article>
 
-                    <article class="news-card" data-category="프로젝트">
+                    <article id="sammin-mes" class="news-card news-feature" data-category="프로젝트">
+                        <img class="news-photo" src="images/banner-sammin-lamination.jpg" alt="">
                         <div class="news-meta">
-                            <div class="news-date">2026.10</div>
+                            <time class="news-date" datetime="2026-10">2026.10</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -358,9 +150,9 @@
                         </div>
                     </article>
 
-                    <article class="news-card" data-category="회사소식">
+                    <article id="gravure-erp-copyright" class="news-card" data-category="회사소식">
                         <div class="news-meta">
-                            <div class="news-date">2026.09</div>
+                            <time class="news-date" datetime="2026-09">2026.09</time>
                             <span class="news-category">회사소식</span>
                         </div>
                         <div class="news-content">
@@ -379,7 +171,7 @@
 
                     <article class="news-card" data-category="회사소식">
                         <div class="news-meta">
-                            <div class="news-date">2026.09</div>
+                            <time class="news-date" datetime="2026-09">2026.09</time>
                             <span class="news-category">회사소식</span>
                         </div>
                         <div class="news-content">
@@ -398,7 +190,7 @@
 
                     <article class="news-card" data-category="프로젝트" data-status="완료">
                         <div class="news-meta">
-                            <div class="news-date">2026.08</div>
+                            <time class="news-date" datetime="2026-08">2026.08</time>
                             <span class="news-category">완료</span>
                         </div>
                         <div class="news-content">
@@ -417,7 +209,7 @@
 
                     <article class="news-card" data-category="프로젝트" data-status="완료">
                         <div class="news-meta">
-                            <div class="news-date">2026.06</div>
+                            <time class="news-date" datetime="2026-06">2026.06</time>
                             <span class="news-category">완료</span>
                         </div>
                         <div class="news-content">
@@ -436,7 +228,7 @@
 
                     <article class="news-card" data-category="프로젝트" data-status="완료">
                         <div class="news-meta">
-                            <div class="news-date">2026.06</div>
+                            <time class="news-date" datetime="2026-06">2026.06</time>
                             <span class="news-category">완료</span>
                         </div>
                         <div class="news-content">
@@ -455,7 +247,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2026.05</div>
+                            <time class="news-date" datetime="2026-05">2026.05</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -474,7 +266,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2026.03</div>
+                            <time class="news-date" datetime="2026-03">2026.03</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -493,7 +285,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2026.03</div>
+                            <time class="news-date" datetime="2026-03">2026.03</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -511,7 +303,7 @@
 
                     <article class="news-card" data-category="프로젝트" data-status="완료">
                         <div class="news-meta">
-                            <div class="news-date">2026.03</div>
+                            <time class="news-date" datetime="2026-03">2026.03</time>
                             <span class="news-category">완료</span>
                         </div>
                         <div class="news-content">
@@ -530,7 +322,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2025.09</div>
+                            <time class="news-date" datetime="2025-09">2025.09</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -549,7 +341,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2025.06</div>
+                            <time class="news-date" datetime="2025-06">2025.06</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -568,7 +360,7 @@
 
                     <article class="news-card" data-category="릴리즈">
                         <div class="news-meta">
-                            <div class="news-date">2025.05</div>
+                            <time class="news-date" datetime="2025-05">2025.05</time>
                             <span class="news-category">릴리즈</span>
                         </div>
                         <div class="news-content">
@@ -587,7 +379,7 @@
 
                     <article class="news-card" data-category="회사소식">
                         <div class="news-meta">
-                            <div class="news-date">2025.05</div>
+                            <time class="news-date" datetime="2025-05">2025.05</time>
                             <span class="news-category">회사소식</span>
                         </div>
                         <div class="news-content">
@@ -606,7 +398,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2025.01</div>
+                            <time class="news-date" datetime="2025-01">2025.01</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -625,7 +417,7 @@
 
                     <article class="news-card" data-category="프로젝트">
                         <div class="news-meta">
-                            <div class="news-date">2025.01</div>
+                            <time class="news-date" datetime="2025-01">2025.01</time>
                             <span class="news-category">프로젝트</span>
                         </div>
                         <div class="news-content">
@@ -648,31 +440,81 @@
 
     <!-- 푸터 -->
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
     <script>
-        (function () {
-            const filters = document.querySelectorAll('.news-filter');
-            const cards = document.querySelectorAll('.news-card');
+        const filters = document.querySelector('.news-filters');
+        const buttons = filters.querySelectorAll('button');
+        const articles = document.querySelectorAll('.news-card');
 
-            filters.forEach((button) => {
-                button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
+        function showCategory(filter) {
+            for (const button of buttons) {
+                button.setAttribute('aria-pressed', String(button.dataset.filter === filter));
+            }
+            for (const article of articles) {
+                article.hidden = filter !== 'all' && article.dataset.category !== filter;
+            }
+        }
 
-                    filters.forEach((item) => item.classList.toggle('is-active', item === button));
-
-                    cards.forEach((card) => {
-                        const category = card.getAttribute('data-category');
-                        const match = filter === 'all' || category === filter;
-                        card.classList.toggle('is-hidden', !match);
-                    });
-                });
-            });
-        })();
+        for (const button of buttons) {
+            button.addEventListener('click', () => showCategory(button.dataset.filter));
+        }
+        filters.hidden = false;
+        window.addEventListener('hashchange', () => {
+            const target = document.getElementById(location.hash.slice(1));
+            if (target?.matches('.news-card[hidden]')) {
+                showCategory('all');
+                target.scrollIntoView();
+            }
+        });
     </script>
 </body>
 </html>

@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>채용정보 | MES·ERP 개발 인재 모집 - 올아이티</title>
-    <meta name="description" content="올아이티 채용정보. 그라비아인쇄 프로그램·MES·ERP 개발과 현장 SI를 함께할 인재를 모집합니다.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- include:head -->
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/footer.css">
+<script defer src="js/navigation.js"></script>
+<!-- endinclude -->
+    <title>채용정보 | MES·ERP 개발 직무와 지원 방법 - 올아이티</title>
+    <meta name="description" content="올아이티 프론트엔드·백엔드·풀스택 개발 직무와 개발팀의 역할을 소개합니다. 공개 채용 현황과 프로필을 보내는 방법을 확인하세요.">
     <meta name="keywords" content="올아이티 채용, MES 개발, ERP 개발, IT 채용, 스마트공장">
     <link rel="canonical" href="https://allitwork.co.kr/careers.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ko_KR">
     <meta property="og:site_name" content="올아이티">
     <meta property="og:url" content="https://allitwork.co.kr/careers.html">
-    <meta property="og:title" content="채용정보 | MES·ERP 개발 인재 모집 - 올아이티">
-    <meta property="og:description" content="그라비아인쇄 프로그램·MES·ERP 개발과 현장 SI를 함께할 인재를 모집합니다.">
-    <meta property="og:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://allitwork.co.kr/careers.html">
-    <meta property="twitter:title" content="올아이티 - 채용정보">
-    <meta property="twitter:description" content="올아이티 채용 정보와 인재상, 문의 방법을 안내합니다.">
-    <meta property="twitter:image" content="https://allitwork.co.kr/images/og-image.jpg">
-    <script src="js/head-loader.js"></script>
+    <meta property="og:title" content="채용정보 | MES·ERP 개발 직무와 지원 방법 - 올아이티">
+    <meta property="og:description" content="올아이티 프론트엔드·백엔드·풀스택 개발 직무와 개발팀의 역할을 소개합니다. 공개 채용 현황과 프로필을 보내는 방법을 확인하세요.">
+    <meta property="og:image" content="https://allitwork.co.kr/images/home-workstation.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://allitwork.co.kr/careers.html">
+    <meta name="twitter:title" content="채용정보 | MES·ERP 개발 직무와 지원 방법 - 올아이티">
+    <meta name="twitter:description" content="올아이티 프론트엔드·백엔드·풀스택 개발 직무와 개발팀의 역할을 소개합니다. 공개 채용 현황과 프로필을 보내는 방법을 확인하세요.">
+    <meta name="twitter:image" content="https://allitwork.co.kr/images/home-workstation.jpg">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4MP3HBNBY"></script>
     <script>
@@ -27,521 +35,191 @@
 
         gtag('config', 'G-D4MP3HBNBY');
     </script>
-    <style>
-        .hero {
-            background: linear-gradient(135deg, #04080f 0%, #507dbc 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        .section:nth-child(odd) {
-            background-color: white;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #04080f;
-        }
-
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto 60px;
-            text-align: center;
-            line-height: 1.8;
-        }
-
-        .section-intro p {
-            font-size: 1.1rem;
-            color: #04080f;
-            margin-bottom: 20px;
-        }
-
-        /* 채용 정보 스타일 */
-        .career-content {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .no-jobs-icon {
-            font-size: 4rem;
-            margin-bottom: 30px;
-            color: #6c757d;
-        }
-
-        .no-jobs-title {
-            font-size: 2rem;
-            color: #04080f;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .no-jobs-description {
-            font-size: 1.1rem;
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 40px;
-            margin-top: 40px;
-        }
-
-        .contact-title {
-            font-size: 1.5rem;
-            color: #04080f;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .contact-description {
-            font-size: 1rem;
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .email-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #507dbc, #a1c6ea);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 10px;
-        }
-
-        .email-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(80, 125, 188, 0.3);
-            color: white;
-            text-decoration: none;
-        }
-
-        .positions-section {
-            margin-top: 50px;
-        }
-
-        .positions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .position-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #e9ecef;
-            text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .position-card:hover {
-            transform: translateY(-5px);
-            border-color: #507dbc;
-        }
-
-        .position-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .position-title {
-            font-size: 1.3rem;
-            color: #04080f;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .position-description {
-            font-size: 0.95rem;
-            color: #6c757d;
-            line-height: 1.5;
-        }
-
-        .company-culture {
-            margin-top: 60px;
-        }
-
-        .culture-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .culture-item {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .culture-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: #507dbc;
-        }
-
-        .culture-title {
-            font-size: 1.1rem;
-            color: #04080f;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .culture-description {
-            font-size: 0.9rem;
-            color: #6c757d;
-            line-height: 1.5;
-        }
-
-        /* 문화 섹션 스타일 - 지원 가능한 직무와 동일 */
-        .culture-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .culture-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 2px solid #e9ecef;
-            text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .culture-card:hover {
-            transform: translateY(-5px);
-            border-color: #507dbc;
-        }
-
-        .culture-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .culture-title {
-            font-size: 1.3rem;
-            color: #04080f;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .culture-section {
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .culture-subtitle {
-            font-size: 1.1rem;
-            color: #507dbc;
-            margin-bottom: 20px;
-            font-weight: 600;
-            text-align: center;
-        }
-
-        .culture-item {
-            margin-bottom: 25px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        .culture-item-title {
-            font-size: 1rem;
-            color: #04080f;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .culture-item-desc {
-            font-size: 0.9rem;
-            color: #6c757d;
-            line-height: 1.5;
-            margin-bottom: 5px;
-        }
-
-        .culture-tasks {
-            text-align: left;
-        }
-
-        .culture-task {
-            font-size: 0.9rem;
-            color: #6c757d;
-            line-height: 1.5;
-            margin-bottom: 8px;
-            padding: 8px 12px;
-            background: #f8f9fa;
-            border-radius: 5px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .career-content {
-                padding: 30px 20px;
-            }
-            
-            .no-jobs-icon {
-                font-size: 3rem;
-            }
-            
-            .no-jobs-title {
-                font-size: 1.5rem;
-            }
-            
-            .positions-grid,
-            .culture-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .culture-card {
-                padding: 20px;
-            }
-            
-            .culture-title {
-                font-size: 1.2rem;
-                margin-bottom: 20px;
-            }
-            
-            .culture-subtitle {
-                font-size: 1rem;
-                margin-bottom: 15px;
-            }
-            
-            .culture-item {
-                padding: 12px;
-                margin-bottom: 20px;
-            }
-            
-            .culture-item-title {
-                font-size: 0.95rem;
-                margin-bottom: 8px;
-            }
-            
-            .culture-item-desc {
-                font-size: 0.85rem;
-            }
-            
-            .culture-task {
-                font-size: 0.85rem;
-                padding: 6px 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/gravure-overview.css">
+    <link rel="stylesheet" href="css/mes-solution.css">
+    <link rel="stylesheet" href="css/careers.css">
 </head>
 <body>
     <!-- 네비게이션 -->
-    <nav class="navbar">
-        <!-- 네비게이션이 여기에 동적으로 로드됩니다 -->
-    </nav>
-
-    <!-- 왼쪽 배너 -->
-    <aside class="banner">
-        <!-- 배너가 여기에 동적으로 로드됩니다 -->
-    </aside>
+<!-- include:nav -->
+<header class="site-header">
+    <div class="site-bar">
+        <div class="nav-logo">
+            <a href="index.html"><img src="images/allit_logo.png" width="631" height="225" alt="올아이티 홈"></a>
+        </div>
+        <button class="menu-switch" type="button" aria-controls="site-navigation" aria-expanded="false"><span>메뉴</span><i aria-hidden="true"></i></button>
+        <nav id="site-navigation" class="site-links" aria-label="주 메뉴">
+            <details class="nav-group">
+                <summary>솔루션</summary>
+                <ul>
+                    <li><a href="gravure-pages/gravure-mes.html">그라비아 인쇄 MES</a></li>
+                    <li><a href="mes-solution.html">표준 MES</a></li>
+                    <li><a href="web-development.html">웹 기반 MES</a></li>
+                </ul>
+            </details>
+            <a href="projects-partners.html">프로젝트·협력사</a>
+            <details class="nav-group">
+                <summary>회사소개</summary>
+                <ul>
+                    <li><a href="about.html">올아이티 소개</a></li>
+                    <li><a href="careers.html" aria-current="page">채용정보</a></li>
+                </ul>
+            </details>
+            <a href="news.html">뉴스</a>
+        </nav>
+    </div>
+</header>
+<!-- endinclude -->
 
     <!-- 메인 콘텐츠 -->
-    <main class="main-content">
-        <!-- 히어로 섹션 -->
-        <section class="hero">
-            <div class="container">
+    <main class="main-content solution-overview">
+        <!-- include:breadcrumb -->
+<nav class="page-breadcrumb" aria-label="현재 위치">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="./"><span itemprop="name">홈</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page"><span itemprop="name">채용정보</span><meta itemprop="position" content="2"></li>
+    </ol>
+</nav>
+<!-- endinclude -->
+        <header class="product-intro">
+            <div class="product-intro-copy">
                 <h1>채용정보</h1>
-                <p>함께 성장할 열정적인 인재를 기다립니다</p>
+                <p>현재 진행 중인 공개 채용은 없습니다.<br>올아이티의 제조 IT 개발에 관심이 있다면 프로필을 보내주세요.</p>
+                <a class="intro-button" href="#apply">지원 방법 보기 <span aria-hidden="true">↓</span></a>
+            </div>
+            <img class="product-photo" src="images/home-workstation.jpg" width="800" height="400" fetchpriority="high" alt="제조 현장의 데이터를 표시한 대시보드">
+        </header>
+
+        <section class="product-details product-frame" aria-labelledby="roles-title">
+            <h2 id="roles-title">개발 직무 소개</h2>
+            <div class="mes-feature-grid">
+                <article class="mes-feature">
+                    <h3>프론트엔드 개발자</h3>
+                    <p>현장 사용자의 작업 흐름에 맞춰 웹 화면과 인터페이스를 설계하고 개발합니다.</p>
+                    <ul><li>JavaScript, React, Vue.js, Angular</li><li>사용자 경험과 인터페이스 설계</li></ul>
+                </article>
+                <article class="mes-feature">
+                    <h3>백엔드 개발자</h3>
+                    <p>웹 서비스의 서버와 API를 개발하고 업무 데이터를 다루는 데이터베이스를 설계합니다.</p>
+                    <ul><li>Node.js, Python, Java, ASP.NET Core</li><li>데이터베이스 설계와 API 개발</li></ul>
+                </article>
+                <article class="mes-feature">
+                    <h3>풀스택 개발자</h3>
+                    <p>사용자 화면에서 서버까지 데이터가 흐르는 과정을 이해하고 시스템 전반을 개발합니다.</p>
+                    <ul><li>프론트엔드·백엔드 개발</li><li>시스템 아키텍처 설계</li></ul>
+                </article>
             </div>
         </section>
 
-        <!-- 채용 정보 섹션 -->
-        <section class="section">
-            <div class="container">
-                <div class="career-content">
-                    <div class="no-jobs-icon">📋</div>
-                    <h2 class="no-jobs-title">현재 채용중인 직무가 없습니다</h2>
-                    <p class="no-jobs-description">
-                        현재 공개 채용 중인 직무는 없지만, 저희 올아이티와 함께 일하고 싶으신 분들을 항상 환영합니다.<br>
-                        Frontend, Backend, Full-stack 개발자로서의 경험이나 열정이 있으시다면 언제든 연락주세요.
-                    </p>
-
-                    <div class="contact-section">
-                        <h3 class="contact-title">지원 의향이 있으시다면</h3>
-                        <p class="contact-description">
-                            자유양식의 프로필, 이력서 또는 이력 링크를 보내주세요.<br>
-                            검토 후 적절한 기회가 있을 때 연락드리겠습니다.
-                        </p>
-                        <a href="mailto:allitjob@gmail.com" class="email-link">📧 allit2301@gmail.com</a>
-                    </div>
-
-                    <div class="positions-section">
-                        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 30px;">지원 가능한 직무</h3>
-                        <div class="positions-grid">
-                            <div class="position-card">
-                                <div class="position-icon">💻</div>
-                                <h4 class="position-title">Frontend 개발자</h4>
-                                <p class="position-description">
-                                    Vanilla JavaScript, React, Vue.js, Angular 등을 활용한 웹 애플리케이션 개발<br>
-                                    사용자 경험과 인터페이스 설계에 대한 이해
-                                </p>
-                            </div>
-                            <div class="position-card">
-                                <div class="position-icon">⚙️</div>
-                                <h4 class="position-title">Backend 개발자</h4>
-                                <p class="position-description">
-                                    Node.js, Python, Java, ASP.NET Core 등을 활용한 서버 개발<br>
-                                    데이터베이스 설계 및 API 개발 경험
-                                </p>
-                            </div>
-                            <div class="position-card">
-                                <div class="position-icon">🔄</div>
-                                <h4 class="position-title">Full-stack 개발자</h4>
-                                <p class="position-description">
-                                    Frontend와 Backend 모두를 아우르는 개발 경험<br>
-                                    전체 시스템 아키텍처 이해 및 개발
-                                </p>
-                            </div>
+        <section class="mes-benefits" aria-labelledby="team-title">
+            <div class="demo-layout product-frame">
+                <div>
+                    <h2 id="team-title">개발팀에서 일하는 방식</h2>
+                    <a class="diagram-link" href="about.html#core-values">올아이티의 핵심가치 보기 <span aria-hidden="true">→</span></a>
+                </div>
+                <div>
+                    <details class="career-track">
+                        <summary>경력 사원의 역할과 과제</summary>
+                        <div class="track-body">
+                            <h3>주요 역할</h3>
+                            <ul class="track-duties">
+                                <li><strong>성장하는 개발 조직 문화를 만드는 것</strong><p>최고의 인재 추천 및 채용</p><p>학습하고 공유하고 지원하고 적용하라</p></li>
+                                <li><strong>신 솔루션 개발에 주도적인 역할을 하는 것</strong><p>신기술을 적극 활용하라</p><p>가치가 높은 솔루션 개발에 집중하라</p></li>
+                                <li><strong>개발부의 핵심 역량을 키우는 것</strong><p>우리는 오랫동안 일하고, 열심히 일하고, 똑똑하게 일한다. 최고 품질의 제품 개발을 위해 항상 최선을 다한다. 두려움 없이 도전하고 실패에도 교훈을 얻는다.</p></li>
+                            </ul>
+                            <h3>핵심 과제</h3>
+                            <ol>
+                                <li>기존 MES/ERP 솔루션 개발 능력 확보</li>
+                                <li>구축 프로젝트 On Time Delivery</li>
+                                <li>SmartERP1.0/2.0 개발 완수</li>
+                                <li>개발/관리 관련 자격증 취득</li>
+                                <li>인재 추천</li>
+                            </ol>
                         </div>
-                    </div>
-
-                    <div class="company-culture">
-                        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 30px;">우리의 문화</h3>
-                        
-                        <div class="culture-grid">
-                            <div class="culture-card">
-                                <div class="culture-icon">👨‍💼</div>
-                                <h4 class="culture-title">경력 사원</h4>
-                                
-                                <div class="culture-section">
-                                    <h5 class="culture-subtitle">3대 과업</h5>
-                                    <div class="culture-item">
-                                        <h6 class="culture-item-title">1. 성장하는 개발 조직 문화를 만드는 것</h6>
-                                        <p class="culture-item-desc">최고의 인재 추천 및 채용</p>
-                                        <p class="culture-item-desc">학습하고 공유하고 지원하고 적용하라</p>
-                                    </div>
-                                    <div class="culture-item">
-                                        <h6 class="culture-item-title">2. 신 솔루션 개발에 주도적인 역할을 하는 것</h6>
-                                        <p class="culture-item-desc">신기술을 적극 활용하라</p>
-                                        <p class="culture-item-desc">가치가 높은 솔루션 개발에 집중하라</p>
-                                    </div>
-                                    <div class="culture-item">
-                                        <h6 class="culture-item-title">3. 개발부의 핵심 역량을 키우는 것</h6>
-                                        <p class="culture-item-desc">우리는 오랫동안 일하고, 열심히 일하고, 똑똑하게 일한다.</p>
-                                        <p class="culture-item-desc">최고 품질의 제품 개발을 위해 항상 최선을 다한다.</p>
-                                        <p class="culture-item-desc">두려움 없이 도전하고 실패에도 교훈을 얻는다.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="culture-section">
-                                    <h5 class="culture-subtitle">5대 핵심 과제</h5>
-                                    <div class="culture-tasks">
-                                        <p class="culture-task">1. 기존 MES/ERP 솔루션 개발 능력 확보</p>
-                                        <p class="culture-task">2. 구축 프로젝트 On Time Delivery</p>
-                                        <p class="culture-task">3. SmartERP1.0/2.0 개발 완수</p>
-                                        <p class="culture-task">4. 개발/관리 관련 자격증 취득</p>
-                                        <p class="culture-task">5. 인재 추천</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="culture-card">
-                                <div class="culture-icon">👨‍🎓</div>
-                                <h4 class="culture-title">신입 사원</h4>
-                                
-                                <div class="culture-section">
-                                    <h5 class="culture-subtitle">3대 과업</h5>
-                                    <div class="culture-item">
-                                        <h6 class="culture-item-title">1. 성장하는 개발 조직 문화를 만드는 것</h6>
-                                        <p class="culture-item-desc">최고의 인재 추천 및 채용</p>
-                                        <p class="culture-item-desc">학습하고 공유하고 지원하고 적용하라</p>
-                                    </div>
-                                    <div class="culture-item">
-                                        <h6 class="culture-item-title">2. 개인 성장을 통한 조직에 기여도 높이는 것</h6>
-                                        <p class="culture-item-desc">최고의 노력으로 초 스피드의 개인 성장을 이룬다.</p>
-                                        <p class="culture-item-desc">단순 지원을 넘어 주도적으로 일할 수 있는 업무 능력을 키운다.</p>
-                                    </div>
-                                    <div class="culture-item">
-                                        <h6 class="culture-item-title">3. 개발부의 핵심 역량을 키우는 것</h6>
-                                        <p class="culture-item-desc">우리는 오랫동안 일하고, 열심히 일하고, 똑똑하게 일한다.</p>
-                                        <p class="culture-item-desc">최고 품질의 제품 개발을 위해 항상 최선을 다한다.</p>
-                                        <p class="culture-item-desc">두려움 없이 도전하고 실패에도 교훈을 얻는다.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="culture-section">
-                                    <h5 class="culture-subtitle">5대 핵심과제</h5>
-                                    <div class="culture-tasks">
-                                        <p class="culture-task">1. 기존 MES/ERP 솔루션 개발 능력 확보</p>
-                                        <p class="culture-task">2. 년 2개 프로젝트에 반드시 참여할 것</p>
-                                        <p class="culture-task">3. 개발 관련 자격증 1개 이상 반드시 취득하기</p>
-                                        <p class="culture-task">4. MES or ERP 중 한 개의 솔루션에 대한 프로세스 설명 발표</p>
-                                        <p class="culture-task">5. 인재 추천</p>
-                                    </div>
-                                </div>
-                            </div>
+                    </details>
+                    <details class="career-track">
+                        <summary>신입 사원의 역할과 과제</summary>
+                        <div class="track-body">
+                            <h3>주요 역할</h3>
+                            <ul class="track-duties">
+                                <li><strong>성장하는 개발 조직 문화를 만드는 것</strong><p>최고의 인재 추천 및 채용</p><p>학습하고 공유하고 지원하고 적용하라</p></li>
+                                <li><strong>개인 성장을 통한 조직에 기여도 높이는 것</strong><p>최고의 노력으로 초 스피드의 개인 성장을 이룬다. 단순 지원을 넘어 주도적으로 일할 수 있는 업무 능력을 키운다.</p></li>
+                                <li><strong>개발부의 핵심 역량을 키우는 것</strong><p>우리는 오랫동안 일하고, 열심히 일하고, 똑똑하게 일한다. 최고 품질의 제품 개발을 위해 항상 최선을 다한다. 두려움 없이 도전하고 실패에도 교훈을 얻는다.</p></li>
+                            </ul>
+                            <h3>핵심 과제</h3>
+                            <ol>
+                                <li>기존 MES/ERP 솔루션 개발 능력 확보</li>
+                                <li>년 2개 프로젝트에 반드시 참여할 것</li>
+                                <li>개발 관련 자격증 1개 이상 반드시 취득하기</li>
+                                <li>MES or ERP 중 한 개의 솔루션에 대한 프로세스 설명 발표</li>
+                                <li>인재 추천</li>
+                            </ol>
                         </div>
-                    </div>
+                    </details>
                 </div>
             </div>
+        </section>
+
+        <section id="apply" class="product-contact product-frame" aria-labelledby="apply-title">
+            <div>
+                <h2 id="apply-title">프로필 보내기</h2>
+                <p>자유 양식의 프로필, 이력서 또는 이력 링크를 이메일로 보내주세요. 보내주신 내용을 검토하고 적합한 채용 기회가 생기면 연락드립니다.</p>
+            </div>
+            <a href="mailto:jyhyun@allitwork.co.kr">jyhyun@allitwork.co.kr <span aria-hidden="true">↗</span></a>
         </section>
     </main>
 
     <!-- 푸터 -->
     <footer class="footer">
-        <!-- 푸터가 여기에 동적으로 로드됩니다 -->
-    </footer>
+<!-- include:footer -->
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>올아이티</h3>
+            <p>그라비아인쇄 프로그램, MES·ERP, 웹 솔루션을 제공하는 IT 회사입니다.</p>
+        </div>
 
-    <script src="js/nav-loader.js"></script>
-    <script src="js/banner-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+        <div class="footer-section">
+            <h4>서비스</h4>
+            <ul class="footer-links">
+                <li><a href="gravure-pages/gravure-mes.html">그라비아인쇄 프로그램</a></li>
+                <li><a href="mes-solution.html">일반 MES</a></li>
+                <li><a href="web-development.html">웹 기반 MES</a></li>
+
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>회사</h4>
+            <ul class="footer-links">
+                <li><a href="about.html">회사 소개</a></li>
+                <li><a href="projects-partners.html">프로젝트 & 협력사</a></li>
+                <li><a href="careers.html">채용 정보</a></li>
+                <li><a href="news.html">뉴스</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>연락처</h4>
+            <div class="contact-info">
+                <p><strong>영업문의:</strong> <a href="tel:010-8015-0400">010-8015-0400</a></p>
+                <p><strong>이메일:</strong> <a href="mailto:shhong@allitwork.co.kr">shhong@allitwork.co.kr</a></p>
+                <p><strong>영업시간:</strong> 평일 09:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2024 올아이티. All rights reserved.</p>
+            <div class="footer-bottom-links">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- endinclude -->
+</footer>
 </body>
 </html> 
