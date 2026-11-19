@@ -68,21 +68,34 @@
     gap: 32px;
     align-items: start;
 }
-.company-columns h2 {
+.company-columns h2, .company-values h2 {
     font-size: clamp(31px, 2.7vw, 46px);
     letter-spacing: -.065em;
     line-height: 1.25;
 }
-.company-values dl { border-top: 1px solid #aebeb7; }
+.company-values h2 { scroll-margin-top: 84px; }
+.company-values dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(24px, 3vw, 48px);
+    row-gap: 12px;
+    margin-top: clamp(24px, 3vw, 40px);
+}
 .company-values dl > div {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-    align-items: baseline;
-    gap: 16px;
-    padding-block: 18px;
-    border-bottom: 1px solid #c9d5cf;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    padding-top: clamp(16px, 1.6vw, 24px);
+    border-top: 2px solid #638272;
 }
-.company-values dt { font-size: 19px; font-weight: 700; }
+.company-values dt {
+    color: #193c30;
+    font-size: clamp(21px, 1.65vw, 27px);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+}
 .company-values dd, .company-vision p { color: #465a50; line-height: 1.8; }
 .company-vision { scroll-margin-top: 80px; }
 .company-vision h3 { font-size: clamp(21px, 2vw, 30px); line-height: 1.35; }
@@ -110,6 +123,8 @@
         background: var(--company-photo) right center / cover;
     }
 }
-@media (max-width: 440px) {
-    .company-values dl > div { grid-template-columns: 1fr; gap: 5px; }
+@media (max-width: 960px) {
+    .company-values dl { grid-template-columns: 1fr; row-gap: 24px; }
+    .company-values dl > div { display: block; grid-row: auto; }
+    .company-values dd { margin-top: 8px; max-width: 46em; }
 }
