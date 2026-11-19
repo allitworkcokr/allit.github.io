@@ -76,7 +76,7 @@
 .company-values dl { border-top: 1px solid #aebeb7; }
 .company-values dl > div {
     display: grid;
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     align-items: baseline;
     gap: 16px;
     padding-block: 18px;
