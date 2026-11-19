@@ -111,7 +111,6 @@ body {
 .hero-slide--sammin { --hero-slide-bg: url("../images/banner-sammin-lamination.jpg"); }
 .hero-slide--hpm { --hero-slide-bg: url("../images/banner-hpm-packaging.jpg"); }
 .hero-slide--steel { --hero-slide-bg: url("../images/banner-steel-fabrication.jpg"); }
-.hero-slide--phase2 { --hero-slide-bg: url("../images/allit_phase2.jpg"); }
 
 .hero-slide {
     flex: 0 0 100%;
@@ -121,6 +120,11 @@ body {
     background-size: cover;
     background-position: center 35%;
     background-repeat: no-repeat;
+}
+
+.hero-slide--phase2 {
+    --hero-slide-bg: url("../images/allit-entrance-sign.jpg");
+    background-position: right center;
 }
 
 /* HPM 2026 배너: 이미지 전체가 보이도록(크롭 방지) */
@@ -371,6 +375,14 @@ body {
 
 /* 반응형 디자인 */
 @media (max-width: 768px) {
+    .hero-slide--phase2 {
+        --entrance-photo-height: clamp(92px, 15vw, 116px);
+        background-color: #04080f;
+        background-image: linear-gradient(to bottom, transparent 65%, #04080f), var(--hero-slide-bg);
+        background-size: 100% var(--entrance-photo-height), auto var(--entrance-photo-height);
+        background-position: right top;
+    }
+
     .hero-content h1,
     .hero-slide--phase2 .hero-slide-content h2 {
         font-size: 2rem;

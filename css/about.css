@@ -1,6 +1,6 @@
 .company .page-breadcrumb { background: #f9faf7; border-color: #d7dfd9; }
 .company-intro {
-    --company-photo: url("../images/allit_phase2.jpg");
+    --company-photo: url("../images/allit-entrance-sign.jpg");
     padding-block: clamp(48px, 5.4vw, 88px);
     background: linear-gradient(90deg, #102420e8, #102420bf 40%, transparent 72%),
         var(--company-photo) center / cover #142925;
